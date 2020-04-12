@@ -1,0 +1,462 @@
+{
+"citybus.roof.biarticulated.rear": {  //based on "citybus_roof"
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA Rear Roof",
+        "value":46000,
+    }
+    "slotType" : "citybus.roof.biarticulated.rear",
+    "slots": [
+        ["type", "default", "description"]
+        //["citybus_sign_F","citybus_sign_F","Front Destination Sign"],
+        //["citybus_intdisplays","citybus_biarticulated_intdisplays","Passenger Information Displays"],
+        //["citybus_biarticulated_roof_mod", "", "Roof Accessory"],
+    ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        {
+            "lightInnerAngle":120
+            "lightOuterAngle":0
+            "lightBrightness":1.8
+            "lightRange":0.9
+            "lightColor":{"r":255, "g":255, "b":200, "a":255}
+            "lightAttenuation":{"x":0, "y":1, "z":1}
+            "lightCastShadows":true
+            "flareName":"vehicleReverseLightFlare"
+            "flareScale":0
+            "cookieName":"art/special/BNG_light_cookie_headlight.png"
+            "texSize":512
+            "shadowSoftness":0.5
+        },
+        //interior lights
+        //["lowhighbeam", "POINTLIGHT", "tt3r", "tt3rr", "tt5r", {"x":0,"y":0,"z":180},   {"x":0,"y":0,"z":0}, {"x":0,"y":0,"z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.31, "y":0.5, "z":-0.2},  "deformGroup":""}],
+        //["lowhighbeam", "POINTLIGHT", "tt5r", "tt5rr", "tt7r", {"x":0,"y":0,"z":180},   {"x":0,"y":0,"z":0}, {"x":0,"y":0,"z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.31, "y":0.5, "z":-0.2},  "deformGroup":""}],
+        //["lowhighbeam", "POINTLIGHT", "tt7r", "tt7rr", "tt9r", {"x":0,"y":0,"z":180},   {"x":0,"y":0,"z":0}, {"x":0,"y":0,"z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":0.31, "y":0.5, "z":0.5},  "deformGroup":""}],
+        //["lowhighbeam", "SPOTLIGHT", "sm18ll", "sm17ll", "ac1ll", {"x":0,"y":0,"z":90}, {"x":0,"y":0,"z":0}, {"x":0,"y":0,"z":0}, 0, 0, 0, 1, {"baseTranslation":{"x":-0.067, "y":0.35, "z":0.14}, "deformGroup":"taillight_L_break"}],
+    ],
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["bcitybus_articulated_roof", ["birear_roof"]],
+        ["bcitybus_signal_RTL", ["birear_roof"]],
+        ["bcitybus_signal_RTR", ["birear_roof"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        //roof top nodes
+        {"nodeWeight":9},
+        {"group":"birear_roof"},
+        ["btt5rr", -1.28, 16.90, 2.74{"group":["birear_roof","birear_side_R","biarticulated_rear_sleeve","birear_bellow_frame"]}],
+        ["btt5r", -0.43, 16.90, 2.79{"group":["birear_roof","birear_side_R","biarticulated_rear_sleeve","birear_bellow_frame"]}],
+        ["btt5l",  0.43, 16.90, 2.79{"group":["birear_roof","birear_side_R","biarticulated_rear_sleeve","birear_bellow_frame"]}],
+        ["btt5ll",  1.28, 16.90, 2.74{"group":["birear_roof","birear_side_R","biarticulated_rear_sleeve","birear_bellow_frame"]}],
+
+        ["btt7rr", -1.28, 18.48, 2.74{"group":["birear_roof","birear_side_R"]}],
+        ["btt7r", -0.43, 18.48, 2.79],
+        ["btt7l",  0.43, 18.48, 2.79],
+        ["btt7ll",  1.28, 18.48, 2.74{"group":["birear_roof","birear_side_L"]}],
+
+        ["btt9rr", -1.28,  20.38, 2.74{"group":["birear_roof","birear_side_R"]}],
+        ["btt9r", -0.43,  20.38, 2.79],
+        ["btt9l",  0.43,  20.38, 2.79],
+        ["btt9ll",  1.28,  20.38, 2.74{"group":["birear_roof","birear_side_L"]}],
+
+        ["btt11rr", -1.28,  21.60, 2.74{"group":["birear_roof","birear_side_R"]}],
+        ["btt11r", -0.43,  21.60, 2.79],
+        ["btt11l",  0.43,  21.60, 2.79],
+        ["btt11ll",  1.28,  21.60, 2.74{"group":["birear_roof","birear_side_L"]}],
+
+        ["btt14rr", -1.28,  23.46, 2.74{"group":["birear_roof","birear_side_R"]}],
+        ["btt14r", -0.43,  23.46, 2.79],
+        ["btt14l",  0.43,  23.46, 2.79],
+        ["btt14ll",  1.28,  23.46, 2.74{"group":["birear_roof","birear_side_L"]}],
+		
+        //rigidifier
+        {"group":""},
+        ["btt1", 0, 18.2, 1.8,{"collision":false,"selfCollision":false}],
+        ["btt2", 0, 23, 1.8,{"collision":false,"selfCollision":false}],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--ROOF--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.2},
+        {"beamSpring":10001000,"beamDamp":1000},
+        {"beamDeform":40000,"beamStrength":1950000},
+        //roof side main shape
+        //L
+        ["btt5ll", "bst5ll"],
+        ["btt7ll", "bst7ll"],
+        ["btt9ll", "bst9ll"],
+        ["btt11ll", "bst11ll"],
+        ["btt14ll", "bst14ll"],
+        ["btt5ll", "btt7ll"],
+        ["btt7ll", "btt9ll"],
+        ["btt9ll", "btt11ll"],
+        ["btt11ll", "btt14ll"],
+        ["btt14ll", "btt16ll"],
+        //R
+        ["btt5rr", "bst5rr"],
+        ["btt7rr", "bst7rr"],
+        ["btt9rr", "bst9rr"],
+        ["btt11rr", "bst11rr"],
+        ["btt14rr", "bst14rr"],
+        ["btt5rr", "btt7rr"],
+        ["btt7rr", "btt9rr"],
+        ["btt9rr", "btt11rr"],
+        ["btt11rr", "btt14rr"],
+        ["btt14rr", "btt16rr"],
+        //roof side crossing
+        {"beamSpring":4001000,"beamDamp":500},
+        {"beamDeform":45000,"beamStrength":925000},
+        //L
+        ["bst5ll", "btt7ll"],
+        ["bst7ll", "btt5ll"],
+        ["bst7ll", "btt9ll"],
+        ["bst9ll", "btt7ll"],
+        ["bst9ll", "btt11ll"],
+        ["bst11ll", "btt9ll"],
+        ["bst11ll", "btt14ll"],
+        ["bst14ll", "btt11ll"],
+        ["bst14ll", "btt16ll"],
+        //R
+        ["bst5rr", "btt7rr"],
+        ["bst7rr", "btt5rr"],
+        ["bst7rr", "btt9rr"],
+        ["bst9rr", "btt7rr"],
+        ["bst9rr", "btt11rr"],
+        ["bst11rr", "btt9rr"],
+        ["bst11rr", "btt14rr"],
+        ["bst14rr", "btt11rr"],
+        ["bst14rr", "btt16rr"],
+
+        //roof top main shape
+        {"beamSpring":10001000,"beamDamp":1000},
+        {"beamDeform":40000,"beamStrength":1950000},
+        //L
+        ["btt5l", "btt7l"],
+        ["btt7l", "btt9l"{"deformGroup":"intdisplay_R","deformationTriggerRatio":0.05}],
+        ["btt9l", "btt11l"],
+        ["btt11l", "btt14l"],
+        ["btt14l", "btt16l"],
+        ["btt5ll", "btt5l"],
+        ["btt7ll", "btt7l"],
+        ["btt9ll", "btt9l"],
+        ["btt11ll", "btt11l"],
+        ["btt14ll", "btt14l"],
+        //R
+        ["btt5r", "btt7r"],
+        ["btt7r", "btt9r"{"deformGroup":"intdisplay_R","deformationTriggerRatio":0.05}],
+        ["btt9r", "btt11r"],
+        ["btt11r", "btt14r"],
+        ["btt14r", "btt16r"],
+        ["btt5rr", "btt5r"],
+        ["btt7rr", "btt7r"],
+        ["btt9rr", "btt9r"],
+        ["btt11rr", "btt11r"],
+        ["btt14rr", "btt14r"],
+
+        //roof top crossing
+        {"beamSpring":4001000,"beamDamp":500},
+        {"beamDeform":45000,"beamStrength":925000},
+        ["btt5ll", "btt7l"],
+        ["btt7ll", "btt5l"],
+        ["btt7ll", "btt9l"],
+        ["btt9ll", "btt7l"],
+        ["btt9ll", "btt11l"],
+        ["btt11ll", "btt9l"],
+        ["btt11ll", "btt14l"],
+        ["btt14ll", "btt11l"],
+        ["btt14ll", "btt16l"],
+        ["btt16ll", "btt14l"],
+        //R
+        ["btt5rr", "btt7r"],
+        ["btt7rr", "btt5r"],
+        ["btt7rr", "btt9r"],
+        ["btt9rr", "btt7r"],
+        ["btt9rr", "btt11r"],
+        ["btt11rr", "btt9r"],
+        ["btt11rr", "btt14r"],
+        ["btt14rr", "btt11r"],
+        ["btt14rr", "btt16r"],
+        ["btt16rr", "btt14r"],
+
+        //roof top center main shape
+        {"beamSpring":10001000,"beamDamp":1000},
+        {"beamDeform":40000,"beamStrength":1950000},
+        ["btt5l", "btt5r"],
+        ["btt7l", "btt7r"{"deformGroup":"intdisplay_R","deformationTriggerRatio":0.05}],
+        ["btt9l", "btt9r"{"deformGroup":"intdisplay_R","deformationTriggerRatio":0.05}],
+        ["btt11l", "btt11r"],
+        ["btt14l", "btt14r"],
+        {"beamSpring":4001000,"beamDamp":500},
+        {"beamDeform":45000,"beamStrength":925000},
+        //roof top center crossing
+        ["btt5l", "btt7r"],
+        ["btt7l", "btt5r"],
+        ["btt7l", "btt9r"{"deformGroup":"intdisplay_R","deformationTriggerRatio":0.05}],
+        ["btt9l", "btt7r"{"deformGroup":"intdisplay_R","deformationTriggerRatio":0.05}],
+        ["btt9l", "btt11r"],
+        ["btt11l", "btt9r"],
+        ["btt11l", "btt14r"],
+        ["btt14l", "btt11r"],
+        ["btt14l", "btt16r"],
+        ["btt16l", "btt14r"],
+
+        //corner reinf
+        {"beamSpring":3001000,"beamDamp":500},
+        {"beamDeform":8000,"beamStrength":"FLT_MAX"},
+        {"deformationTriggerRatio":0.025},
+        //roof center to roof lower side
+        {"deformLimitExpansion":""},
+        ["btt5l", "bst5ll"{"deformGroup":["wallglass_8_L_break","wallglass_9_L_break"]}],
+        ["btt7l", "bst7ll"{"deformGroup":["wallglass_9_L_break","wallglass_10_L_break"]}],
+        ["btt9l", "bst9ll"{"deformGroup":["wallglass_10_L_break","wallglass_11_L_break"]}],
+        ["btt11l", "bst11ll"{"deformGroup":["wallglass_11_L_break","wallglass_12_L_break"]}],
+        ["btt14l", "bst14ll"{"deformGroup":["wallglass_12_L_break","wallglass_13_L_break"]}],
+        ["btt5r", "bst5rr"{"deformGroup":["wallglass_8_R_break","wallglass_9_R_break"]}],
+        ["btt7r", "bst7rr"{"deformGroup":["wallglass_9_R_break","wallglass_10_R_break"]}],
+        ["btt9r", "bst9rr"{"deformGroup":"wallglass_10_R_break"}],
+        ["btt11r", "bst11rr"{"deformGroup":"wallglass_11_R_break"}],
+        ["btt14r", "bst14rr"{"deformGroup":["wallglass_12_R_break","wallglass_13_R_break"]}],
+        //roof center to opposite lower side
+        //L
+        ["btt5l", "bst5rr"],
+        ["btt7l", "bst7rr"],
+        ["btt9l", "bst9rr"],
+        ["btt11l", "bst11rr"],
+        ["btt14l", "bst14rr"],
+        //R
+        ["btt5r", "bst5ll"],
+        ["btt7r", "bst7ll"],
+        ["btt9r", "bst9ll"],
+        ["btt11r", "bst11ll"],
+        ["btt14r", "bst14ll"],
+
+        //window center nodes to roof center
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        //L
+        ["bst6ll", "btt7l"{"deformGroup":"wallglass_10_L_break"}],
+        ["bst6ll", "btt5l"{"deformGroup":"wallglass_10_L_break"}],
+        ["bst8ll", "btt7l"{"deformGroup":"wallglass_11_L_break"}],
+        ["bst8ll", "btt9l"{"deformGroup":"wallglass_11_L_break"}],
+
+        ["bst13ll", "btt11l"{"deformGroup":"wallglass_12_L_break"}],
+        ["bst13ll", "btt14l"{"deformGroup":"wallglass_12_L_break"}],
+        ["bst15ll", "btt14l"{"deformGroup":"wallglass_13_L_break"}],
+        ["bst15ll", "btt16l"{"deformGroup":"wallglass_13_L_break"}],
+
+        //R
+        ["bst6rr", "btt7r"{"deformGroup":"wallglass_10_R_break"}],
+        ["bst6rr", "btt5r"{"deformGroup":"wallglass_10_R_break"}],
+        ["bst8rr", "btt7r"{"deformGroup":"wallglass_11_R_break"}],
+        ["bst8rr", "btt9r"{"deformGroup":"wallglass_11_R_break"}],
+
+        ["bst13rr", "btt11r"{"deformGroup":"wallglass_12_R_break"}],
+        ["bst13rr", "btt14r"{"deformGroup":"wallglass_12_R_break"}],
+        ["bst15rr", "btt14r"{"deformGroup":"wallglass_13_R_break"}],
+        ["bst15rr", "btt16r"{"deformGroup":"wallglass_13_R_break"}],
+
+        {"deformLimitExpansion":1.2},
+        //window center nodes to roof side
+        {"beamDeform":25000,"beamStrength":"FLT_MAX"},
+        //L
+        ["bst6ll", "btt5ll"],
+        ["bst6ll", "btt7ll"],
+        ["bst8ll", "btt7ll"],
+        ["bst8ll", "btt9ll"],
+        ["bst13ll", "btt11ll"],
+        ["bst13ll", "btt14ll"],
+        ["bst15ll", "btt14ll"],
+        ["bst15ll", "btt16ll"],
+        //R
+        ["bst6rr", "btt5rr"],
+        ["bst6rr", "btt7rr"],
+        ["bst8rr", "btt7rr"],
+        ["bst8rr", "btt9rr"],
+        ["bst13rr", "btt11rr"],
+        ["bst13rr", "btt14rr"],
+        ["bst15rr", "btt14rr"],
+        ["bst15rr", "btt16rr"],
+
+        //roof lengthwise rigids
+        {"beamSpring":4001000,"beamDamp":500},
+
+        {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+        ["btt5ll", "btt9ll"],
+        ["btt7ll", "btt11ll"],
+        ["btt9ll", "btt14ll"],
+        ["btt11ll", "btt16ll"],
+        ["btt14ll", "btt17ll"],
+
+        ["btt5rr", "btt9rr"],
+        ["btt7rr", "btt11rr"],
+        ["btt9rr", "btt14rr"],
+        ["btt11rr", "btt16rr"],
+        ["btt14rr", "btt17rr"],
+
+        //widthwise rigids
+        {"beamDeform":6000,"beamStrength":"FLT_MAX"},
+        ["btt5ll", "btt5r"],
+        ["btt7ll", "btt7r"],
+        ["btt9ll", "btt9r"],
+        ["btt11ll", "btt11r"],
+        ["btt14ll", "btt14r"],
+
+        ["btt5rr", "btt5l"],
+        ["btt7rr", "btt7l"],
+        ["btt9rr", "btt9l"],
+        ["btt11rr", "btt11l"],
+        ["btt14rr", "btt14l"],
+
+        //roof side to pillar rigids
+        {"beamSpring":3001000,"beamDamp":500},
+        {"beamDeform":8000,"beamStrength":"FLT_MAX"},
+        //L
+        ["btt5ll", "bsm5ll"],
+        ["btt7ll", "bsm7ll"],
+        ["btt9ll", "bsm9ll"],
+        ["btt11ll", "bsm11ll"],
+        ["btt14ll", "bfs14ll"],
+        ["btt16ll", "bsm16ll"],
+        ["btt18ll", "bsm18ll"],
+
+        //R
+        ["btt5rr", "bsm5rr"],
+        ["btt7rr", "bsm7rr"],
+        ["btt9rr", "bsm9rr"],
+        ["btt11rr", "bsm11rr"],
+        ["btt14rr", "bfs14rr"],
+        ["btt16rr", "bsm16rr"],
+        ["btt18rr", "bsm18rr"],
+
+        {"beamDeform":3000,"beamStrength":"FLT_MAX"},
+        ["bsp5ll", "btt5ll"],
+        ["bsp7ll", "btt7ll"],
+        ["bsp9ll", "btt9ll"],
+        ["bsp11ll", "btt11ll"],
+        ["bsp14ll", "btt14ll"],
+
+        ["bsp5rr", "btt5rr"],
+        ["bsp7rr", "btt7rr"],
+        ["bsp9rr", "btt9rr"],
+        ["bsp11rr", "btt11rr"],
+        ["bsp14rr", "btt14rr"],
+
+        //roof rigidifier
+        {"deformLimitExpansion":""},
+        {"beamSpring":3001000,"beamDamp":500},
+        {"beamDeform":3000,"beamStrength":40000},
+        ["btt1", "btt5ll"],
+        ["btt1", "btt5l"],
+        ["btt1", "btt5r"],
+        ["btt1", "btt5rr"],
+        ["btt1", "btt7ll"],
+        ["btt1", "btt7l"],
+        ["btt1", "btt7r"],
+        ["btt1", "btt7rr"],
+        ["btt1", "btt9ll"],
+        ["btt1", "btt9l"],
+        ["btt1", "btt9r"],
+        ["btt1", "btt9rr"],
+        ["btt1", "btt11ll"],
+        ["btt1", "btt11l"],
+        ["btt1", "btt11r"],
+        ["btt1", "btt11rr"],
+
+        ["btt2", "btt9ll"],
+        ["btt2", "btt9l"],
+        ["btt2", "btt9r"],
+        ["btt2", "btt9rr"],
+        ["btt2", "btt11ll"],
+        ["btt2", "btt11l"],
+        ["btt2", "btt11r"],
+        ["btt2", "btt11rr"],
+        ["btt2", "btt14ll"],
+        ["btt2", "btt14l"],
+        ["btt2", "btt14r"],
+        ["btt2", "btt14rr"],
+        {"beamStrength":50000},
+        ["btt2", "btt16ll"],
+        ["btt2", "btt16l"],
+        ["btt2", "btt16r"],
+        ["btt2", "btt16rr"],
+
+        ["btt1", "btt2"{"beamDeform":10000,"beamStrength":"FLT_MAX"}],
+        {"deformLimitExpansion":1.2},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":15},
+        {"groundModel":"metal"},
+		
+		//biarticulated roof side
+        //L
+        ["btt5ll", "bst5ll", "bst6ll"],
+        ["bst6ll", "btt7ll", "btt5ll"],
+        ["bst6ll", "bst7ll", "btt7ll"],
+        ["btt7ll", "bst7ll", "bst8ll"],
+        ["bst8ll", "btt9ll", "btt7ll"],
+        ["bst8ll", "bst9ll", "btt9ll"],
+        ["btt9ll", "bst9ll", "bst11ll"],
+        ["bst11ll", "btt11ll", "btt9ll"],
+        ["btt11ll", "bst11ll", "bst13ll"],
+        ["bst13ll", "btt14ll", "btt11ll"],
+        ["bst13ll", "bst14ll", "btt14ll"],
+        ["btt14ll", "bst14ll", "bst15ll"],
+        ["bst15ll", "btt16ll", "btt14ll"],
+        //R
+        ["bst5rr", "btt5rr", "bst6rr"],
+        ["btt7rr", "bst6rr", "btt5rr"],
+        ["bst7rr", "bst6rr", "btt7rr"],
+        ["bst7rr", "btt7rr", "bst8rr"],
+        ["btt9rr", "bst8rr", "btt7rr"],
+        ["bst9rr", "bst8rr", "btt9rr"],
+        ["bst9rr", "btt9rr", "bst11rr"],
+        ["btt11rr", "bst11rr", "btt9rr"],
+        ["bst11rr", "btt11rr", "bst13rr"],
+        ["btt14rr", "bst13rr", "btt11rr"],
+        ["bst14rr", "bst13rr", "btt14rr"],
+        ["bst14rr", "btt14rr", "bst15rr"],
+        ["btt16rr", "bst15rr", "btt14rr"],
+
+        //top
+        ["btt5r", "btt5l", "btt7l"],
+        ["btt7l", "btt7r", "btt5r"],
+        ["btt7r", "btt7l", "btt9l"],
+        ["btt9l", "btt9r", "btt7r"],
+        ["btt9r", "btt9l", "btt11l"],
+        ["btt11l", "btt11r", "btt9r"],
+        ["btt11r", "btt11l", "btt14l"],
+        ["btt14l", "btt14r", "btt11r"],
+        ["btt14r", "btt14l", "btt16l"],
+        ["btt16l", "btt16r", "btt14r"],
+        //L
+        ["btt5l", "btt5ll", "btt7ll"],
+        ["btt7ll", "btt7l", "btt5l"],
+        ["btt7l", "btt7ll", "btt9ll"],
+        ["btt9ll", "btt9l", "btt7l"],
+        ["btt9l", "btt9ll", "btt11ll"],
+        ["btt11ll", "btt11l", "btt9l"],
+        ["btt11l", "btt11ll", "btt14ll"],
+        ["btt14ll", "btt14l", "btt11l"],
+        ["btt14l", "btt14ll", "btt16ll"],
+        ["btt16ll", "btt16l", "btt14l"],
+        //R
+        ["btt5rr", "btt5r", "btt7rr"],
+        ["btt7r", "btt7rr", "btt5r"],
+        ["btt7rr", "btt7r", "btt9rr"],
+        ["btt9r", "btt9rr", "btt7r"],
+        ["btt9rr", "btt9r", "btt11rr"],
+        ["btt11r", "btt11rr", "btt9r"],
+        ["btt11rr", "btt11r", "btt14rr"],
+        ["btt14r", "btt14rr", "btt11r"],
+        ["btt14rr", "btt14r", "btt16rr"],
+        ["btt16r", "btt16rr", "btt14r"],
+    ],
+},
+}

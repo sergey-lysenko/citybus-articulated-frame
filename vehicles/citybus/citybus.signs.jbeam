@@ -1,0 +1,97 @@
+{
+"citybus_articulated_sign_S": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Side Destination Sign",
+        "value":800,
+    }
+    "slotType" : "citybus_articulated_sign_S",
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["citybus_articulated_destinationsign_S", ["citybus_side_R"]],
+    ],
+    "destsign":{
+        "destMaterialName": "@busDestinationDsp", 
+        "destHtmlPath": "local://local/vehicles/citybus/display/citybusDestinationDisplay.html",
+        "destTextureWidth": 512, 
+        "destTextureHeight": 32, 
+        "destRoute": "[BUS]", 
+        "destText":"Not in Service"
+    }
+},
+"citybus.sign.articulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Rear Destination Sign",
+        "value":400,
+    }
+    "slotType" : "citybus.sign.articulated",
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["acitybus_destinationsign_R_frame", ["rear_frame_upper"]],
+        {"deformGroup":"sign_R_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg"},
+        ["acitybus_destinationsign_R_glass", ["rear_frame_upper"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+        {"deformGroup":"sign_R_break", "deformMaterialBase":"citybus_sign", "deformMaterialDamaged":"citybus_sign_dmg"},
+        ["acitybus_destinationsign_R_display", ["rear_frame_upper"]],
+        {"deformGroup":""},
+    ],
+    "destsign":{
+        "destMaterialName": "@busDestinationDsp", 
+        "destHtmlPath": "local://local/vehicles/citybus/display/citybusDestinationDisplay.html",
+        "destTextureWidth": 512, 
+        "destTextureHeight": 32, 
+        "destRoute": "[BUS]", 
+        "destText":"Not in Service"
+    }
+},
+"citybus.sign.biarticulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA Rear Destination Sign",
+        "value":400,
+    }
+    "slotType" : "citybus.sign.biarticulated",
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["bcitybus_destinationsign_R_frame", ["birear_frame_upper"]],
+        {"deformGroup":"sign_B_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg"},
+        ["bcitybus_destinationsign_R_glass", ["birear_frame_upper"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+        {"deformGroup":"sign_B_break", "deformMaterialBase":"citybus_sign", "deformMaterialDamaged":"citybus_sign_dmg"},
+        ["bcitybus_destinationsign_R_display", ["birear_frame_upper"]],
+        {"deformGroup":""},
+    ],
+    "destsign":{
+        "destMaterialName": "@busDestinationDsp", 
+        "destHtmlPath": "local://local/vehicles/citybus/display/citybusDestinationDisplay.html",
+        "destTextureWidth": 512, 
+        "destTextureHeight": 32, 
+        "destRoute": "[BUS]", 
+        "destText":"Not in Service"
+    }
+},
+"citybus.sign.triarticulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"TA Rear Destination Sign",
+        "value":400,
+    }
+    "slotType" : "citybus.sign.triarticulated",
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["ccitybus_destinationsign_R_frame", ["trirear_frame_upper"]],
+        {"deformGroup":"sign_B_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg"},
+        ["ccitybus_destinationsign_R_glass", ["trirear_frame_upper"],[]{"deformSound":"GlassBreakSound1", "deformVolume":0.7}],
+        {"deformGroup":"sign_B_break", "deformMaterialBase":"citybus_sign", "deformMaterialDamaged":"citybus_sign_dmg"},
+        ["ccitybus_destinationsign_R_display", ["trirear_frame_upper"]],
+        {"deformGroup":""},
+    ],
+    "destsign":{
+        "destMaterialName": "@busDestinationDsp", 
+        "destHtmlPath": "local://local/vehicles/citybus/display/citybusDestinationDisplay.html",
+        "destTextureWidth": 512, 
+        "destTextureHeight": 32, 
+        "destRoute": "[BUS]", 
+        "destText":"Not in Service"
+    }
+},
+}

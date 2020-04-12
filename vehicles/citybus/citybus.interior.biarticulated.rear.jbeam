@@ -1,0 +1,24 @@
+{
+"citybus.interior.biarticulated.rear": {
+    "information":{
+        "authors":"slysenko",
+        "name":"BA Rear Interior",
+        "value":0,
+    }
+    "slotType" : "citybus.interior.biarticulated.rear",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus.seats.biarticulated.rear","citybus.seats.biarticulated.rear","Seats"],
+    ],
+    "flexbodies":[
+    ],
+     "props": [
+    ],
+    "nodes": [
+    ],
+    "beams": [
+    ],
+    "triangles": [
+    ],
+},
+}

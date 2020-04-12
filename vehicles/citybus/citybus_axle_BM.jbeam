@@ -1,0 +1,281 @@
+{
+"citybus_axle_BM": { //based on citybus_axle_R
+    "information":{
+        "authors":"BeamNG",
+        "name":"Unpowered Live Axle",
+        "value":9500,
+    },
+    "slotType" : "citybus_axle_BM",
+    "slots": [
+        ["type", "default", "description"],
+        ["citybus_brake_B","citybus_brake_B","Brakes"],
+        ["citybus_wheel_B","citybus_wheel_B", "Wheels"],
+        ["citybus_wheeldata_B","citybus_wheeldata_B", "Spindles"{"coreSlot":true}],
+        ["citybus_shock_B","citybus_shock_B","Shocks"],
+        ["citybus_airbag_B","citybus_airbag_B","Airbags"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["bcitybus_axle_B", ["citybus_axle_B"]],
+        ["bcitybus_lowerarm_B", ["citybus_lowerarm_B"]],
+        ["bcitybus_upperarm_B", ["citybus_upperarm_B"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR LIVE AXLE--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":75},
+        {"group":"citybus_axle_B"},
+        ["bax1", 0.0, 23.12, 0.444{"group":["citybus_axle_B","citybus_lowerarm_B"]}],
+        ["bax2", 0.0, 23.6, 0.444],
+        ["bax3", 0.0, 23.36, 0.72{"selfCollision":false,"group":["citybus_axle_B","citybus_upperarm_B"]}],
+        ["bax4", 0.0, 23.36, 0.22],
+
+        {"nodeWeight":35},
+        ["bax1l",  0.80, 23.12, 0.444],
+        ["bax1r", -0.80, 23.12, 0.444],
+        ["bax2l",  0.80, 23.6, 0.444],
+        ["bax2r", -0.80, 23.6, 0.444],
+
+        ["bax3l",  0.80, 23.36, 0.68],
+        ["bax3r", -0.80, 23.36, 0.68],
+        ["bax4l",  0.80, 23.36, 0.22{"group":["citybus_axle_B","citybus_lowerarm_B"]}],
+        ["bax4r", -0.80, 23.36, 0.22{"group":["citybus_axle_B","citybus_lowerarm_B"]}],
+
+        //axle air bag mounts
+        {"selfCollision":false},
+        {"group":["citybus_airbags_B","citybus_axle_B"]},
+        ["bab1l",  0.6, 22.55, 0.36],
+        ["bab1r", -0.6, 22.55, 0.36],
+        ["bab2l",  0.6, 24.16, 0.36],
+        ["bab2r", -0.6, 24.16, 0.36],
+
+        {"group":["citybus_airbags_B","citybus_frame"]},
+        ["bab3l",  0.6, 22.55, 0.59],
+        ["bab3r", -0.6, 22.55, 0.59],
+        ["bab4l",  0.6, 24.16, 0.59],
+        ["bab4r", -0.6, 24.16, 0.59],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR LIVE AXLE--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.1},
+        {"beamSpring":60001000,"beamDamp":1000},
+        {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+        //axle main shape
+        ["bax1", "bax2"],
+        ["bax3", "bax4"],
+        ["bax1", "bax4"],
+        ["bax4", "bax2"],
+        ["bax3", "bax2"],
+        ["bax3", "bax1"],
+
+        //L
+        ["bax3l", "bax4l"],
+        ["bax3l", "bax3"],
+        ["bax4l", "bax4"],
+        ["bax3l", "bax1"],
+        ["bax4l", "bax1"],
+        ["bax4l", "bax2"],
+        ["bax3l", "bax2"],
+
+        ["bax1l", "bax1"],
+        ["bax2l", "bax2"],
+        ["bax1l", "bax3"],
+        ["bax1l", "bax4"],
+        ["bax2l", "bax3"],
+        ["bax2l", "bax4"],
+        //R
+        ["bax3r", "bax4r"],
+        ["bax3r", "bax3"],
+        ["bax4r", "bax4"],
+        ["bax3r", "bax1"],
+        ["bax4r", "bax1"],
+        ["bax3r", "bax2"],
+        ["bax4r", "bax2"],
+
+        ["bax1r", "bax1"],
+        ["bax2r", "bax2"],
+        ["bax1r", "bax3"],
+        ["bax1r", "bax4"],
+        ["bax2r", "bax3"],
+        ["bax2r", "bax4"],
+
+        //beam rigid
+        {"beamSpring":40001000,"beamDamp":1000},
+        ["bax3r", "bax3l"],
+        ["bax4r", "bax4l"],
+
+        {"beamSpring":60001000,"beamDamp":1000},
+        //airbag mount cross beam
+        //L
+        ["bab1l", "bax1l"],
+        ["bab1l", "bax4l"],
+        ["bab1l", "bax3l"],
+        ["bab1l", "bax4"],
+        ["bab1l", "bax1"],
+        ["bab1l", "bax3"],
+
+        ["bab2l", "bax2l"],
+        ["bab2l", "bax4l"],
+        ["bab2l", "bax3l"],
+        ["bab2l", "bax4"],
+        ["bab2l", "bax2"],
+        ["bab2l", "bax3"],
+        //R
+        ["bab1r", "bax1r"],
+        ["bab1r", "bax4r"],
+        ["bab1r", "bax3r"],
+        ["bab1r", "bax4"],
+        ["bab1r", "bax1"],
+        ["bab1r", "bax3"],
+
+        ["bab2r", "bax2r"],
+        ["bab2r", "bax4r"],
+        ["bab2r", "bax3r"],
+        ["bab2r", "bax4"],
+        ["bab2r", "bax2"],
+        ["bab2r", "bax3"],
+
+        //airbag to frame mounts
+        {"beamSpring":40001000,"beamDamp":2000},
+        //L
+        ["bab3l", "bfm13l"],
+        ["bab3l", "bfm11l"],
+        ["bab3l", "bfm13r"],
+        ["bab3l", "bfm11r"],
+        ["bab3l", "bfs13l"],
+        ["bab3l", "bfs13r"],
+
+        ["bab4l", "bfs16l"],
+        ["bab4l", "bfm16l"],
+        ["bab4l", "bfs15l"],
+        ["bab4l", "bfs15r"],
+        ["bab4l", "bfs16r"],
+        //R
+        ["bab3r", "bfm13r"],
+        ["bab3r", "bfm11r"],
+        ["bab3r", "bfm13l"],
+        ["bab3r", "bfm11l"],
+        ["bab3r", "bfs13r"],
+        ["bab3r", "bfs13l"],
+
+        ["bab4r", "bfs16r"],
+        ["bab4r", "bfm16r"],
+        ["bab4r", "bfs15r"],
+        ["bab4r", "bfs15l"],
+        ["bab4r", "bfs16l"],
+
+        //wheel hubs
+        {"beamSpring":100001000,"beamDamp":5000},
+        ["bax4l", "bax1l"],
+        ["bax4l", "bax2l"],
+        ["bax3l", "bax1l"],
+        ["bax3l", "bax2l"],
+
+        ["bax4r", "bax1r"],
+        ["bax4r", "bax2r"],
+        ["bax3r", "bax1r"],
+        ["bax3r", "bax2r"],
+
+        //suspension links
+        {"beamSpring":50001000,"beamDamp":10000},
+        {"beamDeform":250000,"beamStrength":2925000},
+        ["bax4l", "bfm13l",{"dampCutoffHz":500}],
+        ["bax4r", "bfm13r",{"dampCutoffHz":500}],
+        ["bax3", "bfs13l",{"dampCutoffHz":500}],
+        ["bax3", "bfs13r",{"dampCutoffHz":500}],
+
+        //rear wheel to axle
+        {"beamSpring":40001000,"beamDamp":500},
+        {"beamDeform":200000,"beamStrength":2000000},
+        //L
+        {"optional":true},
+        {"breakGroup":"wheel_BL"},
+        ["brw1l","bax3l"{"name":"axle_BL"}],
+        ["brw1l","bax4l"],
+        ["brw1l","bax1l"],
+        ["brw1l","bax2l"],
+        ["brw1ll","bax3l"],
+        ["brw1ll","bax4l"],
+        ["brw1ll","bax1l"],
+        ["brw1ll","bax2l"],
+        //L
+        {"breakGroup":"wheel_BR"},
+        ["brw1r","bax3r"{"name":"axle_BR"}],
+        ["brw1r","bax4r"],
+        ["brw1r","bax1r"],
+        ["brw1r","bax2r"],
+        ["brw1rr","bax3r"],
+        ["brw1rr","bax4r"],
+        ["brw1rr","bax1r"],
+        ["brw1rr","bax2r"],
+        {"breakGroup":""},
+        {"optional":false},
+
+        //--AXLE TO FRAME DAMP--
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":0,"beamDamp":15000,"beamDeform":200000,"beamStrength":350000},
+        {"beamLimitSpring":0,"beamLimitDamp":0},
+        //["bax3l", "bfm11l",{"dampCutoffHz":500}],
+        //["bax4l", "bfm11l",{"dampCutoffHz":500}],
+        //["bax3l", "bfm16l",{"dampCutoffHz":500}],
+        //["bax4l", "bfm16l",{"dampCutoffHz":500}],
+        //
+        //["bax3r", "bfm11r",{"dampCutoffHz":500}],
+        //["bax4r", "bfm11r",{"dampCutoffHz":500}],
+        //["bax3r", "bfm16r",{"dampCutoffHz":500}],
+        //["bax4r", "bfm16r",{"dampCutoffHz":500}],
+        //
+        //["bax3l", "bfs14r",{"dampCutoffHz":500}],
+        //["bax3r", "bfs14l",{"dampCutoffHz":500}],
+
+        //axle articulation hard limit
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":20001000,"beamDamp":1000},
+        {"beamDeform":250000,"beamStrength":850000},
+        {"beamPrecompression":0.77},
+        ["bax4l", "bfs14l"],
+        ["bax4r", "bfs14r"],
+        {"beamPrecompression":1},
+
+        //crash limiters
+        {"beamSpring":10001000,"beamDamp":500},
+        {"beamPrecompression":0.8},
+        ["bax4l", "bfs14lll"],
+        ["bax4l", "bfs14ll"],
+        ["bax4r", "bfs14rrr"],
+        ["bax4r", "bfs14rr"],
+
+        //crash lateral limiters
+        {"beamPrecompression":0.85},
+        ["bax3l", "bfs13r"],
+        ["bax3l", "bfs15r"],
+        ["bax3r", "bfs13l"],
+        ["bax3r", "bfs15l"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":0},
+        {"groundModel":"metal"},
+        {"triangleType":"NONCOLLIDABLE"},
+        ["bax2", "bax4", "bax1"],
+        ["bax1", "bax3", "bax2"],
+        ["bax4r", "bax1r", "bax3r"],
+        ["bax3r", "bax2r", "bax4r"],
+        ["bax3l", "bax1l", "bax4l"],
+        ["bax4l", "bax2l", "bax3l"],
+        ["bax4l", "bab2l", "bax2l"],
+        ["bab1l", "bax4l", "bax1l"],
+        ["bab2r", "bax4r", "bax2r"],
+        ["bax4r", "bab1r", "bax1r"],
+        {"triangleType":"NORMALTYPE"},
+    ],
+}
+}

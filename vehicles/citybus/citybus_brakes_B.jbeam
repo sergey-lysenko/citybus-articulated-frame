@@ -1,0 +1,37 @@
+{
+"citybus_brake_B": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Biarticulated Brakes",
+        "value":2200,
+    }
+    "slotType" : "citybus_brake_B",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_B","brakepad_B_premium", "Articulated Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //brake drums
+         ["bcitybus_brakedrum_B", ["wheel_BL","wheel_BR","wheelhub_BR","wheelhub_BL"]],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brake properties
+        {"brakeTorque":16000},
+        {"parkingTorque":0},
+        {"brakeSpring":200},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.35},
+        {"brakeMass":55},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.2},
+    ],
+    "engine":{
+        "brakePressureDelay":0.6,
+    },
+}
+}

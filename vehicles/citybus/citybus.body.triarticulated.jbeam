@@ -1,0 +1,17 @@
+{
+"citybus.body.triarticulated": {
+    "information":{
+        "authors":"slysenko",
+        "name":"TA Body",
+        "value":0,
+    }
+    "slotType" : "citybus.body.triarticulated",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus.body.articulated.front",     "citybus.body.articulated.front",    "Front"],
+        ["citybus.body.biarticulated.middle",  "citybus.body.biarticulated.middle", "Second"],
+        ["citybus.body.triarticulated.middle", "citybus.body.triarticulated.middle", "Third"],
+        ["citybus.body.triarticulated.rear",   "citybus.body.triarticulated.rear",  "Rear"],
+    ],
+},
+}

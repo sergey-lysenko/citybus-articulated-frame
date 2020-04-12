@@ -1,0 +1,111 @@
+{
+"citybus.exhaust.articulated": { // based on citybus_exhaust
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Single Exhaust",
+        "value":2200,
+    }
+    "slotType" : "citybus.exhaust.articulated",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["acitybus_exhaust", ["citybus_articulated_exhaust"]],
+    ],
+    //"mainEngine":{
+    //    "torqueModExhaust":[
+    //        ["rpm", "torque"],
+    //        [0,        0],
+    //        [1000, -4   ],
+    //        [2000, -9.2 ],
+    //        [3000, -13.6],
+    //        [4000, -17.2],
+    //        [5000, -25.2],
+    //        [6000, -32.0],
+    //        [7000, -44.0],
+    //        [8000, -55.0],
+    //    ],
+    //},
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true}
+         //--Exhaust-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":2.0},
+         {"group":"citybus_articulated_exhaust"},
+         ["aex1",1.07, 16.065, 2.94, {"afterFireAudioCoef":0,"afterFireVisualCoef":0}],
+         {"selfCollision":false}
+         {"collision":false}
+         ["aex2",1.15, 16.0, 2.73],
+         ["aex3",0.99, 16.0, 2.73],
+         ["aex4",1.15, 15.8, 2.73],
+         ["aex5",0.99, 15.8, 2.73],
+         ["aex6",1.07, 15.97, 2.0],
+         {"group":""},
+         ["aex7",1.07, 15.75, 2.88],
+         //rigidifier
+         {"selfCollision":false}
+         {"collision":false}
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          //--EXHAUST--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"deformLimitExpansion":1.1},
+          {"beamSpring":1501000,"beamDamp":250},
+          {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+          ["aex1", "aex5"],
+          ["aex1", "aex3"],
+          ["aex1", "aex2"],
+          ["aex1", "aex4"],
+          ["aex2", "aex3"],
+          ["aex1", "aex7",{"isExhaust":true}],
+          ["aex7", "aex5"],
+          ["aex7", "aex4"],
+          ["aex7", "aex3"],
+          ["aex7", "aex2"],
+          ["aex7", "aex6",{"isExhaust":true}],
+          ["aex1", "aex6"],
+
+          ["aex3", "aex5"],
+          ["aex5", "aex4"],
+          ["aex4", "aex2"],
+          ["aex2", "aex5"],
+          ["aex3", "aex4"],
+          ["aex4", "att17ll"],
+          ["aex2", "att17ll"],
+          ["aex4", "att18ll"],
+          ["aex5", "att17ll"],
+          ["aex3", "att18ll"],
+          ["aex3", "att18l"],
+          ["aex4", "ast17ll"],
+          ["aex5", "ast17ll"],
+          ["aex3", "ast17ll"],
+          ["aex2", "ast17ll"],
+          ["aex2", "asp18l"],
+
+          ["aex5", "aex6"],
+          ["aex4", "aex6"],
+          ["aex3", "aex6"],
+          ["aex2", "aex6"],
+          ["aex6", "asp18ll"],
+          ["aex6", "asp17ll"],
+
+          //support beams
+          {"beamPrecompression":0.95, "beamType":"|SUPPORT", "beamLongBound":15},
+          {"beamDeform":50000,"beamStrength":250000},
+          {"optional":true}
+          {"optional":false}
+          ["aex1", "asp18ll"],
+          ["aex1", "asp18l"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+          ["id1:","id2:","id3:"],
+          {"triangleType":"NONCOLLIDABLE"},
+          ["aex1", "aex2", "aex3"],
+          {"triangleType":"NORMALTYPE"},
+    ],
+}
+}

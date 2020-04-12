@@ -1,0 +1,37 @@
+{
+"citybus_brake_A": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Articulated Brakes",
+        "value":2200,
+    }
+    "slotType" : "citybus_brake_A",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_A","brakepad_A_premium", "Articulated Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //brake drums
+         ["acitybus_brakedrum_A", ["wheel_AL","wheel_AR","wheelhub_AR","wheelhub_AL"]],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brake properties
+        {"brakeTorque":16000},
+        {"parkingTorque":0},
+        {"brakeSpring":200},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.35},
+        {"brakeMass":55},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.2},
+    ],
+    "engine":{
+        "brakePressureDelay":0.6,
+    },
+}
+}

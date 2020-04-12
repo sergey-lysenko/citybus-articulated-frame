@@ -1,0 +1,150 @@
+{
+"citybus.glass.biarticulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA Glass",
+        "value":1400,
+    }
+    "slotType" : "citybus.glass.biarticulated",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["bcitybus_wallglass_3_L", ["birear_side_L"],[],{"deformGroup":"bwallglass_3_L_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound7", "deformVolume":0.6}],
+        ["bcitybus_wallglass_3_L_int", ["birear_side_L"],[],{"deformGroup":"bwallglass_3_L_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_3_R", ["birear_side_R"],[],{"deformGroup":"bwallglass_3_R_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound3", "deformVolume":0.6}],
+        ["bcitybus_wallglass_3_R_int", ["birear_side_R"],[],{"deformGroup":"bwallglass_3_R_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_4_L", ["birear_side_L"],[],{"deformGroup":"bwallglass_4_L_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound8", "deformVolume":0.6}],
+        ["bcitybus_wallglass_4_L_int", ["birear_side_L"],[],{"deformGroup":"bwallglass_4_L_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_4_R", ["birear_side_R"],[],{"deformGroup":"bwallglass_4_R_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound1", "deformVolume":0.6}],
+        ["bcitybus_wallglass_4_R_int", ["birear_side_R"],[],{"deformGroup":"bwallglass_4_R_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_5_L", ["birear_side_L"],[],{"deformGroup":"bwallglass_5_L_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound2", "deformVolume":0.6}],
+        ["bcitybus_wallglass_5_L_int", ["birear_side_L"],[],{"deformGroup":"bwallglass_5_L_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_6_L", ["birear_side_L"],[],{"deformGroup":"bwallglass_6_L_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound4", "deformVolume":0.6}],
+        ["bcitybus_wallglass_6_L_int", ["birear_side_L"],[],{"deformGroup":"bwallglass_6_L_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_6_R", ["birear_side_R"],[],{"deformGroup":"bwallglass_6_R_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound5", "deformVolume":0.6}],
+        ["bcitybus_wallglass_6_R_int", ["birear_side_R"],[],{"deformGroup":"bwallglass_6_R_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_7_L", ["birear_side_L"],[],{"deformGroup":"bwallglass_7_L_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound7", "deformVolume":0.6}],
+        ["bcitybus_wallglass_7_L_int", ["birear_side_L"],[],{"deformGroup":"bwallglass_7_L_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+
+        ["bcitybus_wallglass_7_R", ["birear_side_R"],[],{"deformGroup":"bwallglass_7_R_break", "deformMaterialBase":"citybus_glass", "deformMaterialDamaged":"citybus_glass_dmg","deformSound":"GlassBreakSound5", "deformVolume":0.6}],
+        ["bcitybus_wallglass_7_R_int", ["birear_side_R"],[],{"deformGroup":"bwallglass_7_R_break", "deformMaterialBase":"citybus_glass_int", "deformMaterialDamaged":"citybus_glass_int_dmg"}],
+        {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":true}
+        {"collision":true},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_GLASS"},
+        {"nodeWeight":4},
+        {"group":["gps","citybus_biarticulated_frontpanel"]},
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+
+        //--SIDE GLASS--
+        {"beamSpring":3001000,"beamDamp":100},
+        {"beamDeform":25000,"beamStrength":35000},
+        {"deformationTriggerRatio":0.03}
+        //L
+        {"breakGroup":"bwallglass_3_L_break","deformGroup":"bwallglass_3_L_break"},
+        ["bst5ll", "bsm7ll"],
+        ["bsm5ll", "bst7ll"],
+        ["bsp5ll", "bsp7ll"],
+        ["bsm6ll", "bst6ll"],
+        {"breakGroup":"bwallglass_4_L_break","deformGroup":"bwallglass_4_L_break"},
+        ["bst7ll", "bsm9ll"],
+        ["bsm7ll", "bst9ll"],
+        ["bsp7ll", "bsp9ll"],
+        ["bsm8ll", "bst8ll"],
+        {"breakGroup":"bwallglass_5_L_break","deformGroup":"bwallglass_5_L_break"},
+        ["bst9ll", "bsm11ll"],
+        ["bsm9ll", "bst11ll"],
+        ["bsm11ll", "bst9ll"],
+        ["bsp11ll", "bsp9ll"],
+        {"breakGroup":"bwallglass_6_L_break","deformGroup":"bwallglass_6_L_break"},
+        ["bsp11ll", "bsp14ll"],
+        ["bsm13ll", "bst13ll"],
+        ["bsm11ll", "bst14ll"],
+        ["bsm13ll", "bst11ll"],
+        {"breakGroup":"bwallglass_7_L_break","deformGroup":"bwallglass_7_L_break"},
+        ["bsp14ll", "bsp16ll"],
+        ["bsm15ll", "bst15ll"],
+        ["bsm16ll", "bst14ll"],
+        //R
+        //door here instead
+        {"breakGroup":"bwallglass_3_R_break","deformGroup":"bwallglass_3_R_break"},
+        ["bst5rr", "bsm7rr"],
+        ["bsm5rr", "bst7rr"],
+        ["bsp5rr", "bsp7rr"],
+        ["bsm6rr", "bst6rr"],
+        {"breakGroup":"bwallglass_4_R_break","deformGroup":"bwallglass_4_R_break"},
+        ["bst7rr", "bsm9rr"],
+        ["bsm7rr", "bst9rr"],
+        ["bsp7rr", "bsp9rr"],
+        ["bsm8rr", "bst8rr"],
+        {"breakGroup":"bwallglass_5_R_break","deformGroup":"bwallglass_5_R_break"},
+        //door here instead
+        {"breakGroup":"bwallglass_6_R_break","deformGroup":"bwallglass_6_R_break"},
+        ["bsp11rr", "bsp14rr"],
+        ["bsm13rr", "bst13rr"],
+        ["bsm11rr", "bst14rr"],
+        ["bsm13rr", "bst11rr"],
+        {"breakGroup":"bwallglass_7_R_break","deformGroup":"bwallglass_7_R_break"},
+        ["bsp14rr", "bsp16rr"],
+        ["bsm15rr", "bst15rr"],
+        ["bsm16rr", "bst14rr"],
+        {"breakGroup":""},
+        {"deformGroup":""},
+        {"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"beamType":"|NORMAL", "beamPrecompression":1, "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        {"groundModel":"plastic"},
+
+        //side windows
+        //L
+        {"breakGroup":"bwallglass_3_L_break"},
+        ["bsp5ll", "bsm6ll", "bsp7ll"],
+        ["bsp7ll", "bst6ll", "bsp5ll"],
+        {"breakGroup":"bwallglass_4_L_break"},
+        ["bsp7ll", "bsm8ll", "bsp9ll"],
+        ["bsp9ll", "bst8ll", "bsp7ll"],
+        {"breakGroup":"bwallglass_5_L_break"},
+        ["bsp9ll", "bsm9ll", "bsm11ll"],
+        ["bsm11ll", "bsp11ll", "bsp9ll"],
+        ["bsp9ll", "bsp11ll", "bst11ll"],
+        ["bst11ll", "bst9ll", "bsp9ll"],
+        {"breakGroup":"bwallglass_6_L_break"},
+        ["bsp11ll", "bsm13ll", "bsp14ll"],
+        ["bsp14ll", "bst13ll", "bsp11ll"],
+        {"breakGroup":"bwallglass_7_L_break"},
+        ["bsp14ll", "bsm15ll", "bsp16ll"],
+        ["bsp16ll", "bst15ll", "bsp14ll"],
+        //R
+        {"breakGroup":"bwallglass_3_R_break"},
+        ["bsm6rr", "bsp5rr", "bsp7rr"],
+        ["bst6rr", "bsp7rr", "bsp5rr"],
+        {"breakGroup":"bwallglass_4_R_break"},
+        ["bsm8rr", "bsp7rr", "bsp9rr"],
+        ["bst8rr", "bsp9rr", "bsp7rr"],
+        {"breakGroup":"bwallglass_6_R_break"},
+        ["bsm13rr", "bsp11rr", "bsp14rr"],
+        ["bst13rr", "bsp14rr", "bsp11rr"],
+        {"breakGroup":"bwallglass_7_R_break"},
+        ["bsm15rr", "bsp14rr", "bsp16rr"],
+        ["bst15rr", "bsp16rr", "bsp14rr"],
+        {"breakGroup":""},
+        {"groundModel":"metal"},
+    ],
+}
+}

@@ -1,0 +1,495 @@
+{
+"citybus_axle_B": { // based on citybus_axle_R
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA Live Axle",
+        "value":9500,
+    },
+    "slotType" : "citybus_axle_B",
+    "slots": [
+        ["type", "default", "description"],
+        ["citybus_brake_B","citybus_brake_B","Brakes"],
+        ["citybus_wheel_B","citybus_wheel_B", "Wheels"],
+        ["citybus_wheeldata_B","citybus_wheeldata_B", "Spindles"{"coreSlot":true}],
+        ["citybus_shock_B","citybus_shock_B","Shocks"],
+        ["citybus_airbag_B","citybus_airbag_B","Airbags"],
+        ["citybus_differential_B","citybus_differential_B_locking_med","Biarticulated Differential"],
+    ],
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["bcitybus_axle_B", ["citybus_axle_B"]],
+        ["bcitybus_lowerarm_B", ["citybus_lowerarm_B"]],
+        ["bcitybus_upperarm_B", ["citybus_upperarm_B"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR LIVE AXLE--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":75},
+        {"group":"citybus_axle_B"},
+        ["bax1", 0.0, 23.12, 0.444{"group":["citybus_axle_B","citybus_lowerarm_B"]}],
+        ["bax2", 0.0, 23.6, 0.444],
+        ["bax3", 0.0, 23.36, 0.72{"selfCollision":false,"group":["citybus_axle_B","citybus_upperarm_B"]}],
+        ["bax4", 0.0, 23.36, 0.22],
+
+        {"nodeWeight":35},
+        ["bax1l",  0.80, 23.12, 0.444],
+        ["bax1r", -0.80, 23.12, 0.444],
+        ["bax2l",  0.80, 23.6, 0.444],
+        ["bax2r", -0.80, 23.6, 0.444],
+
+        ["bax3l",  0.80, 23.36, 0.68],
+        ["bax3r", -0.80, 23.36, 0.68],
+        ["bax4l",  0.80, 23.36, 0.22{"group":["citybus_axle_B","citybus_lowerarm_B"]}],
+        ["bax4r", -0.80, 23.36, 0.22{"group":["citybus_axle_B","citybus_lowerarm_B"]}],
+
+        //axle air bag mounts
+        {"selfCollision":false},
+        {"group":["citybus_airbags_B","citybus_axle_B"]},
+        ["bab1l",  0.6, 22.55, 0.36],
+        ["bab1r", -0.6, 22.55, 0.36],
+        ["bab2l",  0.6, 24.16, 0.36],
+        ["bab2r", -0.6, 24.16, 0.36],
+
+        {"group":["citybus_airbags_B","citybus_frame"]},
+        ["bab3l",  0.6, 22.55, 0.59],
+        ["bab3r", -0.6, 22.55, 0.59],
+        ["bab4l",  0.6, 24.16, 0.59],
+        ["bab4r", -0.6, 24.16, 0.59],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR LIVE AXLE--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.1},
+        {"beamSpring":60001000,"beamDamp":1000},
+        {"beamDeform":150000,"beamStrength":"FLT_MAX"},
+        //axle main shape
+        ["bax1", "bax2"],
+        ["bax3", "bax4"],
+        ["bax1", "bax4"],
+        ["bax4", "bax2"],
+        ["bax3", "bax2"],
+        ["bax3", "bax1"],
+
+        //L
+        ["bax3l", "bax4l"],
+        ["bax3l", "bax3"],
+        ["bax4l", "bax4"],
+        ["bax3l", "bax1"],
+        ["bax4l", "bax1"],
+        ["bax4l", "bax2"],
+        ["bax3l", "bax2"],
+
+        ["bax1l", "bax1"],
+        ["bax2l", "bax2"],
+        ["bax1l", "bax3"],
+        ["bax1l", "bax4"],
+        ["bax2l", "bax3"],
+        ["bax2l", "bax4"],
+        //R
+        ["bax3r", "bax4r"],
+        ["bax3r", "bax3"],
+        ["bax4r", "bax4"],
+        ["bax3r", "bax1"],
+        ["bax4r", "bax1"],
+        ["bax3r", "bax2"],
+        ["bax4r", "bax2"],
+
+        ["bax1r", "bax1"],
+        ["bax2r", "bax2"],
+        ["bax1r", "bax3"],
+        ["bax1r", "bax4"],
+        ["bax2r", "bax3"],
+        ["bax2r", "bax4"],
+
+        //beam rigid
+        {"beamSpring":40001000,"beamDamp":1000},
+        ["bax3r", "bax3l"],
+        ["bax4r", "bax4l"],
+
+        {"beamSpring":60001000,"beamDamp":1000},
+        //airbag mount cross beam
+        //L
+        ["bab1l", "bax1l"],
+        ["bab1l", "bax4l"],
+        ["bab1l", "bax3l"],
+        ["bab1l", "bax4"],
+        ["bab1l", "bax1"],
+        ["bab1l", "bax3"],
+
+        ["bab2l", "bax2l"],
+        ["bab2l", "bax4l"],
+        ["bab2l", "bax3l"],
+        ["bab2l", "bax4"],
+        ["bab2l", "bax2"],
+        ["bab2l", "bax3"],
+        //R
+        ["bab1r", "bax1r"],
+        ["bab1r", "bax4r"],
+        ["bab1r", "bax3r"],
+        ["bab1r", "bax4"],
+        ["bab1r", "bax1"],
+        ["bab1r", "bax3"],
+
+        ["bab2r", "bax2r"],
+        ["bab2r", "bax4r"],
+        ["bab2r", "bax3r"],
+        ["bab2r", "bax4"],
+        ["bab2r", "bax2"],
+        ["bab2r", "bax3"],
+
+        //airbag to frame mounts
+        {"beamSpring":40001000,"beamDamp":2000},
+        //L
+        ["bab3l", "bfm13l"],
+        ["bab3l", "bfm11l"],
+        ["bab3l", "bfm13r"],
+        ["bab3l", "bfm11r"],
+        ["bab3l", "bfs13l"],
+        ["bab3l", "bfs13r"],
+
+        ["bab4l", "bfs16l"],
+        ["bab4l", "bfm16l"],
+        ["bab4l", "bfs15l"],
+        ["bab4l", "bfs15r"],
+        ["bab4l", "bfs16r"],
+        //R
+        ["bab3r", "bfm13r"],
+        ["bab3r", "bfm11r"],
+        ["bab3r", "bfm13l"],
+        ["bab3r", "bfm11l"],
+        ["bab3r", "bfs13r"],
+        ["bab3r", "bfs13l"],
+
+        ["bab4r", "bfs16r"],
+        ["bab4r", "bfm16r"],
+        ["bab4r", "bfs15r"],
+        ["bab4r", "bfs15l"],
+        ["bab4r", "bfs16l"],
+
+        //wheel hubs
+        {"beamSpring":100001000,"beamDamp":5000},
+        ["bax4l", "bax1l"],
+        ["bax4l", "bax2l"],
+        ["bax3l", "bax1l"],
+        ["bax3l", "bax2l"],
+
+        ["bax4r", "bax1r"],
+        ["bax4r", "bax2r"],
+        ["bax3r", "bax1r"],
+        ["bax3r", "bax2r"],
+
+        //suspension links
+        {"beamSpring":50001000,"beamDamp":10000},
+        {"beamDeform":250000,"beamStrength":2925000},
+        ["bax4l", "bfm13l",{"dampCutoffHz":500}],
+        ["bax4r", "bfm13r",{"dampCutoffHz":500}],
+        ["bax3", "bfs13l",{"dampCutoffHz":500}],
+        ["bax3", "bfs13r",{"dampCutoffHz":500}],
+
+        //rear wheel to axle
+        {"beamSpring":40001000,"beamDamp":500},
+        {"beamDeform":200000,"beamStrength":2000000},
+        //L
+        {"optional":true},
+        {"breakGroup":"wheel_BL"},
+        ["brw1l","bax3l"{"name":"axle_BL"}],
+        ["brw1l","bax4l"],
+        ["brw1l","bax1l"],
+        ["brw1l","bax2l"],
+        ["brw1ll","bax3l"],
+        ["brw1ll","bax4l"],
+        ["brw1ll","bax1l"],
+        ["brw1ll","bax2l"],
+        //L
+        {"breakGroup":"wheel_BR"},
+        ["brw1r","bax3r"{"name":"axle_BR"}],
+        ["brw1r","bax4r"],
+        ["brw1r","bax1r"],
+        ["brw1r","bax2r"],
+        ["brw1rr","bax3r"],
+        ["brw1rr","bax4r"],
+        ["brw1rr","bax1r"],
+        ["brw1rr","bax2r"],
+        {"breakGroup":""},
+        {"optional":false},
+
+        //--AXLE TO FRAME DAMP--
+        {"beamPrecompression":1.0, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":0,"beamDamp":15000,"beamDeform":200000,"beamStrength":350000},
+        {"beamLimitSpring":0,"beamLimitDamp":0},
+        //["bax3l", "bfm11l",{"dampCutoffHz":500}],
+        //["bax4l", "bfm11l",{"dampCutoffHz":500}],
+        //["bax3l", "bfm16l",{"dampCutoffHz":500}],
+        //["bax4l", "bfm16l",{"dampCutoffHz":500}],
+        //
+        //["bax3r", "bfm11r",{"dampCutoffHz":500}],
+        //["bax4r", "bfm11r",{"dampCutoffHz":500}],
+        //["bax3r", "bfm16r",{"dampCutoffHz":500}],
+        //["bax4r", "bfm16r",{"dampCutoffHz":500}],
+        //
+        //["bax3l", "bfs14r",{"dampCutoffHz":500}],
+        //["bax3r", "bfs14l",{"dampCutoffHz":500}],
+
+        //axle articulation hard limit
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":20001000,"beamDamp":1000},
+        {"beamDeform":250000,"beamStrength":850000},
+        {"beamPrecompression":0.77},
+        ["bax4l", "bfs14l"],
+        ["bax4r", "bfs14r"],
+        {"beamPrecompression":1},
+
+        //crash limiters
+        {"beamSpring":10001000,"beamDamp":500},
+        {"beamPrecompression":0.8},
+        ["bax4l", "bfs14lll"],
+        ["bax4l", "bfs14ll"],
+        ["bax4r", "bfs14rrr"],
+        ["bax4r", "bfs14rr"],
+
+        //crash lateral limiters
+        {"beamPrecompression":0.85},
+        ["bax3l", "bfs13r"],
+        ["bax3l", "bfs15r"],
+        ["bax3r", "bfs13l"],
+        ["bax3r", "bfs15l"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":0},
+        {"groundModel":"metal"},
+        {"triangleType":"NONCOLLIDABLE"},
+        ["bax2", "bax4", "bax1"],
+        ["bax1", "bax3", "bax2"],
+        ["bax4r", "bax1r", "bax3r"],
+        ["bax3r", "bax2r", "bax4r"],
+        ["bax3l", "bax1l", "bax4l"],
+        ["bax4l", "bax2l", "bax3l"],
+        ["bax4l", "bab2l", "bax2l"],
+        ["bab1l", "bax4l", "bax1l"],
+        ["bab2r", "bax4r", "bax2r"],
+        ["bax4r", "bab1r", "bax1r"],
+        {"triangleType":"NORMALTYPE"},
+    ],
+}
+"citybus_wheeldata_B": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Biarticulated Spindles",
+        "value":0,
+    }
+    "slotType" : "citybus_wheeldata_B",
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //rear wheels definition
+        {"selfCollision":true},
+        {"collision":true},
+        {"triangleCollision":false},
+        {"wheelOffset":-0.255},
+        {"axleBeams":["axle_BL"]}
+        ["RRRL", "wheel_BL", "tire_BL", "brw1ll", "brw1l", 9999, "bax3l", -1, {"torqueCoupling:":"bax1l", "torqueArm:":"bax2l"}],
+        {"axleBeams":["axle_BR"]}
+        ["RRRR", "wheel_BR", "tire_BR", "brw1rr", "brw1r", 9999, "bax3r", 1, {"torqueCoupling:":"bax1r", "torqueArm:":"bax2r"}],
+        //disable outer wheel brake
+        {"brakeTorque":0},
+        {"parkingTorque":0},
+        {"enableBrakeThermals":false},
+        //
+        {"wheelOffset":0.075},
+        {"axleBeams":["axle_BL"]}
+        ["RRRL2", "wheel_BL2", "tire_BL2", "brw1ll", "brw1l", 9999, "bax3l", -1, {"torqueCoupling:":"bax1l", "torqueArm:":"bax2l","wheelAngle":6.43}],
+        {"axleBeams":["axle_BR"]}
+        ["RRRR2", "wheel_BR2", "tire_BR2", "brw1rr", "brw1r", 9999, "bax3r", 1, {"torqueCoupling:":"bax1r", "torqueArm:":"bax2r","wheelAngle":6.43}],
+        {"brakeTorque":0},
+        {"parkingTorque":0},
+        {"triangleCollision":false},
+        {"selfCollision":true},
+        {"axleBeams":[]},{"disableMeshBreaking":false,"disableTriangleBreaking":false},
+        {"enableHubcaps":false},
+        {"enableTireLbeams":false},
+        {"enableTreadReinfBeams":false},
+        {"enableTireReinfBeams":false},
+        {"enableTreadReinfBeams":false},
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["differential", "differential_BL", "differential_B", 1, {"diffType":"locked", "gearRatio":1, "lockTorque":2000000, "friction":15, "uiName":"Biarticulated Differential","defaultVirtualInertia":2}]
+        ["differential", "differential_BR", "differential_B", 2, {"diffType":"locked", "gearRatio":1, "lockTorque":2000000, "friction":15, "uiName":"Biarticulated Differential","defaultVirtualInertia":2}]
+        //rear left axle
+        ["shaft", "wheelaxle_BL", "differential_BL", 1, {"connectedWheel":"RRRL", "breakTriggerBeam":"axle_BL", "uiName":"Biarticulated Left Axle", "friction":10}]
+        ["shaft", "wheelaxle_BL2", "differential_BL", 2, {"connectedWheel":"RRRL2", "breakTriggerBeam":"axle_BL", "uiName":"Biarticulated Left Axle", "friction":10}]
+        //rear right axle
+        ["shaft", "wheelaxle_BR", "differential_BR", 1, {"connectedWheel":"RRRR", "breakTriggerBeam":"axle_BR", "uiName":"Biarticulated Right Axle", "friction":10}]
+        ["shaft", "wheelaxle_BR2", "differential_BR", 2, {"connectedWheel":"RRRR2", "breakTriggerBeam":"axle_BR", "uiName":"Biarticulated Right Axle", "friction":10}]
+    ],
+},
+"citybus_airbag_B": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Rear Airbags",
+        "value":3400,
+    }
+    "slotType" : "citybus_airbag_B",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"airbag_B1_break", "deformMaterialBase":"citybus", "deformMaterialDamaged":"invis"},
+        ["bcitybus_airbags_B", ["citybus_airbags_B"]],
+        {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+    "airbagBeamData": [
+        ["beamName", "groupName"]
+        ["airbag_BL1", "leftAxle"],
+        ["airbag_BL2", "leftAxle"],
+        ["airbag_BR1", "rightAxle"],
+        ["airbag_BR2", "rightAxle"],
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--PRESSURED BEAM AIRBAGS--
+        {"beamPrecompression":1, "beamType":"|PRESSURED"},
+        {"beamSpring":100,"beamDamp":0,"beamDeform":100000,"beamStrength":250000},
+        {"beamLimitSpring":0,"beamLimitDamp":0},
+        {"breakGroup":"airbag_B_break"},
+        {"breakGroupType":1},
+        ["bab1l","bab3l"{"pressurePSI":110,"surface":0.024,"volumeCoef":4,"name":"aairbag_BL1"}],
+        ["bab2l","bab4l"{"pressurePSI":110,"surface":0.024,"volumeCoef":4,"name":"aairbag_BL2","soundFile":"art/sound/spring_compress2.ogg","volumeFactor":1.3,"decayMode":1,"decayFactor":8,"pitchFactor":2,"maxStress":10}],
+        ["bab1r","bab3r"{"pressurePSI":110,"surface":0.024,"volumeCoef":4,"name":"aairbag_BR1","soundFile":"art/sound/spring_compress2.ogg","volumeFactor":1.1,"decayMode":1,"decayFactor":8,"pitchFactor":0.8,"maxStress":8}],
+        ["bab2r","bab4r"{"pressurePSI":110,"surface":0.024,"volumeCoef":4,"name":"aairbag_BR2"}],
+        {"breakGroupType":0},
+        //--LIMITERS--
+        {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.4, "beamShortBound":0.4},
+        {"beamSpring":100,"beamDamp":0,"beamDeform":150000,"beamStrength":350000},
+        {"beamLimitSpring":50001000,"beamLimitDamp":10000},
+        {"deformGroup":"airbag_B_break","deformationTriggerRatio":0.1},
+        {"breakGroup":"airbag_B_break"},
+        ["bab1l","bab3l"{"soundFile":"art/sound/spring_creak.ogg","volumeFactor":4,"decayMode":0,"decayFactor":2.5,"pitchFactor":1,"maxStress":40}],
+        ["bab1r","bab3r"],
+        ["bab2l","bab4l"],
+        ["bab2r","bab4r"{"soundFile":"art/sound/spring_creak3.ogg","volumeFactor":2.5,"decayMode":0,"decayFactor":2.5,"pitchFactor":1,"maxStress":40}],
+        {"breakGroup":""},
+        {"deformGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+}
+"citybus_shock_B": {
+    "information":{
+        "aauthors":"BeamNG",
+        "name":"Biarticulated Shocks",
+        "value":1600,
+    }
+    "slotType" : "citybus_shock_B",
+    "flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        {"deformGroup":"airbag_B1_break", "deformMaterialBase":"citybus", "deformMaterialDamaged":"invis"},
+        ["bcitybus_shocks_B", ["citybus_airbags_B"]],
+        {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--ARTICULATED SHOCKS--
+        {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":0,"beamDeform":50000,"beamStrength":150000},
+        {"beamLimitSpring":0,"beamLimitDamp":0},
+        {"breakGroupType":1},
+        {"deformGroup":"airbag_B_break","deformationTriggerRatio":0.1},
+        {"breakGroup":"airbag_B_break"},
+        ["bab1l","bab3l"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        ["bab1r","bab3r"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        ["bab2l","bab4l"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        ["bab2r","bab4r"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        {"breakGroupType":0},
+        {"deformGroup":""},
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+}
+"citybus_differential_B_locking_short": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.56 Locking Rear Differential",
+        "value":1800,
+    }
+    "slotType" : "citybus_differential_B",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus_biarticulated_driveshaft","citybus_biarticulated_driveshaft", "Biarticulated Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        //rear diff
+        ["differential", "differential_B", "biarticulated_driveshaft", 1, {"diffType":["open","locked"], "gearRatio":4.56, "lockTorque":1000000, "friction":25, "uiName":"Biarticulated Differential","defaultVirtualInertia":4}]
+    ],
+}
+"citybus_differential_B_locking_med": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"4.04 Locking Rear Differential",
+        "value":1800,
+    }
+    "slotType" : "citybus_differential_B",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus_biarticulated_driveshaft","citybus_biarticulated_driveshaft", "Biarticulated Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        //rear diff
+        ["differential", "differential_B", "biarticulated_driveshaft", 1, {"diffType":["open","locked"], "gearRatio":4.04, "lockTorque":1000000, "friction":25, "uiName":"Biarticulated Differential","defaultVirtualInertia":4}]
+    ],
+}
+"citybus_differential_B_locking_tall": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"3.42 Locking Rear Differential",
+        "value":1800,
+    }
+    "slotType" : "citybus_differential_B",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus_biarticulated_driveshaft","citybus_biarticulated_driveshaft", "Biarticulated Driveshaft"],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        //rear diff
+        ["differential", "differential_B", "biarticulated_driveshaft", 1, {"diffType":["open","locked"], "gearRatio":3.42, "lockTorque":1000000, "friction":25, "uiName":"Biarticulated Differential","defaultVirtualInertia":4}]
+    ],
+}
+"citybus_biarticulated_driveshaft": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Biarticulated Driveshaft",
+        "value":450,
+    }
+    "slotType" : "citybus_biarticulated_driveshaft",
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"]
+        //biarticulated driveshaft
+        ["torsionReactor", "torsionReactorB", "gearbox", 1, {}]
+        ["shaft", "biarticulated_driveshaft", "torsionReactorB", 1, {"breakTriggerBeam":"biarticulated_driveshaft", "uiName":"Biarticulated Driveshaft", "uiName":"Biarticulated Driveshaft", "electricsName":"biarticulated_driveshaft", "friction":1}]
+    ],
+    "torsionReactorR": {
+        "torqueReactionNodes:":["ben4l","ben3l","ben1r"],
+    },
+    "props": [
+        ["func"      , "mesh"           , "idRef:", "idX:", "idY:", "baseRotation"        , "rotation"            , "translation"        , "min", "max", "offset", "multiplier",],
+        ["biarticulated_driveshaft", "bcitybus_driveshaft", "bax2r", "bax2l", "btra1", {"x":90, "y":0, "z":0}, {"x":0, "y":1, "z":0} , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"breakGroup":"biarticulated_driveshaft","deformGroup":"biarticulated_driveshaft","optional":true}],
+    ],
+    "beams": [
+          ["id1:", "id2:"],
+          //driveshaft
+          {"beamPrecompression":1, "beamType":"|BOUNDED", "beamLongBound":0.05, "beamShortBound":0.05},
+          {"beamDeform":4000,"beamStrength":6000},
+          {"beamSpring":0,"beamDamp":0},
+          {"beamLimitSpring":5001000,"beamLimitDamp":500},
+          ["bax2","btra1", {"name":"biarticulated_driveshaft","optional":true,"breakGroup":"biarticulated_driveshaft","deformGroup":"biarticulated_driveshaft"}],
+          {"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+    ],
+}
+}

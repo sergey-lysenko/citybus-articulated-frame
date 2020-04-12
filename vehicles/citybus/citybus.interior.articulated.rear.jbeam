@@ -1,0 +1,24 @@
+{
+"citybus.interior.articulated.rear": { //Based on citybus_interior
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Rear Interior",
+        "value":12500,
+    }
+    "slotType" : "citybus.interior.articulated.rear",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus.seats.articulated.rear","citybus.seats.articulated.rear","Seats"],
+    ],
+    "flexbodies":[
+    ],
+     "props": [
+    ],
+    "nodes": [
+    ],
+    "beams": [
+    ],
+    "triangles": [
+    ],
+},
+}

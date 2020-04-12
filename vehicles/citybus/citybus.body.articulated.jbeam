@@ -1,0 +1,15 @@
+{
+"citybus.body.articulated": {
+    "information":{
+        "authors":"slysenko",
+        "name":"A Body",
+        "value":0,
+    }
+    "slotType" : "citybus.body.articulated",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus.body.articulated.front","citybus.body.articulated.front","Front"],
+        ["citybus.body.articulated.rear","citybus.body.articulated.rear","Rear"],
+    ],
+},
+}

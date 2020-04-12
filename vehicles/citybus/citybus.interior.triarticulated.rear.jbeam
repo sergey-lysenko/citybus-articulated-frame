@@ -1,0 +1,24 @@
+{
+"citybus.interior.triarticulated.rear": {
+    "information":{
+        "authors":"slysenko",
+        "name":"TA Rear Interior",
+        "value":0,
+    }
+    "slotType" : "citybus.interior.triarticulated.rear",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus.seats.triarticulated.rear","citybus.seats.triarticulated.rear","Seats"],
+    ],
+    "flexbodies":[
+    ],
+     "props": [
+    ],
+    "nodes": [
+    ],
+    "beams": [
+    ],
+    "triangles": [
+    ],
+},
+}

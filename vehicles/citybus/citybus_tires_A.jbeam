@@ -1,0 +1,58 @@
+{
+"citybus_tire_A": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Heavy Duty Articulated Tires",
+        "value":1400,
+    }
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["tire_02a_22x10_39", ["wheel_AR2","tire_AR2"], [], {"pos":{"x":-0.759, "y":13.356 "z":0.447}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["tire_02a_22x10_39", ["wheel_AL2","tire_AL2"], [], {"pos":{"x": 0.759, "y":13.356, "z":0.447}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["tire_02a_22x10_39", ["wheel_AR","tire_AR"], [], {"pos":{"x":-1.089, "y":13.356, "z":0.447}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+         ["tire_02a_22x10_39", ["wheel_AL","tire_AL"], [], {"pos":{"x": 1.089, "y":13.356, "z":0.447}, "rot":{"x":0, "y":0, "z":0}, "scale":{"x":1, "y":1, "z":1}}],
+     ],
+    "variables": [
+        ["name", "type", "unit", "category", "default", "min", "max", "title", "description"]
+        ["$tirepressure_R", "range", "psi", "Wheels", 70, 0, 100, "Tire Pressure", "Relative to atmospheric pressure", {"subCategory":"Rear"}]
+    ],
+    "slotType" : "citybus_tire_A",
+    "pressureWheels": [
+            ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+            {"enableTireLbeams":false,"enableTireReinfBeams":true,"disableMeshBreaking":false,"disableHubMeshBreaking":false},
+            //{"enableTirePeripheryReinfBeams":true},
+
+            //general settings
+            {"radius":0.501},
+            {"tireWidth":0.245},
+
+            //tire options
+            {"wheelSideBeamSpring":0,"wheelSideBeamDamp":50},
+            {"wheelSideBeamSpringExpansion":2501000,"wheelSideBeamDampExpansion":25},
+            {"wheelSideTransitionZone":0.05,"wheelSideBeamPrecompression":0.99},
+            {"wheelReinfBeamSpring":86000,"wheelReinfBeamDamp":2000,"wheelReinfBeamDampCutoffHz":250},
+            {"wheelTreadBeamSpring":1001000,"wheelTreadBeamDamp":350,"wheelTreadBeamDampCutoffHz":250},
+            {"wheelPeripheryBeamSpring":1651000,"wheelPeripheryBeamDamp":60},
+
+            //deform values
+            {"wheelSideBeamDeform":88000,"wheelSideBeamStrength":94000},
+            {"wheelReinfBeamDeform":88000,"wheelReinfBeamStrength":94000},
+            {"wheelTreadBeamDeform":88000,"wheelTreadBeamStrength":99000},
+            {"wheelPeripheryBeamDeform":88000,"wheelPeripheryBeamStrength":99000},
+
+            //general tire values
+            {"nodeWeight":0.72},
+            {"nodeMaterial":"|NM_RUBBER","hasTire":true},
+            {"frictionCoef":1},
+            {"slidingFrictionCoef":1},
+            {"noLoadCoef":1.10},
+            {"loadSensitivitySlope":0.000006},
+            {"fullLoadCoef":0.25},
+            {"softnessCoef":0.3},
+            {"treadCoef":0.6},
+            {"triangleCollision":false},
+            {"pressurePSI":"$tirepressure_R"},
+            {"dragCoef":5},
+    ],
+}
+}

@@ -1,0 +1,24 @@
+{
+"citybus.interior.biarticulated.middle": {
+    "information":{
+        "authors":"BeamNG, slysenko",
+        "name":"BA Middle Interior",
+        "value":0,
+    }
+    "slotType" : "citybus.interior.biarticulated.middle",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus.seats.biarticulated.middle","citybus.seats.biarticulated.middle","Seats"],
+    ],
+    "flexbodies":[
+    ],
+     "props": [
+    ],
+    "nodes": [
+    ],
+    "beams": [
+    ],
+    "triangles": [
+    ],
+},
+}

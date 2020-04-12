@@ -1,0 +1,513 @@
+{
+"citybus.accessdoor.rear.left.articulated": {// Based on citybus_accesspanels.jbeam
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Rear Left Access Panel",
+        "value":600,
+    }
+    "slotType" : "citybus.accessdoor.rear.left.articulated",
+    "slots": [
+        ["type", "default", "description"]
+    ],
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["acitybus_accessdoor_radiator", ["citybus_articulated_accessdoor_RL"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--RL ACCESS PANEL--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":4},
+        {"group":"citybus_articulated_accessdoor_RL"},
+        ["ap1l", 1.33, 16.01, 1.25],  //
+        ["ap2l", 1.33, 15.41, 1.25],  //
+        ["ap3l", 1.33, 14.70, 1.25],  //
+        ["ap4l", 1.33, 16.01, 0.45],  //
+        ["ap5l", 1.33, 15.41, 0.375], //
+        ["ap6l", 1.33, 14.70, 0.265], //
+        {"collision":false}
+        {"selfCollision":false},
+        ["ap7l", 0.90, 15.41, 0.79],  //
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--RL ACCESS PANEL--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.1},
+        {"beamSpring":2501000,"beamDamp":150},
+        {"beamDeform":20000,"beamStrength":380000},
+        //main shape
+        ["ap1l", "ap4l"],
+        ["ap2l", "ap5l"],
+        ["ap3l", "ap6l"],
+        ["ap1l", "ap2l"],
+        ["ap4l", "ap5l"],
+        ["ap2l", "ap3l"],
+        ["ap5l", "ap6l"],
+        ["ap4l", "ap2l"],
+        ["ap1l", "ap5l"],
+        ["ap5l", "ap3l"],
+        ["ap2l", "ap6l"],
+        ["ap1l", "ap7l"],
+        ["ap2l", "ap7l"],
+        ["ap3l", "ap7l"],
+        ["ap4l", "ap7l"],
+        ["ap5l", "ap7l"],
+        ["ap6l", "ap7l"],
+
+        //rigids
+        ["ap1l", "ap3l"],
+        ["ap4l", "ap6l"],
+
+        //attach
+        {"beamDeform":10000,"beamStrength":38000},
+        {"breakGroup":"accesspanel_rl_hinge_a"},
+        ["asm18ll", "ap1l"], //
+        ["asm17ll", "ap1l"], //
+        ["asp18ll", "ap1l"], //
+        ["asp17ll", "ap1l"], //
+        ["asm16ll", "ap3l"], //
+        ["ap3l", "afs16l"],  //
+        {"breakGroup":"accesspanel_rl_hinge_b"},
+        ["ap3l", "asm15ll"], //
+        ["ap3l", "asp16ll"], //
+        ["ap3l", "asm16l"],  //
+        ["ap1l", "asm18l"],  //
+        ["ap1l", "asp18l"],  //
+        ["ap3l", "afs15ll"], //
+
+        {"breakGroup":"accesspanel_rl_latch"},
+        ["ap5l", "afm17ll"], //
+        ["ap5l", "afm17l"],  //
+        ["ap5l", "afm16l"],  //
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+        ["ap4l", "ap1l", "ap5l"],
+        ["ap2l", "ap5l", "ap1l"],
+        ["ap6l", "ap5l", "ap3l"],
+        ["ap2l", "ap3l", "ap5l"],
+    ],
+},
+"citybus.accessdoor.rear.right.articulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Rear Right Access Panel",
+        "value":600,
+    }
+    "slotType" : "citybus.accessdoor.rear.right.articulated",
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["acitybus_accessdoor_batteries", ["citybus_articulated_accessdoor_RR"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--RR ACCESS PANEL--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":4},
+        {"group":"citybus_articulated_accessdoor_RR"}, //
+        ["ap1r", -1.33, 16.01, 1.25],                  //
+        ["ap2r", -1.33, 15.41, 1.25],                  //
+        ["ap3r", -1.33, 14.70, 1.25],                  //
+        ["ap4r", -1.33, 16.01, 0.45],                  //
+        ["ap5r", -1.33, 15.41, 0.375],                 //
+        ["ap6r", -1.33, 14.70, 0.265],                 //
+        {"collision":false}
+        {"selfCollision":false},
+        ["ap7r", -0.90, 15.41, 0.79],                  //
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--RR ACCESS PANEL--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.1},
+        {"beamSpring":2501000,"beamDamp":150},
+        {"beamDeform":20000,"beamStrength":380000},
+        //main shape
+        ["ap1r", "ap4r"],
+        ["ap2r", "ap5r"],
+        ["ap3r", "ap6r"],
+        ["ap1r", "ap2r"],
+        ["ap4r", "ap5r"],
+        ["ap2r", "ap3r"],
+        ["ap5r", "ap6r"],
+        ["ap4r", "ap2r"],
+        ["ap1r", "ap5r"],
+        ["ap5r", "ap3r"],
+        ["ap2r", "ap6r"],
+        ["ap1r", "ap7r"],
+        ["ap2r", "ap7r"],
+        ["ap3r", "ap7r"],
+        ["ap4r", "ap7r"],
+        ["ap5r", "ap7r"],
+        ["ap6r", "ap7r"],
+
+        //rigids
+        ["ap1r", "ap3r"],
+        ["ap4r", "ap6r"],
+
+        //attach
+        {"beamDeform":10000,"beamStrength":38000},
+        {"breakGroup":"accesspanel_rr_hinge_a"},
+        ["asm18rr", "ap1r"], //
+        ["asm17rr", "ap1r"], //
+        ["asp18rr", "ap1r"], //
+        ["asp17rr", "ap1r"], //
+        ["asm16rr", "ap3r"], //
+        ["ap3r", "afs16r"],  //
+        {"breakGroup":"accesspanel_rr_hinge_b"},
+        ["ap3r", "asm15rr"], //
+        ["ap3r", "asp16rr"], //
+        ["ap3r", "asm16r"],  //
+        ["ap1r", "asm18r"],  //
+        ["ap1r", "asp18r"],  //
+        ["ap3r", "afs15rr"], //
+
+        {"breakGroup":"accesspanel_rr_latch"},
+        ["ap5r", "afm17rr"], //
+        ["ap5r", "afm17r"],  //
+        ["ap5r", "afm16r"],  //
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+        ["ap1r", "ap4r", "ap5r"],
+        ["ap5r", "ap2r", "ap1r"],
+        ["ap5r", "ap6r", "ap3r"],
+        ["ap3r", "ap2r", "ap5r"],
+    ],
+},
+//"citybus_accessdoor_FL": { // Not used in articulated section
+// ...
+//},
+"citybus.enginedoor.articulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Engine Access Panel",
+        "value":800,
+    }
+    "slotType" : "citybus.enginedoor.articulated",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus_articulated_licenseplate_R","citybus_articulated_licenseplate_R", "Rear License Plate"],
+    ],
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["acitybus_enginedoor", ["citybus_articulated_enginedoor"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--ENGINE ACCESS PANEL--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":3},
+        {"group":"citybus_articulated_enginedoor"},
+        ["ec1ll", 1.06, 16.22, 1.63], //
+        ["ec1rr",-1.06, 16.22, 1.63], //
+        ["ec1l",  0.56, 16.22, 1.63], //
+        ["ec1",  -0.00, 16.22, 1.63], //
+        ["ec1r", -0.56, 16.22, 1.63], //
+
+        ["ec2ll", 1.06, 16.26, 1.12], //
+        ["ec2l",  0.56, 16.26, 1.12], //
+        ["ec2",  -0.00, 16.26, 1.12], //
+        ["ec2r", -0.56, 16.26, 1.12], //
+        ["ec2rr",-1.06, 16.26, 1.12], //
+
+        ["ec3ll", 1.06, 16.28, 0.72], //
+        ["ec3l",  0.56, 16.28, 0.72], //
+        ["ec3",  -0.00, 16.28, 0.72], //
+        ["ec3r", -0.56, 16.28, 0.72], //
+        ["ec3rr",-1.06, 16.28, 0.72], //
+        {"collision":false}
+        {"selfCollision":false},
+        ["ec4",  -0.00, 15.7, 1.12],  //
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--ENGINE ACCESS PANEL--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.1},
+        {"beamSpring":2501000,"beamDamp":150},
+        {"beamDeform":20000,"beamStrength":380000},
+        //main shape
+        ["ec1", "ec2"],
+        ["ec2", "ec3"],
+
+        ["ec1ll", "ec1l"],
+        ["ec1l", "ec1"],
+        ["ec2ll", "ec2l"],
+        ["ec2l", "ec2"],
+        ["ec3ll", "ec3l"],
+        ["ec3l", "ec3"],
+        ["ec1ll", "ec2ll"],
+        ["ec2ll", "ec3ll"],
+        ["ec1l", "ec2l"],
+        ["ec2l", "ec3l"],
+        ["ec3ll", "ec2l"],
+        ["ec2ll", "ec3l"],
+        ["ec3l", "ec2"],
+        ["ec2l", "ec3"],
+        ["ec2ll", "ec1l"],
+        ["ec1ll", "ec2l"],
+        ["ec2l", "ec1"],
+        ["ec1l", "ec2"],
+
+        ["ec1rr", "ec1r"],
+        ["ec1r", "ec1"],
+        ["ec2rr", "ec2r"],
+        ["ec2r", "ec2"],
+        ["ec3rr", "ec3r"],
+        ["ec3r", "ec3"],
+        ["ec1rr", "ec2rr"],
+        ["ec2rr", "ec3rr"],
+        ["ec1r", "ec2r"],
+        ["ec2r", "ec3r"],
+        ["ec3rr", "ec2r"],
+        ["ec2rr", "ec3r"],
+        ["ec3r", "ec2"],
+        ["ec2r", "ec3"],
+        ["ec2rr", "ec1r"],
+        ["ec1rr", "ec2r"],
+        ["ec2r", "ec1"],
+        ["ec1r", "ec2"],
+
+        //rigids
+        ["ec3", "ec1"],
+        ["ec1r", "ec1l"],
+        ["ec2r", "ec2l"],
+        ["ec3r", "ec3l"],
+
+        ["ec1ll", "ec1"],
+        ["ec2ll", "ec2"],
+        ["ec3ll", "ec3"],
+
+        ["ec1rr", "ec1"],
+        ["ec2rr", "ec2"],
+        ["ec3rr", "ec3"],
+
+        ["ec3ll", "ec1ll"],
+        ["ec3l", "ec1l"],
+
+        ["ec3rr", "ec1rr"],
+        ["ec3r", "ec1r"],
+
+        //rigidifier
+        ["ec1", "ec4"],
+        ["ec2", "ec4"],
+        ["ec3", "ec4"],
+
+        ["ec1ll", "ec4"],
+        ["ec1l", "ec4"],
+        ["ec2ll", "ec4"],
+        ["ec2l", "ec4"],
+        ["ec3ll", "ec4"],
+        ["ec3l", "ec4"],
+
+        ["ec1rr", "ec4"],
+        ["ec1r", "ec4"],
+        ["ec2rr", "ec4"],
+        ["ec2r", "ec4"],
+        ["ec3rr", "ec4"],
+        ["ec3r", "ec4"],
+        //attach
+        {"beamDeform":10000,"beamStrength":38000},
+        {"breakGroup":"enginedoor_hinge_l"},
+        ["ec1ll", "asp18ll"],
+        ["ec1ll", "asp18l"],
+        ["ec1ll", "asm18ll"],
+        ["ec1ll", "asm18l"],
+        ["asp18l", "ec1l"],
+        ["asp18ll", "ec1l"],
+        ["asm18l", "ec1l"],
+        ["ec1l", "asp16l"],
+        ["ec1ll", "asp16l"],
+        ["ec1", "asp18l"],
+        {"breakGroup":"enginedoor_hinge_r"},
+        ["ec1rr", "asp18rr"],
+        ["ec1rr", "asp18r"],
+        ["ec1rr", "asm18rr"],
+        ["ec1rr", "asm18r"],
+        ["asp18r", "ec1r"],
+        ["asp18rr", "ec1r"],
+        ["asm18r", "ec1r"],
+        ["ec1r", "asp16r"],
+        ["ec1rr", "asp16r"],
+        ["ec1", "asp18r"],
+        {"breakGroup":"enginedoor_latch_l"},
+        ["ec3ll", "ac1ll"],
+        ["ec3ll", "ac1l"],
+        ["ec3l", "ac1ll"],
+        ["ec3l", "ac1l"],
+        ["ec3l", "afm17l"],
+        ["ec3ll", "afm17ll"],
+        ["ec3", "ac1l"],
+        {"breakGroup":"enginedoor_latch_r"},
+        ["ec3rr", "ac1rr"],
+        ["ec3rr", "ac1r"],
+        ["ec3r", "ac1rr"],
+        ["ec3r", "ac1r"],
+        ["ec3r", "afm17r"],
+        ["ec3rr", "afm17rr"],
+        ["ec3", "ac1r"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+        ["ec1rr", "ec1r", "ec2r"],
+        ["ec2r", "ec2rr", "ec1rr"],
+        ["ec2r", "ec3r", "ec3rr"],
+        ["ec3rr", "ec2rr", "ec2r"],
+        ["ec1", "ec2", "ec2r"],
+        ["ec2r", "ec1r", "ec1"],
+        ["ec2", "ec3", "ec3r"],
+        ["ec3r", "ec2r", "ec2"],
+
+        ["ec1l", "ec1ll", "ec2l"],
+        ["ec2ll", "ec2l", "ec1ll"],
+        ["ec3l", "ec2l", "ec3ll"],
+        ["ec2ll", "ec3ll", "ec2l"],
+        ["ec2", "ec1", "ec2l"],
+        ["ec1l", "ec2l", "ec1"],
+        ["ec3", "ec2", "ec3l"],
+        ["ec2l", "ec3l", "ec2"],
+    ],
+},
+"citybus.accessdoor.rear.articulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Rear Access Panel",
+        "value":700,
+    }
+    "slotType" : "citybus.accessdoor.rear.articulated",
+    "slots": [
+        ["type", "default", "description"]
+    ],
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["acitybus_accessdoor_rearhvac", ["citybus_articulated_hvacdoor"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        //--REAR UPPER ACCESS PANEL--
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true},
+        {"selfCollision":true},
+        {"nodeWeight":2},
+        {"group":"citybus_articulated_hvacdoor"},
+        ["hc1l",  0.86, 16.16, 2.40],
+        ["hc1",  -0.00, 16.16, 2.40],
+        ["hc1r", -0.86, 16.16, 2.40],
+
+        ["hc2l",  0.86, 16.22, 1.73],
+        ["hc2",  -0.00, 16.22, 1.73],
+        ["hc2r", -0.86, 16.22, 1.73],
+        {"collision":false}
+        {"selfCollision":false},
+        ["hc4",  -0.00, 15.7, 2.05],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--REAR UPPER ACCESS PANEL--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.1},
+        {"beamSpring":2501000,"beamDamp":150},
+        {"beamDeform":20000,"beamStrength":380000},
+        //main shape
+        ["hc1", "hc2"],
+
+        ["hc1l", "hc1"],
+        ["hc2l", "hc2"],
+        ["hc1l", "hc2l"],
+        ["hc2l", "hc1"],
+        ["hc1l", "hc2"],
+
+        ["hc1r", "hc1"],
+        ["hc2r", "hc2"],
+        ["hc1r", "hc2r"],
+        ["hc2r", "hc1"],
+        ["hc1r", "hc2"],
+
+        //rigids
+        ["hc1r", "hc1l"],
+        ["hc2r", "hc2l"],
+
+        //rigidifier
+        ["hc1", "hc4"],
+        ["hc2", "hc4"],
+
+        ["hc1l", "hc4"],
+        ["hc2l", "hc4"],
+
+        ["hc1r", "hc4"],
+        ["hc2r", "hc4"],
+
+        //attach
+        {"beamDeform":10000,"beamStrength":38000},
+        {"breakGroup":"hvacdoor_hinge_l"},
+        ["hc1l", "att18ll"],
+        ["hc1l", "att18l"],
+        ["hc1", "att18l"],
+        ["hc1l", "ast18ll"],
+        ["hc1l", "asp18ll"],
+        ["hc1l", "ast17ll"],
+        ["hc1l", "att17ll"],
+        ["hc1l", "att17l"],
+        {"breakGroup":"hvacdoor_hinge_r"},
+        ["hc1r", "att18rr"],
+        ["hc1r", "att18r"],
+        ["hc1", "att18r"],
+        ["hc1r", "ast18rr"],
+        ["hc1r", "asp18rr"],
+        ["hc1r", "ast17rr"],
+        ["hc1r", "att17rr"],
+        ["hc1r", "att17r"],
+        {"breakGroup":"hvacdoor_latch_l"},
+        ["hc2l", "asp18ll"],
+        ["hc2l", "asp18l"],
+        ["hc2l", "asp17ll"],
+        ["hc2l", "asp16l"],
+        ["hc2", "asp16l"],
+        {"breakGroup":"hvacdoor_latch_r"},
+        ["hc2r", "asp18rr"],
+        ["hc2r", "asp18r"],
+        ["hc2r", "asp17rr"],
+        ["hc2r", "asp16r"],
+        ["hc2", "asp16r"],
+        {"breakGroup":""},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":10},
+        {"groundModel":"metal"},
+        ["hc1l", "hc2l", "hc2"],
+        ["hc2", "hc1", "hc1l"],
+        ["hc2r", "hc1r", "hc2"],
+        ["hc1", "hc2", "hc1r"],
+    ],
+},
+}

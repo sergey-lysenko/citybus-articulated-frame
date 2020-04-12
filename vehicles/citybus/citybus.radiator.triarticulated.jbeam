@@ -1,0 +1,30 @@
+{
+"citybus.radiator.triarticulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"TA Powerfull Radiator",
+        "value":5650,
+    }
+    "slotType" : "citybus.radiator.triarticulated",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["ccitybus_radiator", ["trirear_frame_upper"]],
+     ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["radiatorFanSpin"  , "ccitybus_radiatorfan", "cfm16l","cfs16l","cfm17l",  {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":1}    , {"x":0, "y":0, "z":0}, -360, 360, 0, -1],
+    ],
+    "mainEngine":{
+        //cooling system
+        "radiatorArea":1,
+        "radiatorEffectiveness":15000,
+        "coolantVolume":15
+        "radiatorFanType":"electric",
+        "radiatorFanMaxAirSpeed":10,
+        "thermostatTemperature":90
+        "oilRadiatorArea":0.24,
+        "oilRadiatorEffectiveness":3000,
+        "oilThermostatTemperature":100
+    },
+}
+}

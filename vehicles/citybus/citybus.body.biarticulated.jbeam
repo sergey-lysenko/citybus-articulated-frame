@@ -1,0 +1,16 @@
+{
+"citybus.body.biarticulated": {
+    "information":{
+        "authors":"slysenko",
+        "name":"BA Body",
+        "value":0,
+    }
+    "slotType" : "citybus.body.biarticulated",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus.body.articulated.front","citybus.body.articulated.front","Front"],
+        ["citybus.body.biarticulated.middle","citybus.body.biarticulated.middle","Middle"],
+        ["citybus.body.biarticulated.rear","citybus.body.biarticulated.rear","Rear"],
+    ],
+},
+}

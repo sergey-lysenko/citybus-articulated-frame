@@ -1,0 +1,158 @@
+{
+"citybus.stanchions.triarticulated": {
+    "information":{
+        "authors":"BeamNG, slysenko",
+        "name":"TA Hand Rails",
+        "value":7300,
+    }
+    "slotType" : "citybus.stanchions.triarticulated",
+    "flexbodies":[
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["ccitybus_stanchions", ["triarticulated_stanchions","trirear_roof"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"collision":true}
+        {"selfCollision":true}
+        {"nodeWeight":3},
+        {"group":"triarticulated_stanchions"}
+        ["cstc3l",  0.41, 26.90, 2.25{"group":["triarticulated_stanchions","trirear_sleeve","trirear_bellow_frame"]}],
+        ["cstc4l",  0.41, 28.47, 2.25],
+        ["cstc5l",  0.41, 29.31, 2.25],
+        ["cstc6l",  0.41,  30.17, 2.25],
+        ["cstc7l",  0.41,  31.67, 2.25],
+        ["cstc8l",  0.41,  31.67, 1.55],
+		
+        ["cstc3r", -0.41, 26.90, 2.25{"group":["triarticulated_stanchions","trirear_sleeve","trirear_bellow_frame"]}],
+        ["cstc4r", -0.41, 28.47, 2.25],
+        ["cstc5r", -0.41, 29.31, 2.25],
+        ["cstc6r", -0.41,  30.17, 2.25],
+        ["cstc7r", -0.41,  31.67, 2.25],
+        ["cstc8r", -0.41,  31.67, 1.55],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"deformLimitExpansion":1.2},
+        //--STANCHIONS--
+        {"beamSpring":1001000,"beamDamp":250},
+        {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+        //L
+        ["cstc3l", "cstc4l"],
+        ["cstc4l", "cstc5l"],
+        ["cstc5l", "cstc6l"],
+        ["cstc6l", "cstc7l"],
+        //R
+        ["cstc3r", "cstc4r"],
+        ["cstc4r", "cstc5r"],
+        ["cstc5r", "cstc6r"],
+        ["cstc6r", "cstc7r"],
+
+        //to roof
+        //L
+        {"beamDeform":5000,"beamStrength":95000},
+        {"optional":true}
+        ["cstc3l", "ctt5l"],
+        ["cstc2l", "ctt5l"],
+        ["cstc4l", "ctt7l"],
+        ["cstc5l", "ctt7l"],
+        ["cstc5l", "ctt9l"],
+        ["cstc6l", "ctt9l"],
+        ["cstc7l", "ctt11l"],
+        //R
+        ["cstc3r", "ctt5r"],
+        ["cstc2r", "ctt5r"],
+        ["cstc4r", "ctt7r"],
+        ["cstc5r", "ctt7r"],
+        ["cstc5r", "ctt9r"],
+        ["cstc6r", "ctt9r"],
+        ["cstc7r", "ctt11r"],
+
+        //extra crossing
+        //L
+        ["cstc7l", "ctt9l"],
+        ["cstc6l", "ctt11l"],
+        ["cstc4l", "ctt5l"],
+        ["cstc3l", "ctt7l"],
+        //R
+        ["cstc7r", "ctt9r"],
+        ["cstc6r", "ctt11r"],
+        ["cstc4r", "ctt5r"],
+        ["cstc3r", "ctt7r"],
+        {"optional":false}
+
+        //to side
+        //L
+        {"beamDeform":5000,"beamStrength":"FLT_MAX"},
+        ["cstc3l", "cst5ll"],
+        ["cstc4l", "cst7ll"],
+        ["cstc5l", "cst7ll"],
+        ["cstc5l", "cst9ll"],
+        ["cstc6l", "cst9ll"],
+        ["cstc7l", "cst11ll"],
+        //R
+        ["cstc3r", "cst5rr"],
+        ["cstc4r", "cst7rr"],
+        ["cstc5r", "cst7rr"],
+        ["cstc5r", "cst9rr"],
+        ["cstc6r", "cst9rr"],
+        ["cstc7r", "cst11rr"],
+
+        //extra crossing
+        //L
+        ["cstc7l", "cst9ll"],
+        ["cstc6l", "cst11ll"],
+        ["cstc4l", "cst5ll"],
+        ["cstc3l", "cst7ll"],
+        //R
+        ["cstc7r", "cst9rr"],
+        ["cstc6r", "cst11rr"],
+        ["cstc4r", "cst5rr"],
+        ["cstc3r", "cst7rr"],
+
+        //to frame
+        //L
+        ["cstc7l", "cstc8l"],
+        ["cstc8l", "cfs11l"],
+        ["cstc8l", "csm11ll"],
+        ["cstc8l", "cstc6l"],
+        ["cstc8l", "cfs13l"],
+        //R
+        ["cstc7r", "cstc8r"],
+        ["cstc8r", "cfs11r"],
+        ["cstc8r", "csm11rr"],
+        ["cstc8r", "cstc6r"],
+        ["cstc8r", "cfs13r"],
+
+        //to seats
+        //L
+        ["cstc4l", "cse2l_6"],
+        ["cstc5l", "cse3l_6"],
+        ["cstc6l", "cse4l_6"],
+        ["cstc4l", "cse2l_5"],
+        ["cstc5l", "cse3l_5"],
+        ["cstc6l", "cse4l_5"],
+
+        //R
+        ["cstc4r", "cse2r_6"],
+        ["cstc5r", "cse3r_6"],
+        ["cstc6r", "cse4r_6"],
+        ["cstc4r", "cse2r_5"],
+        ["cstc5r", "cse3r_5"],
+        ["cstc6r", "cse4r_5"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        //stanchion panels
+        {"dragCoef":0},
+        ["cstc8l", "cfs11l", "cfs11ll"],
+        ["cfs11ll", "csm11ll", "cstc8l"],
+        ["cfs11r", "cstc8r", "cfs11rr"],
+        ["csm11rr", "cfs11rr", "cstc8r"],
+    ],
+},
+}

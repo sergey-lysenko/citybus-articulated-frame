@@ -1,0 +1,31 @@
+{
+"citybus.radiator.articulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A Powerful Radiator",
+        "value":2650,
+    }
+    "slotType" : "citybus.radiator.articulated",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["acitybus_radiator", ["rear_frame_upper","citybus_articulated_frame"]],
+     ],
+    "props": [
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["radiatorFanSpin"  , "acitybus_radiatorfan", "afm16l","afs16l","afm17l",  {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":1}    , {"x":0, "y":0, "z":0}, -360, 360, 0, -1],
+    ],
+    "mainEngine":{
+        //cooling system
+        "radiatorArea":1,
+        "radiatorEffectiveness":15000,
+        "coolantVolume":10
+        "radiatorFanType":"electric",
+        "radiatorFanMaxAirSpeed":5,
+        "thermostatTemperature":90
+
+        "oilRadiatorArea":0.24,
+        "oilRadiatorEffectiveness":3000,
+        "oilThermostatTemperature":100
+    },
+}
+}

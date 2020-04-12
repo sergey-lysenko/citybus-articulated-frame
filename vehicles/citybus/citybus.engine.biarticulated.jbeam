@@ -1,0 +1,650 @@
+{
+"citybus.engine.biarticulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA Tuned Gavril TCM 8.9L Diesel Engine",
+        "value":16500,
+    },
+    "slotType" : "citybus.engine.biarticulated",
+    "slots": [
+        ["type", "default", "description"]
+        //engine
+        ["citybus.radiator.biarticulated","citybus.radiator.biarticulated", "Radiator"],
+        ["citybus.transmission.biarticulated","citybus.transmission.biarticulated.6A", "Transmission"],
+        ["citybus.turbo","citybus.turbo.350", "Turbocharger"],
+        ["citybus_articulated_engine_ecu","citybus_articulated_engine_ecu", "Engine Management",{"coreSlot":true}],
+        //exhaust and intake are linked from body section because they mount to body
+        //["n2o_system","", "Nitrous Oxide System"],
+        ["citybus_articulated_engine_internals","citybus_articulated_engine_internals", "Engine Long Block",{"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["combustionEngine", "mainEngine", "dummy", 0],
+    ],
+    "mainEngine":{
+        "torque":[
+            ["rpm", "torque"]
+            [0,      0],
+            [200,  279],
+            [400,  480],
+            [600,  606],
+            [800,  747],
+            [1000, 858],
+            [1200, 915],
+            [1400, 923],
+            [1500, 929],
+            [1600, 934],
+            [1800, 921],
+            [2100, 900],
+            [2400, 897],
+            [2700, 833],
+            [3000, 764],
+        ],
+
+        "idleRPM":500,
+        "maxRPM":3500,
+        "inertia":15,
+        "friction":20,
+        "idleRPMRoughness":25,
+        "revLimiterType":"soft"
+        "dynamicFriction":0.2
+        "burnEfficiency":[
+            [0,   0.20],
+            [0.1, 0.25],
+            [0.3, 0.32],
+            [0.4, 0.46],
+            [0.7, 0.44],
+            [1,   0.42],
+        ],
+        //fuel system
+        "energyStorage": "mainTank",
+        "requiredEnergyType":"diesel",
+
+        //exhaust
+        "particulates":0.20
+        "instantAfterFireCoef": 0.0,
+        "sustainedAfterFireCoef": 0.0,
+
+        //cooling and oil system
+        "thermalsEnabled":true
+        "engineBlockMaterial":"iron"
+        "oilVolume":25
+
+        //engine durability
+        "maxTorqueRating": 6300,
+        "maxOverTorqueDamage": 3300,
+        "cylinderWallTemperatureDamageThreshold":160
+        "headGasketDamageThreshold":1500000
+        "pistonRingDamageThreshold":1500000
+        "connectingRodDamageThreshold":1500000
+
+        //node beam interface
+        "torqueReactionNodes:":["ben4l","ben3l","ben1r"]
+        "waterDamage": {"[engineGroup]:":["biarticulated_intake"]}
+        "radiator": {"[engineGroup]:":["biarticulated_radiator"]}
+        "engineBlock": {"[engineGroup]:":["biarticulated_engine_block"]}
+        "breakTriggerBeam":"biarticulated_engine",
+        "uiName":"Engine",
+
+        "soundConfig": "soundConfig",
+        "soundConfigExhaust": "soundConfigExhaust",
+
+        //starter motor
+        "starterSample":"event:>Engine>Starter>i6diesel_bus_eng",
+        "starterVolume":0.7
+        "starterThrottleKillTime":1.3,
+        "idleRPMStartRate":2,
+        "idleRPMStartCoef":0.5,
+    },
+    "soundConfig": {
+        "sampleName": "I6D_bus_engine",
+
+        "mainGain": 0,
+        "onLoadGain":1.0,
+        "offLoadGain":0.85,
+
+        "maxLoadMix": 1.0,
+        "minLoadMix": 0,
+
+        "eqLowGain": -3,
+        "eqLowFreq": 250,
+        "eqLowWidth": 0.1,
+
+        "eqHighGain": -8,
+        "eqHighFreq": 1600,
+        "eqHighWidth": 0.1,
+
+        "lowShelfGain":0,
+        "lowShelfFreq":80,
+
+        "highShelfGain":4,
+        "highShelfFreq":4500,
+
+        "fundamentalFrequencyCylinderCount":6
+        "eqFundamentalGain": 0
+    },
+    "soundConfigExhaust": {
+        "sampleName": "I6D_semi_exhaust",
+
+        "mainGain": -2,
+        "onLoadGain":1.0,
+        "offLoadGain":0.85,
+
+        "maxLoadMix": 1.0,
+        "minLoadMix": 0,
+
+        "eqLowGain": 0,
+        "eqLowFreq": 120,
+        "eqLowWidth": 0.1,
+
+        "eqHighGain": 0,
+        "eqHighFreq": 2400,
+        "eqHighWidth": 0.1,
+
+        "lowShelfGain":6,
+        "lowShelfFreq":110,
+
+        "highShelfGain":6,
+        "highShelfFreq":3000,
+
+        "fundamentalFrequencyCylinderCount":6
+        "eqFundamentalGain": 2
+    },
+    //"soundConfig": {
+    //    "sampleName": "I6D_engine",
+    //
+    //    "mainGain": -7,
+    //    "onLoadGain":1.0,
+    //    "offLoadGain":0.77,
+    //
+    //    "maxLoadMix": 1.0,
+    //    "minLoadMix": 0,
+    //
+    //    "eqLowGain": 0,
+    //    "eqLowFreq": 300,
+    //    "eqLowWidth": 0.1,
+    //
+    //    "eqHighGain": -8,
+    //    "eqHighFreq": 1400,
+    //    "eqHighWidth": 0.1,
+    //
+    //    "lowShelfGain":5,
+    //    "lowShelfFreq":270,
+    //
+    //    "highShelfGain":5,
+    //    "highShelfFreq":6500,
+    //
+    //    "fundamentalFrequencyCylinderCount":6
+    //    "eqFundamentalGain": 0
+    //},
+    //"soundConfig": {
+    //    "sampleName": "I6D_exhaust",
+    //
+    //    "mainGain": 0,
+    //    "onLoadGain":1.0,
+    //    "offLoadGain":0.74,
+    //
+    //    "maxLoadMix": 1.0,
+    //    "minLoadMix": 0,
+    //
+    //    "eqLowGain": 0,
+    //    "eqLowFreq": 90,
+    //    "eqLowWidth": 0.05,
+    //
+    //    "eqHighGain": 0,
+    //    "eqHighFreq": 1400,
+    //    "eqHighWidth": 0.1,
+    //
+    //    "lowShelfGain":0,
+    //    "lowShelfFreq":270,
+    //
+    //    "highShelfGain":0,
+    //    "highShelfFreq":6500,
+    //
+    //    "fundamentalFrequencyCylinderCount":6
+    //    "eqFundamentalGain": 0
+    //},
+    //"soundConfigExhaust": {
+    //    "sampleName": "I6D_exhaust",
+    //
+    //    "mainGain": 2,
+    //    "onLoadGain":1.0,
+    //    "offLoadGain":0.73,
+    //
+    //    "maxLoadMix": 1.0,
+    //    "minLoadMix": 0,
+    //
+    //    "eqLowGain": 0,
+    //    "eqLowFreq": 100,
+    //    "eqLowWidth": 0.1,
+    //
+    //    "eqHighGain": 0,
+    //    "eqHighFreq": 2500,
+    //    "eqHighWidth": 0.1,
+    //
+    //    "lowShelfGain":0,
+    //    "lowShelfFreq":100,
+    //
+    //    "highShelfGain":-8,
+    //    "highShelfFreq":1500,
+    //
+    //    "fundamentalFrequencyCylinderCount":6
+    //    "eqFundamentalGain": 0
+    //},
+
+    "vehicleController": {
+    },
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["bcitybus_engine", ["citybus_biarticulated_engine_R","citybus_biarticulated_engine_L"]],
+         ["bcitybus_compressor", ["birear_frame"]],
+         {"deformGroup":"biarticulated_pipes_break", "deformMaterialBase":"citybus", "deformMaterialDamaged":"invis"},
+         ["bcitybus_pipes", ["birear_frame_upper","citybus_biarticulated_engine_L","citybus_biarticulated_engine_piping"]],
+         ["bcitybus_compressorbelt", ["birear_frame","citybus_biarticulated_engine_R","citybus_biarticulated_engine_L"]],
+         {"deformGroup":"", "deformMaterialBase":"", "deformMaterialDamaged":""},
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":true}
+        {"collision":true}
+        //--ENGINE CUBE--
+        {"nodeWeight":125},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"citybus_biarticulated_engine_L"},
+        {"engineGroup":"biarticulated_engine_block"}
+        ["ben1l", 0.24, 26.03, 0.44,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":"thermals","conductionRadius":0.21}],
+        ["ben2l", 0.24, 25.2, 0.36,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":"thermals","conductionRadius":0.21}],
+        ["ben3l", 0.24, 25.95, 1.42,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":"thermals","conductionRadius":0.21}],
+        ["ben4l", 0.24, 25.12, 1.35,{"isExhaust":"mainEngine","chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":"thermals","conductionRadius":0.21}],
+        {"group":"citybus_biarticulated_engine_R"},
+        ["ben1r", -0.24, 26.03, 0.44],
+        {"engineGroup":["biarticulated_engine_block","biarticulated_exhaust_manifold"]},
+        ["ben2r", -0.24, 25.2, 0.36],
+        {"engineGroup":"biarticulated_engine_block"},
+        ["ben3r", -0.24, 25.95, 1.42],
+        ["ben4r", -0.24, 25.12, 1.35],
+        {"group":"citybus_biarticulated_engine_piping"},
+        {"nodeWeight":2.5},
+        ["bin0",  -0.78, 25.55, 1.46, {"engineGroup":"biarticulated_intake"}],
+        ["bex0",   1.06, 26.02, 1.35],
+        ["bex6",   1.06, 26.02, 1.75],
+        {"engineGroup":""}
+        {"selfCollision":true}
+        {"collision":true}
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--ENGINE CUBE--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":20001000,"beamDamp":5000},
+        {"beamDeform":250000,"beamStrength":"FLT_MAX"},
+        ["ben1r","ben1l"],
+        ["ben1r","ben2r"],
+        ["ben1r","ben2l"],
+        ["ben1r","ben3r"],
+        ["ben1r","ben3l"],
+        ["ben1r","ben4r"],
+        ["ben1r","ben4l"],
+        ["ben1l","ben2r"],
+        ["ben1l","ben2l"],
+        ["ben1l","ben3r"],
+        ["ben1l","ben3l"],
+        ["ben1l","ben4r"],
+        ["ben1l","ben4l"],
+        ["ben2r","ben2l"],
+        ["ben2r","ben3r"],
+        ["ben2r","ben3l"],
+        ["ben2r","ben4r"],
+        ["ben2r","ben4l"],
+        ["ben2l","ben3r"],
+        ["ben2l","ben3l"],
+        ["ben2l","ben4r"],
+        ["ben2l","ben4l"],
+        ["ben3r","ben3l"],
+        ["ben3r","ben4r"],
+        ["ben3r","ben4l"],
+        ["ben3l","ben4r"],
+        ["ben3l","ben4l"{"isExhaust":"mainEngine"}],
+        ["ben4r","ben4l"],
+
+        //engine mounts
+        {"beamSpring":4001000,"beamDamp":2500},
+        {"beamDeform":50000,"beamStrength":295000},
+        {"deformGroup":"pipes_break","deformationTriggerRatio":0.1},
+        ["ben1l", "bfm18l",{"name":"bengine","disableMeshBreaking":true,"disableTriangleBreaking":true}],
+        ["ben1r", "bfm18r",{"name":"bengine","disableMeshBreaking":true,"disableTriangleBreaking":true}],
+        ["ben3r", "bfm18r"],
+        ["ben3l", "bfm18l"],
+        ["ben1r", "bfm18l"],
+        ["ben1l", "bfm18r"],
+
+        ["ben2l", "bfs16l"],
+        ["ben2r", "bfs16r"],
+
+        ["ben2l", "bfm16l"],
+        ["ben2r", "bfm16r"],
+
+        ["ben4l", "bfm16l"],
+        ["ben4r", "bfm16l"],
+        {"deformGroup":""},
+
+        //engine piping
+        {"beamSpring":51000,"beamDamp":500},
+        {"beamDeform":2000,"beamStrength":5000},
+        ["bex0", "bex6"{"isExhaust":"mainEngine"}],
+        ["bex0", "ben3l"{"isExhaust":"mainEngine"}],
+        ["bex0", "ben4l"],
+        ["bex6", "ben3l"],
+        ["bex0", "ben1l"],
+        ["bex6", "ben4l"],
+        {"beamDeform":2000,"beamStrength":10000},
+        ["ben3r", "bin0"],
+        ["ben4r", "bin0"],
+        ["ben1r", "bin0"],
+        ["ben2r", "bin0"],
+
+        //limiters
+        {"beamType":"|SUPPORT", "beamLongBound":5},
+        {"beamSpring":10001000,"beamDamp":250},
+        {"beamDeform":150000,"beamStrength":850000},
+        {"beamPrecompression":0.8},
+        ["ben4l", "bsm18r"],
+        ["ben4r", "bsm18l"],
+        ["ben2l", "bfm18r"],
+        ["ben2r", "bfm18l"],
+
+        ["ben1l", "bfm18ll"],
+        ["ben1r", "bfm18rr"],
+        ["ben2r", "bfm16rr"],
+        ["ben2l", "bfm16ll"],
+
+        ["bsp16l", "ben2r"],
+        ["bsp16r", "ben2l"],
+        ["bsp18l", "ben1r"],
+        ["bsp18r", "ben1l"],
+        {"beamPrecompression":1},
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+    "triangles": [
+        ["id1:","id2:","id3:"],
+        {"dragCoef":5},
+        {"groundModel":"metal"},
+        {"optional":true},
+        ["ben1r", "btra2r", "ben4r"],
+        ["ben4r", "ben3r", "ben1r"],
+        ["ben1r", "ben1l", "btra2l"],
+        ["btra2l", "btra2r", "ben1r"],
+        ["ben3l", "ben1l", "ben1r"],
+        ["ben1r", "ben3r", "ben3l"],
+        ["ben4r", "btra2r", "btra2l"],
+        ["btra2l", "ben4l", "ben4r"],
+        ["ben3r", "ben4r", "ben4l"],
+        ["ben4l", "ben3l", "ben3r"],
+        ["btra2l", "ben1l", "ben3l"],
+        ["ben3l", "ben4l", "btra2l"],
+        ["btra2l", "ben1l","ben4l"],
+        ["ben3l", "ben4l", "ben1l"],
+        {"optional":false},
+
+        {"triangleType":"NONCOLLIDABLE"},
+        ["bex6", "bex0", "ben3l"],
+        ["ben3r", "bin0", "ben4r"],
+        {"triangleType":"NORMALTYPE"},
+        {"group":""},
+    ],
+}
+"citybus.airfilter.biarticulated": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA Air Filter",
+        "value":350,
+    }
+    "slotType" : "citybus.airfilter.biarticulated",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         ["bcitybus_airfilter", ["birear_frame_upper"]],
+    ],
+    "nodes": [
+         ["id", "posX", "posY", "posZ"],
+         {"selfCollision":true}
+         {"collision":true}
+         //--Air Filter-
+         {"frictionCoef":0.5},
+         {"nodeMaterial":"|NM_METAL"},
+         {"nodeWeight":2.0},
+         {"group":"acitybus_airfilter"},
+         ["bin0",-1.2, 25.85, 2.1, {"engineGroup":"biarticulated_intake"}],
+         {"group":""},
+    ],
+
+    "beams": [
+          ["id1:", "id2:"],
+          //--AIR FILTER--
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+          {"deformLimitExpansion":1.1},
+          {"beamSpring":51000,"beamDamp":250},
+          {"beamDeform":10000,"beamStrength":"FLT_MAX"},
+          ["bin0", "bsp17rr"],
+          ["bin0", "bst17rr"],
+          ["bin0", "bst18rr"],
+          ["bin0", "bsp18rr"],
+          {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+}
+"citybus.transmission.biarticulated.4A": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA 4-Speed Automatic Transmission",
+        "value":12000,
+    }
+    "slotType" : "citybus.transmission.biarticulated",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus_converter","citybus_converter","Torque Converter", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-5.03, 0, 3.49, 1.86, 1.41, 1.0],
+        "friction": 25,
+        "parkLockTorque":50000,
+        "oneWayViscousCoef":100,
+        "gearboxNode:":["btra1"],
+    },
+    "vehicleController": {
+        "automaticModes":"PRNDM",
+        "useSmartAggressionCalculation":false,
+        "calculateOptimalLoadShiftPoints":false,
+        "transmissionGearChangeDelay":2,
+        "gearboxDecisionSmoothingDown":2,
+        "gearboxDecisionSmoothingUp":2,
+
+        "highShiftUpRPM":1850,
+        "highShiftDownRPM":1200
+        "lowShiftUpRPM":1250,
+        "lowShiftDownRPM":750,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:"],
+        ["bcitybus_transmission", ["citybus_biarticulated_transmission","citybus_biarticulated_engine_L","citybus_biarticulated_engine_R"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":true}
+        {"collision":true}
+        //--TRANSMISSION CONE--
+        {"nodeWeight":80},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"citybus_biarticulated_transmission"},
+        ["btra2r", -0.22, 24.15, 0.28],
+        ["btra2l", 0.22, 24.15, 0.28],
+        ["btra1", -0.05, 24.28, 0.562],
+        ["btra3r", -0.15, 24.4, 0.73],
+        ["btra3l", 0.15, 24.4, 0.73],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--TRANSMISSION CONE--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":20001000,"beamDamp":5000},
+        {"beamDeform":250000,"beamStrength":"FLT_MAX"},
+        ["btra1","btra2r"],
+        ["btra1","btra2l"],
+        ["btra1","btra3r"],
+        ["btra1","btra3l"],
+        ["btra2r","btra2l"],
+        ["btra3r","btra3l"],
+        ["btra2r","btra3r"],
+        ["btra2l","btra3l"],
+        ["btra2r","btra3l"],
+        ["btra2l","btra3r"],
+        //attach to engine
+        ["btra1","ben2r"],
+        ["btra1","ben2l"],
+        ["btra3l","ben1l"],
+        ["btra3r","ben1r"],
+        ["btra2r","ben2r"],
+        ["btra2r","ben2l"],
+        ["btra2r","ben4r"],
+        ["btra2r","ben4l"],
+        ["btra2l","ben2r"],
+        ["btra2l","ben2l"],
+        ["btra2l","ben4r"],
+        ["btra2l","ben4l"],
+        ["btra3r","ben2r"],
+        ["btra3r","ben2l"],
+        ["btra3r","ben4r"],
+        ["btra3r","ben4l"],
+        ["btra3l","ben2r"],
+        ["btra3l","ben2l"],
+        ["btra3l","ben4r"],
+        ["btra3l","ben4l"],
+        //transmission mounts
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":4001000,"beamDamp":2500},
+        {"beamDeform":50000,"beamStrength":295000},
+        ["btra2l", "bfs15l"],
+        ["btra2r", "bfs15r"],
+        ["btra1", "bfs15l"],
+        ["btra1", "bfs15r"],
+        ["btra2l", "bfs15r"],
+        ["btra2r", "bfs15l"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+}
+"citybus.transmission.biarticulated.6A": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"BA 6-Speed Automatic Transmission",
+        "value":16000,
+    }
+    "slotType" : "citybus.transmission.biarticulated",
+    "slots": [
+        ["type", "default", "description"]
+        ["citybus_converter","citybus_converter","Torque Converter", {"coreSlot":true}],
+    ],
+    "powertrain" : [
+        ["type", "name", "inputName", "inputIndex"],
+        ["torqueConverter", "torqueConverter", "mainEngine", 1],
+        ["automaticGearbox", "gearbox", "torqueConverter", 1],
+    ],
+    "gearbox": {
+        "uiName":"Gearbox",
+        "gearRatios":[-5.03, 0, 3.49, 1.86, 1.41, 1.0, 0.75, 0.65],
+        "friction": 25,
+        "parkLockTorque":50000,
+        "oneWayViscousCoef":100,
+        "gearboxNode:":["btra1"],
+    },
+    "vehicleController": {
+        "automaticModes":"PRNDM",
+        "useSmartAggressionCalculation":false,
+        "calculateOptimalLoadShiftPoints":false,
+        "transmissionGearChangeDelay":1,
+        "gearboxDecisionSmoothingDown":2,
+        "gearboxDecisionSmoothingUp":2,
+		
+        "highShiftUpRPM":1850,
+        "highShiftDownRPM":1200
+        "lowShiftUpRPM":1250,
+        "lowShiftDownRPM":750,
+    },
+    "flexbodies": [
+        ["mesh", "[group]:"],
+        ["bcitybus_transmission", ["citybus_biarticulated_transmission","citybus_biarticulated_engine_L","citybus_biarticulated_engine_R"]],
+    ],
+    "nodes": [
+        ["id", "posX", "posY", "posZ"],
+        {"selfCollision":true}
+        {"collision":true}
+        //--TRANSMISSION CONE--
+        {"nodeWeight":80},
+        {"frictionCoef":0.5},
+        {"nodeMaterial":"|NM_METAL"},
+        {"group":"citybus_biarticulated_transmission"},
+        ["btra2r", -0.22, 24.15, 0.28],
+        ["btra2l", 0.22, 24.15, 0.28],
+        ["btra1", -0.05, 24.28, 0.562],
+        ["btra3r", -0.15, 24.4, 0.73],
+        ["btra3l", 0.15, 24.4, 0.73],
+        {"group":""},
+    ],
+    "beams": [
+        ["id1:", "id2:"],
+        //--TRANSMISSION CONE--
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":20001000,"beamDamp":5000},
+        {"beamDeform":250000,"beamStrength":"FLT_MAX"},
+        ["btra1","btra2r"],
+        ["btra1","btra2l"],
+        ["btra1","btra3r"],
+        ["btra1","btra3l"],
+        ["btra2r","btra2l"],
+        ["btra3r","btra3l"],
+        ["btra2r","btra3r"],
+        ["btra2l","btra3l"],
+        ["btra2r","btra3l"],
+        ["btra2l","btra3r"],
+        //attach to engine
+        ["btra1","ben2r"],
+        ["btra1","ben2l"],
+        ["btra3l","ben1l"],
+        ["btra3r","ben1r"],
+        ["btra2r","ben2r"],
+        ["btra2r","ben2l"],
+        ["btra2r","ben4r"],
+        ["btra2r","ben4l"],
+        ["btra2l","ben2r"],
+        ["btra2l","ben2l"],
+        ["btra2l","ben4r"],
+        ["btra2l","ben4l"],
+        ["btra3r","ben2r"],
+        ["btra3r","ben2l"],
+        ["btra3r","ben4r"],
+        ["btra3r","ben4l"],
+        ["btra3l","ben2r"],
+        ["btra3l","ben2l"],
+        ["btra3l","ben4r"],
+        ["btra3l","ben4l"],
+        //transmission mounts
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+        {"beamSpring":4001000,"beamDamp":2500},
+        {"beamDeform":50000,"beamStrength":295000},
+        ["btra2l", "bfs15l"],
+        ["btra2r", "bfs15r"],
+        ["btra1", "bfs15l"],
+        ["btra1", "bfs15r"],
+        ["btra2l", "bfs15r"],
+        ["btra2r", "bfs15l"],
+        {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
+    ],
+},
+}

@@ -1,0 +1,37 @@
+{
+"citybus_brake_C": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"Triarticulated Brakes",
+        "value":2200,
+    }
+    "slotType" : "citybus_brake_C",
+    "slots": [
+        ["type", "default", "description"]
+        ["brakepad_C","brakepad_C_premium", "Brake Pads"{"coreSlot":true}],
+    ],
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+         //brake drums
+         ["ccitybus_brakedrum_C", ["wheel_CL","wheel_CR","wheelhub_CR","wheelhub_CL"]],
+    ],
+    "pressureWheels": [
+        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
+        //brake properties
+        {"brakeTorque":16000},
+        {"parkingTorque":0},
+        {"brakeSpring":200},
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        {"brakeDiameter":0.35},
+        {"brakeMass":55},
+        {"brakeType":"drum"},
+        {"rotorMaterial":"steel"},
+        {"brakeVentingCoef":0.2},
+    ],
+    "engine":{
+        "brakePressureDelay":0.6,
+    },
+}
+}

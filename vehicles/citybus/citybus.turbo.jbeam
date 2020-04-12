@@ -1,0 +1,184 @@
+{
+"citybus.turbo.280": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A T280 Turbocharger",
+        "value":4500,
+    }
+    "slotType" : "citybus.turbo",
+    "flexbodies": [
+        ["mesh", "[group]:"],
+    ],
+    "turbocharger": {
+        "bovSoundFileName":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_bov"
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_hiss"
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_spin"
+        "bovEnabled":false,
+        "bovSoundVolumeCoef":0.0,
+        "hissVolumePerPSI": 0.0,
+		"whineVolumePer10kRPM": 0.09,
+        "whinePitchPer10kRPM": 0.074,
+        "wastegateStart":24,
+        "wastegateLimit":25,
+        "maxExhaustPower": 10000,
+        "backPressureCoef": 0.00006,
+        "frictionCoef": 12,
+        "inertia":15,
+        "damageThresholdTemperature": 750,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         0],
+            [30000,     8],
+            [60000,     14],
+            [90000,     28],
+            [150000,    38],
+            [200000,    44],
+            [250000,    51],
+            [300000,    55],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,        0,     0],
+            [200,   0.37,   0.1],
+            [400,   0.51,  0.30],
+            [600,   0.64,  0.54],
+            [800,   0.75,  0.75],
+            [1000,  0.78,  0.87],
+            [1200,  0.79,   0.9],
+            [1400,  0.78,  0.87],
+            [1500,  0.775,  0.81],
+            [1600,  0.77,  0.75],
+            [1800,  0.76,  0.67],
+            [2000,  0.74,  0.59],
+            [2200,  0.66,   0.51],
+            [2400,  0.61,   0.43],
+            [2600,  0.50,   0.35],
+            [2800,  0.33,   0.26],
+            [3000,  0.22,   0.18],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+},
+"citybus.turbo.350": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A T350 Turbocharger",
+        "value":6500,
+    }
+    "slotType" : "citybus.turbo",
+    "flexbodies": [
+        ["mesh", "[group]:"],
+    ],
+    "turbocharger": {
+        "bovSoundFileName":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_bov"
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_hiss"
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_spin"
+        "bovEnabled":false,
+        "bovSoundVolumeCoef":0.0,
+        "hissVolumePerPSI": 0.0,
+		"whineVolumePer10kRPM": 0.075,
+        "whinePitchPer10kRPM": 0.074,
+        "wastegateStart":34,
+        "wastegateLimit":35,
+        "maxExhaustPower": 24000,
+        "backPressureCoef": 0.00005,
+        "frictionCoef": 12,
+        "inertia":45,
+        "damageThresholdTemperature": 750,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,         0],
+            [30000,     9],
+            [60000,  16.5],
+            [90000,     30],
+            [150000,    41],
+            [200000,    48],
+            [250000,    56],
+            [300000,    61],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,        0,     0],
+            [200,   0.37,   0.1],
+            [400,   0.51,  0.30],
+            [600,   0.63,  0.54],
+            [800,   0.76,  0.75],
+            [1000,  0.77,  0.87],
+            [1200,  0.78,   0.9],
+            [1400,  0.785,  0.87],
+            [1500,  0.779,  0.81],
+            [1600,  0.776,  0.75],
+            [1800,  0.772,  0.67],
+            [2000,  0.768,  0.59],
+            [2200,  0.746,   0.57],
+            [2400,  0.723,   0.55],
+            [2600,  0.711,   0.52],
+            [2800,  0.699,   0.49],
+            [3000,  0.622,   0.46],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+},
+"citybus.turbo.600": {
+    "information":{
+        "authors":"BeamNG",
+        "name":"A T600 Turbocharger",
+        "value":4000,
+    }
+    "slotType" : "citybus.turbo",
+    "flexbodies": [
+         ["mesh", "[group]:", "nonFlexMaterials"],
+    ],
+    "turbocharger": {
+        "bovSoundFileName":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_bov"
+        "hissLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_hiss"
+        "whineLoopEvent":"event:>Vehicle>Forced_Induction>Turbo_06>turbo_spin"
+        "bovEnabled":false,
+        "bovSoundVolumeCoef": 0.0
+		"hissVolumePerPSI": 0.0,
+		"whineVolumePer10kRPM": 0.09,
+        "whinePitchPer10kRPM": 0.074,
+	    "wastegateStart":55,
+        "wastegateLimit":57,
+        "volumePer10kRPM":0.12
+        "pitchPer10kRPM": 0.095,
+        "maxExhaustPower": 35000,
+        "backPressureCoef": 0.00006,
+        "frictionCoef": 23,
+        "inertia":25,
+        "damageThresholdTemperature": 850,
+        "pressurePSI":[
+            //turbineRPM, pressure(PSI)
+            [0,          0],
+            [30000,      8],
+            [60000,     20],
+            [90000,     39],
+            [150000,    69],
+            [200000,    78],
+            [250000,    87],
+            [300000,    93],
+        ],
+        "engineDef":[
+            //engineRPM, efficiency, exhaustFactor
+            [0,     0.2,    0.1],
+            [250,   0.6,    0.1],
+            [500,   0.8,    0.2],
+            [800,   0.9,    0.9],
+            [1400,  0.95,   0.9],
+            [2000,  0.85,   0.8],
+            [2500,  0.6,    0.6],
+            [3000,  0.2,    0.3],
+        ],
+    },
+    "mainEngine": {
+        //turbocharger name
+        "turbocharger":"turbocharger",
+    },
+},
+}
