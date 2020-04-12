@@ -33,9 +33,9 @@
          {"nodeMaterial":"|NM_METAL"},
          {"nodeWeight":2.0},
          {"group":"citybus_biarticulated_exhaust"},
-         ["bex1",1.07, 26.065, 2.94, {"afterFireAudioCoef":0,"afterFireVisualCoef":0}],
-         {"selfCollision":false}
-         {"collision":false}
+         ["bex1",1.07, 26.065, 2.94, {"afterFireAudioCoef":0,"afterFireVisualCoef":0, "exhaustAudioMufflingCoef": 0.1, "exhaustAudioGainChange":-4}],
+         {"selfCollision":false},
+         {"collision":false},
          ["bex2",1.15, 26.0, 2.73],
          ["bex3",0.99, 26.0, 2.73],
          ["bex4",1.15, 25.8, 2.73],
@@ -60,12 +60,12 @@
           ["bex1", "bex2"],
           ["bex1", "bex4"],
           ["bex2", "bex3"],
-          ["bex1", "bex7",{"isExhaust":true}],
+          ["bex1", "bex7", {"isExhaust":true}],
           ["bex7", "bex5"],
           ["bex7", "bex4"],
           ["bex7", "bex3"],
           ["bex7", "bex2"],
-          ["bex7", "bex6",{"isExhaust":true}],
+          ["bex7", "bex6", {"isExhaust":true}],
           ["bex1", "bex6"],
 
           ["bex3", "bex5"],

@@ -76,13 +76,13 @@
         ["fs2ll",  1.30, -5.33, 0.36],
 
         ["fs4rr", -1.30, -4.83, 0.36],
-        ["fs4r",  -0.45, -4.83, 0.36{"collision":true,"selfCollision":true}],
-        ["fs4l",   0.45, -4.83, 0.36{"collision":true,"selfCollision":true}],
+        ["fs4r",  -0.45, -4.83, 0.36, {"collision":true,"selfCollision":true}],
+        ["fs4l",   0.45, -4.83, 0.36, {"collision":true,"selfCollision":true}],
         ["fs4ll",  1.30, -4.83, 0.36],
 
         ["fs5rr", -1.30, -3.35, 0.36],
-        ["fs5r",  -0.45, -3.35, 0.36{"collision":true,"selfCollision":true}],
-        ["fs5l",   0.45, -3.35, 0.36{"collision":true,"selfCollision":true}],
+        ["fs5r",  -0.45, -3.35, 0.36, {"collision":true,"selfCollision":true}],
+        ["fs5l",   0.45, -3.35, 0.36, {"collision":true,"selfCollision":true}],
         ["fs5ll",  1.30, -3.35, 0.36],
 
         ["fs6rr", -1.30, -2.32, 0.36],
@@ -97,25 +97,25 @@
         ["fs9rr", -1.30,  0.38, 0.36],
         ["fs9ll",  1.30,  0.38, 0.36],
 
-        ["fs10rr", -1.30,  1.64, 0.36{"collision":false,"selfCollision":false}],
-        //["fs10r",  -0.46,  1.64, 0.36{"collision":false,"selfCollision":false}],
-        //["fs10l",   0.46,  1.64, 0.36{"collision":false,"selfCollision":false}],
-        ["fs10ll",  1.30,  1.64, 0.36{"collision":false,"selfCollision":false}],
+        ["fs10rr", -1.30,  1.64, 0.36, {"collision":false,"selfCollision":false}],
+        //["fs10r",  -0.46,  1.64, 0.36, {"collision":false,"selfCollision":false}],
+        //["fs10l",   0.46,  1.64, 0.36, {"collision":false,"selfCollision":false}],
+        ["fs10ll",  1.30,  1.64, 0.36, {"collision":false,"selfCollision":false}],
 
         //front wheel tubs
         {"nodeWeight":4},
         ["ms3rr", -1.30, -4.59, 1.33],
-        ["ms3r",  -0.45,-4.59, 1.33{"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
-        ["ms3l",   0.45,-4.59, 1.33{"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
+        ["ms3r",  -0.45,-4.59, 1.33, {"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
+        ["ms3l",   0.45,-4.59, 1.33, {"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
         ["ms3ll",  1.30, -4.59, 1.33],
 
         ["ms5rr", -1.30, -3.65, 1.33],
-        ["ms5r",  -0.45,-3.65, 1.33{"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
-        ["ms5l",   0.45,-3.65, 1.33{"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
+        ["ms5r",  -0.45,-3.65, 1.33, {"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
+        ["ms5l",   0.45,-3.65, 1.33, {"group":"citybus_articulated_stanchions","collision":true,"selfCollision":true}],
         ["ms5ll",  1.30, -3.65, 1.33],
 
         //driver floor
-        ["dk1l",  0.45, -5.33, 0.85{"group":["citybus_articulated_wheelcover_FL"]}],
+        ["dk1l",  0.45, -5.33, 0.85, {"group":["citybus_articulated_wheelcover_FL"]}],
         ["dk2l",  0.45, -4.73, 0.85],
 
         //driver area
@@ -387,7 +387,6 @@
         ["sw2", "sw3"],
         ["sw1", "fm1l"],
         ["sw1", "fm1ll"],
-        ["sw1", "fm1l"],
         ["sw3", "fm1ll"],
         ["sw2", "fm1ll"],
         ["sw2", "fm1l"],
@@ -433,13 +432,13 @@
         ["gp1l", "fp0ll"],
 
         {"beamDeform":3500,"beamStrength":"FLT_MAX"},
-        ["sc1", "sb2ll"{"beamDeform":7000}],
+        ["sc1", "sb2ll", {"beamDeform":7000}],
         ["sc1", "sb1ll"],
         ["sc1", "sm1ll"],
-        ["sc1", "sm2ll"{"beamDeform":7000}],
+        ["sc1", "sm2ll", {"beamDeform":7000}],
         ["sc1", "sm3ll"],
         ["sc1", "sb3ll"],
-        ["sc1", "fm2ll"{"beamDeform":7000}],
+        ["sc1", "fm2ll", {"beamDeform":7000}],
         ["sc1", "fm3ll"],
         {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
     ],
@@ -673,11 +672,16 @@
         ["astc6l", "ast11ll"],
         ["astc4l", "ast5ll"],
         ["astc3l", "ast7ll"],
+        ["astc3l", "ast3ll"],
+        ["astc1l", "ast5ll"],
+        
         //R
         ["astc7r", "ast9rr"],
         ["astc6r", "ast11rr"],
         ["astc4r", "ast5rr"],
         ["astc3r", "ast7rr"],
+        ["astc3r", "ast3rr"],
+        ["astc1r", "ast5rr"],
 
         //to frame
         //L

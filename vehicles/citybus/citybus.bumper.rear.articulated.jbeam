@@ -3,11 +3,11 @@
     "information":{
         "authors":"BeamNG",
         "name":"A Bumper",
-        "value":1250,
+        "value":1050,
     },
     "slotType" : "citybus.bumper.rear.articulated",
     "slots": [
-        ["type", "default", "description"]
+        ["type", "default", "description"],
     ],
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],

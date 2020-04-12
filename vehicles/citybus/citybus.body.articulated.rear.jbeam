@@ -7,7 +7,7 @@
     }
     "slotType" : "citybus.body.articulated.rear",
     "slots": [
-        ["type", "default", "description"]
+        ["type", "default", "description"],
 
         //Specific
         ["citybus.accessdoor.rear.articulated","citybus.accessdoor.rear.articulated","Rear Access Panel"],

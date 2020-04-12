@@ -3,8 +3,8 @@
     "information":{
         "authors":"BeamNG",
         "name":"A Glass",
-        "value":1400,
-    }
+        "value":25000,
+    },
     "slotType" : "citybus.glass.articulated",
     "flexbodies": [
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -93,6 +93,7 @@
         ["asp14ll", "asp16ll"],
         ["asm15ll", "ast15ll"],
         ["asm16ll", "ast14ll"],
+        ["asm15ll", "ast16ll"],
         //R
         //{"breakGroup":"wallglass_1_R_break","deformGroup":"wallglass_1_R_break","deformationTriggerRatio":0.005},
         //door here instead
@@ -123,6 +124,7 @@
         ["asp14rr", "asp16rr"],
         ["asm15rr", "ast15rr"],
         ["asm16rr", "ast14rr"],
+        ["asm15rr", "ast16rr"],
         {"breakGroup":""},
         {"deformGroup":""},
         {"disableMeshBreaking":false,"disableTriangleBreaking":false},
@@ -132,6 +134,24 @@
         ["id1:","id2:","id3:"],
         {"dragCoef":10},
         {"groundModel":"plastic"},
+        //L
+        ["awi1l", "afp2l", "afp2ll"],
+        ["awi1l", "afp2ll", "afp3ll"],
+        ["awi1l", "afp3ll", "afp4ll"],
+        ["awi1l", "afp4ll", "afp4l"],
+        ["awi1l", "afp4l", "afp4"],
+        ["awi1l", "afp4", "afp3"],
+        ["awi1l", "afp3", "afp2"],
+        ["awi1l", "afp2", "afp2l"],
+        //R
+        ["afp2r", "awi1r", "afp2rr"],
+        ["afp2rr", "awi1r", "afp3rr"],
+        ["afp3rr", "awi1r", "afp4rr"],
+        ["afp4rr", "awi1r", "afp4r"],
+        ["afp4r", "awi1r", "afp4"],
+        ["afp4", "awi1r", "afp3"],
+        ["afp3", "awi1r", "afp2"],
+        ["afp2", "awi1r", "afp2r"],
 
         //side windows
         //L

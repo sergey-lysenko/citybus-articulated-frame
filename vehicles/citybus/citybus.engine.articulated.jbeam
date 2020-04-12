@@ -7,7 +7,7 @@
     },
     "slotType" : "citybus.engine.articulated",
     "slots": [
-        ["type", "default", "description"]
+        ["type", "default", "description"],
         //engine
         ["citybus.transmission.articulated","citybus.transmission.articulated.6A", "Transmission"],
         ["citybus.radiator.articulated","citybus.radiator.articulated", "Radiator"],
@@ -61,22 +61,22 @@
         "requiredEnergyType":"diesel",
 
         //exhaust
-        "particulates":0.20
+        "particulates":0.30,
         "instantAfterFireCoef": 0.0,
         "sustainedAfterFireCoef": 0.0,
 
         //cooling and oil system
-        "thermalsEnabled":true
-        "engineBlockMaterial":"iron"
-        "oilVolume":25
+        "thermalsEnabled":true,
+        "engineBlockMaterial":"iron",
+        "oilVolume":35,
 
         //engine durability
         "maxTorqueRating": 6300,
         "maxOverTorqueDamage": 3300,
-        "cylinderWallTemperatureDamageThreshold":160
-        "headGasketDamageThreshold":1500000
-        "pistonRingDamageThreshold":1500000
-        "connectingRodDamageThreshold":1500000
+        "cylinderWallTemperatureDamageThreshold":160,
+        "headGasketDamageThreshold":1500000,
+        "pistonRingDamageThreshold":1500000,
+        "connectingRodDamageThreshold":1500000,
 
         //node beam interface
         "torqueReactionNodes:":["aen4l","aen3l","aen1r"]
@@ -91,7 +91,9 @@
 
         //starter motor
         "starterSample":"event:>Engine>Starter>i6diesel_bus_eng",
-        "starterVolume":0.7
+        "shutOffSampleEngine":"event:>Engine>Shutoff>i6diesel_bus_eng",
+        "starterVolume":0.7,
+        "shutOffVolumeEngine":0.5,
         "starterThrottleKillTime":1.3,
         "idleRPMStartRate":2,
         "idleRPMStartCoef":0.5,
@@ -99,7 +101,7 @@
     "soundConfig": {
         "sampleName": "I6D_bus_engine",
 
-        "mainGain": 0,
+        "mainGain": 2,
         "onLoadGain":1.0,
         "offLoadGain":0.85,
 
@@ -120,13 +122,13 @@
         "highShelfGain":4,
         "highShelfFreq":4500,
 
-        "fundamentalFrequencyCylinderCount":6
-        "eqFundamentalGain": 0
+        "fundamentalFrequencyCylinderCount":6,
+        "eqFundamentalGain": 0,
     },
     "soundConfigExhaust": {
         "sampleName": "I6D_semi_exhaust",
 
-        "mainGain": -2,
+        "mainGain": 0,
         "onLoadGain":1.0,
         "offLoadGain":0.85,
 
@@ -147,91 +149,9 @@
         "highShelfGain":6,
         "highShelfFreq":3000,
 
-        "fundamentalFrequencyCylinderCount":6
-        "eqFundamentalGain": 2
+        "fundamentalFrequencyCylinderCount":6,
+        "eqFundamentalGain": 2,
     },
-    //"soundConfig": {
-    //    "sampleName": "I6D_engine",
-    //
-    //    "mainGain": -7,
-    //    "onLoadGain":1.0,
-    //    "offLoadGain":0.77,
-    //
-    //    "maxLoadMix": 1.0,
-    //    "minLoadMix": 0,
-    //
-    //    "eqLowGain": 0,
-    //    "eqLowFreq": 300,
-    //    "eqLowWidth": 0.1,
-    //
-    //    "eqHighGain": -8,
-    //    "eqHighFreq": 1400,
-    //    "eqHighWidth": 0.1,
-    //
-    //    "lowShelfGain":5,
-    //    "lowShelfFreq":270,
-    //
-    //    "highShelfGain":5,
-    //    "highShelfFreq":6500,
-    //
-    //    "fundamentalFrequencyCylinderCount":6
-    //    "eqFundamentalGain": 0
-    //},
-    //"soundConfig": {
-    //    "sampleName": "I6D_exhaust",
-    //
-    //    "mainGain": 0,
-    //    "onLoadGain":1.0,
-    //    "offLoadGain":0.74,
-    //
-    //    "maxLoadMix": 1.0,
-    //    "minLoadMix": 0,
-    //
-    //    "eqLowGain": 0,
-    //    "eqLowFreq": 90,
-    //    "eqLowWidth": 0.05,
-    //
-    //    "eqHighGain": 0,
-    //    "eqHighFreq": 1400,
-    //    "eqHighWidth": 0.1,
-    //
-    //    "lowShelfGain":0,
-    //    "lowShelfFreq":270,
-    //
-    //    "highShelfGain":0,
-    //    "highShelfFreq":6500,
-    //
-    //    "fundamentalFrequencyCylinderCount":6
-    //    "eqFundamentalGain": 0
-    //},
-    //"soundConfigExhaust": {
-    //    "sampleName": "I6D_exhaust",
-    //
-    //    "mainGain": 2,
-    //    "onLoadGain":1.0,
-    //    "offLoadGain":0.73,
-    //
-    //    "maxLoadMix": 1.0,
-    //    "minLoadMix": 0,
-    //
-    //    "eqLowGain": 0,
-    //    "eqLowFreq": 100,
-    //    "eqLowWidth": 0.1,
-    //
-    //    "eqHighGain": 0,
-    //    "eqHighFreq": 2500,
-    //    "eqHighWidth": 0.1,
-    //
-    //    "lowShelfGain":0,
-    //    "lowShelfFreq":100,
-    //
-    //    "highShelfGain":-8,
-    //    "highShelfFreq":1500,
-    //
-    //    "fundamentalFrequencyCylinderCount":6
-    //    "eqFundamentalGain": 0
-    //},
-
     "vehicleController": {
     },
     "flexbodies": [
@@ -252,7 +172,7 @@
         {"frictionCoef":0.5},
         {"nodeMaterial":"|NM_METAL"},
         {"group":"citybus_articulated_engine_L"},
-        {"engineGroup":"articulated_engine_block"}
+        {"engineGroup":"articulated_engine_block"},
         ["aen1l", 0.24, 16.03, 0.44,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":"thermals","conductionRadius":0.21}],
         ["aen2l", 0.24, 15.2, 0.36,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":"thermals","conductionRadius":0.21}],
         ["aen3l", 0.24, 15.95, 1.42,{"chemEnergy":1000,"burnRate":0.39,"flashPoint":700,"specHeat": 0.1,"selfIgnitionCoef":false,"smokePoint":600,"baseTemp":"thermals","conductionRadius":0.21}],
@@ -306,15 +226,15 @@
         ["aen3r","aen4r"],
         ["aen3r","aen4l"],
         ["aen3l","aen4r"],
-        ["aen3l","aen4l"{"isExhaust":"mainEngine"}],
+        ["aen3l","aen4l", {"isExhaust":"mainEngine"}],
         ["aen4r","aen4l"],
 
         //engine mounts
         {"beamSpring":4001000,"beamDamp":2500},
         {"beamDeform":50000,"beamStrength":295000},
         {"deformGroup":"pipes_break","deformationTriggerRatio":0.1},
-        ["aen1l", "afm18l",{"name":"aengine","disableMeshBreaking":true,"disableTriangleBreaking":true}],
-        ["aen1r", "afm18r",{"name":"aengine","disableMeshBreaking":true,"disableTriangleBreaking":true}],
+        ["aen1l", "afm18l", {"name":"aengine","disableMeshBreaking":true,"disableTriangleBreaking":true}],
+        ["aen1r", "afm18r", {"name":"aengine","disableMeshBreaking":true,"disableTriangleBreaking":true}],
         ["aen3r", "afm18r"],
         ["aen3l", "afm18l"],
         ["aen1r", "afm18l"],
@@ -333,8 +253,8 @@
         //engine piping
         {"beamSpring":51000,"beamDamp":500},
         {"beamDeform":2000,"beamStrength":5000},
-        ["aex0", "aex6"{"isExhaust":"mainEngine"}],
-        ["aex0", "aen3l"{"isExhaust":"mainEngine"}],
+        ["aex0", "aex6", {"isExhaust":"mainEngine"}],
+        ["aex0", "aen3l", {"isExhaust":"mainEngine"}],
         ["aex0", "aen4l"],
         ["aex6", "aen3l"],
         ["aex0", "aen1l"],

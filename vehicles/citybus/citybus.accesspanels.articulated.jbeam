@@ -3,11 +3,11 @@
     "information":{
         "authors":"BeamNG",
         "name":"A Rear Left Access Panel",
-        "value":600,
-    }
+        "value":400,
+    },
     "slotType" : "citybus.accessdoor.rear.left.articulated",
     "slots": [
-        ["type", "default", "description"]
+        ["type", "default", "description"],
     ],
     "flexbodies":[
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -101,8 +101,8 @@
     "information":{
         "authors":"BeamNG",
         "name":"A Rear Right Access Panel",
-        "value":600,
-    }
+        "value":400,
+    },
     "slotType" : "citybus.accessdoor.rear.right.articulated",
     "flexbodies":[
         ["mesh", "[group]:", "nonFlexMaterials"],
@@ -199,11 +199,11 @@
     "information":{
         "authors":"BeamNG",
         "name":"A Engine Access Panel",
-        "value":800,
-    }
+        "value":600,
+    },
     "slotType" : "citybus.enginedoor.articulated",
     "slots": [
-        ["type", "default", "description"]
+        ["type", "default", "description"],
         ["citybus_articulated_licenseplate_R","citybus_articulated_licenseplate_R", "Rear License Plate"],
     ],
     "flexbodies":[

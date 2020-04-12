@@ -210,8 +210,8 @@
         ["fs15rr", -1.31,  3.97, 0.8{"group":["front_frame","citybus_side_R"]}],
         ["fs15ll",  1.31,  3.97, 0.8{"group":["front_frame","citybus_side_L"]}],
 
-        ["fs16r",   -0.46,  5.1, 0.8{"group":["front_frame"]}],  // Moved farther
-        ["fs16l",    0.46,  5.1, 0.8{"group":["front_frame"]}],  // Moved farther
+        ["fs16r",   -0.46,  5.1, 0.8{"group":["front_frame"]}],  // Moved further
+        ["fs16l",    0.46,  5.1, 0.8{"group":["front_frame"]}],  // Moved further
         ["fs16rr",  -1.29,  5.1, 0.8{"group":["front_frame","citybus_side_R","front_frame_upper","articulator_floor","front_sleeve"]}],  // Moved farther
         ["fs16ll",   1.29,  5.1, 0.8{"group":["front_frame","citybus_side_L","front_frame_upper","articulator_floor","front_sleeve"]}],  // Moved farther
 

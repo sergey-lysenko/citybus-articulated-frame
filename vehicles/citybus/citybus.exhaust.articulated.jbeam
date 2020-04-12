@@ -33,9 +33,9 @@
          {"nodeMaterial":"|NM_METAL"},
          {"nodeWeight":2.0},
          {"group":"citybus_articulated_exhaust"},
-         ["aex1",1.07, 16.065, 2.94, {"afterFireAudioCoef":0,"afterFireVisualCoef":0}],
-         {"selfCollision":false}
-         {"collision":false}
+         ["aex1",1.07, 16.065, 2.94, {"afterFireAudioCoef":0,"afterFireVisualCoef":0, "exhaustAudioMufflingCoef": 0.1, "exhaustAudioGainChange":-4}],
+         {"selfCollision":false},
+         {"collision":false},
          ["aex2",1.15, 16.0, 2.73],
          ["aex3",0.99, 16.0, 2.73],
          ["aex4",1.15, 15.8, 2.73],
@@ -60,12 +60,12 @@
           ["aex1", "aex2"],
           ["aex1", "aex4"],
           ["aex2", "aex3"],
-          ["aex1", "aex7",{"isExhaust":true}],
+          ["aex1", "aex7", {"isExhaust":true}],
           ["aex7", "aex5"],
           ["aex7", "aex4"],
           ["aex7", "aex3"],
           ["aex7", "aex2"],
-          ["aex7", "aex6",{"isExhaust":true}],
+          ["aex7", "aex6", {"isExhaust":true}],
           ["aex1", "aex6"],
 
           ["aex3", "aex5"],

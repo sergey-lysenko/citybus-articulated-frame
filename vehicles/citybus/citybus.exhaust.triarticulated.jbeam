@@ -33,7 +33,7 @@
          {"nodeMaterial":"|NM_METAL"},
          {"nodeWeight":2.0},
          {"group":"citybus_triarticulated_exhaust"},
-         ["cex1",1.07, 36.065, 2.94, {"afterFireAudioCoef":0,"afterFireVisualCoef":0}],
+         ["cex1",1.07, 36.065, 2.94, {"afterFireAudioCoef":0,"afterFireVisualCoef":0, "exhaustAudioMufflingCoef": 0.1, "exhaustAudioGainChange":-4}],
          {"selfCollision":false}
          {"collision":false}
          ["cex2",1.15, 36.0, 2.73],

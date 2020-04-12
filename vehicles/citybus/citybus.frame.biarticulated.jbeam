@@ -8,16 +8,16 @@
     "slotType" : "citybus_frame",
     "slots": [
         ["type", "default", "description"]
-        ["citybus.body.biarticulated","citybus.body.biarticulated","Body"],
-        ["citybus.bumper.rear.biarticulated","citybus.bumper.rear.biarticulated","Rear Bumper"],
-        ["citybus.engine.biarticulated","citybus.engine.biarticulated","Engine"],
         ["citybus_ABS","citybus_ABS", "ABS"],
         ["citybus_safety","citybus_safety", "Safety Interlock"],
         ["citybus_axle_F","citybus_axle_F","Front Axle"],
         ["citybus_axle_M","citybus_axle_M","Second Axle"],         // unpowered "citybus_axle_R"
         ["citybus_axle_AM","citybus_axle_AM","Third Axle"],  // unpowered "citybus_axle_A"
         ["citybus_axle_B","citybus_axle_B","Rear Axle"],  // "citybus_axle_R" + 20 meters
+        ["citybus.engine.biarticulated","citybus.engine.biarticulated","Engine"],
+        ["citybus.body.biarticulated","citybus.body.biarticulated","Body"],
         ["citybus_bumper_F","citybus_bumper_F","Front Bumper"],
+        ["citybus.bumper.rear.biarticulated","citybus.bumper.rear.biarticulated","Rear Bumper"],
         ["citybus_fueltank","citybus_fueltank","Fuel Tank"],
     ],
     "refNodes":[
@@ -27,14 +27,14 @@
     "cameraExternal":{
         "distance":12,
         "distanceMin":3,
-        "offset":{"x":0.46, "y":14.25, "z":1.5},
+        "offset":{"x":0.46, "y":14.25, "z":1.5}, //Changed to accomodate different vehicle length
         "fov":65,
     },
     "cameraChase":{
         "distance":12,
         "distanceMin":8,
         "defaultRotation":{"x":0,"y":-12,"z":0},
-        "offset":{"x":0.46, "y":14.25, "z":2},
+        "offset":{"x":0.46, "y":14.25, "z":2}, //Changed to accomodate different vehicle length
         "fov":65,
     },
     "camerasInternal":[
@@ -87,8 +87,7 @@
         {"frictionCoef":0.5},
         {"nodeMaterial":"|NM_METAL"},
         {"collision":true},
-        {"selfCollision":true},
-        
+        {"selfCollision":true},       
         //main floor
         {"nodeWeight":45},
         {"group":"front_frame"},
