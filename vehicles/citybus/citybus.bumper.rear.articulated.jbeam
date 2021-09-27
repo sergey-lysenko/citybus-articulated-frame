@@ -310,7 +310,7 @@
         {"beamSpring":2000800,"beamDamp":350},
         {"beamDeform":150000,"beamStrength":"FLT_MAX"},
         //anti wheel collision
-		{"optional":true},
+        {"optional":true},
         {"beamPrecompression":0.77},
         //["arb4lll","fh1ll"],
         //["arb3lll","fh1ll"],
@@ -336,7 +336,7 @@
     ],
     "triangles": [
         ["id1:","id2:","id3:"],
-        {"dragCoef":8},
+        {"dragCoef":6},
         {"groundModel":"metal"},
         {"group":"citybus_bumper_R"},
         //{"triangleType":"NONCOLLIDABLE"},

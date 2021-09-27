@@ -34,20 +34,21 @@
             [1400, 923],
             [1500, 929],
             [1600, 934],
-            [1800, 921],
-            [2100, 900],
-            [2400, 897],
-            [2700, 833],
-            [3000, 764],
+            [1800, 960],
+            [2100, 970],
+            [2400, 980],
+            [2700, 990],
+            [3000, 999],
         ],
 
-        "idleRPM":500,
+        "idleRPM":450,
         "maxRPM":3500,
         "inertia":15,
-        "friction":20,
-        "idleRPMRoughness":25,
+        "friction":30,
+        "idleRPMRoughness":75,
         "revLimiterType":"soft"
-        "dynamicFriction":0.2
+        "dynamicFriction":0.3,
+        "engineBrakeTorque":60,
         "burnEfficiency":[
             [0,   0.20],
             [0.1, 0.25],
@@ -61,7 +62,7 @@
         "requiredEnergyType":"diesel",
 
         //exhaust
-        "particulates":0.30, 
+        "particulates":0.30,
         "instantAfterFireCoef": 0.0,
         "sustainedAfterFireCoef": 0.0,
 
@@ -101,12 +102,12 @@
     "soundConfig": {
         "sampleName": "I6D_bus_engine",
 
-        "mainGain": 2,
+        "mainGain": -3,
         "onLoadGain":1.0,
-        "offLoadGain":0.85,
+        "offLoadGain":0.65,
 
         "maxLoadMix": 1.0,
-        "minLoadMix": 0,
+        "minLoadMix": 0.0,
 
         "eqLowGain": -3,
         "eqLowFreq": 250,
@@ -128,9 +129,9 @@
     "soundConfigExhaust": {
         "sampleName": "I6D_semi_exhaust",
 
-        "mainGain": 0,
+        "mainGain": -1,
         "onLoadGain":1.0,
-        "offLoadGain":0.85,
+        "offLoadGain":0.35,
 
         "maxLoadMix": 1.0,
         "minLoadMix": 0,
@@ -226,7 +227,7 @@
         ["cen3r","cen4r"],
         ["cen3r","cen4l"],
         ["cen3l","cen4r"],
-        ["cen3l","cen4l"{"isExhaust":"mainEngine"}],
+        ["cen3l","cen4l", {"isExhaust":"mainEngine"}],
         ["cen4r","cen4l"],
 
         //engine mounts
@@ -253,8 +254,8 @@
         //engine piping
         {"beamSpring":51000,"beamDamp":500},
         {"beamDeform":2000,"beamStrength":5000},
-        ["cex0", "cex6"{"isExhaust":"mainEngine"}],
-        ["cex0", "cen3l"{"isExhaust":"mainEngine"}],
+        ["cex0", "cex6", {"isExhaust":"mainEngine"}],
+        ["cex0", "cen3l", {"isExhaust":"mainEngine"}],
         ["cex0", "cen4l"],
         ["cex6", "cen3l"],
         ["cex0", "cen1l"],
@@ -379,14 +380,14 @@
     },
     "vehicleController": {
         "automaticModes":"PRNDM",
-        "useSmartAggressionCalculation":false,
-        "calculateOptimalLoadShiftPoints":false,
+        "useSmartAggressionCalculation":true,
+        "calculateOptimalLoadShiftPoints":true,
         "transmissionGearChangeDelay":2,
         "gearboxDecisionSmoothingDown":2,
         "gearboxDecisionSmoothingUp":2,
 
         "highShiftUpRPM":1850,
-        "highShiftDownRPM":1200
+        "highShiftDownRPM":1200,
         "lowShiftUpRPM":1250,
         "lowShiftDownRPM":750,
     },
@@ -486,14 +487,14 @@
     },
     "vehicleController": {
         "automaticModes":"PRNDM",
-        "useSmartAggressionCalculation":false,
-        "calculateOptimalLoadShiftPoints":false,
+        "useSmartAggressionCalculation":true,
+        "calculateOptimalLoadShiftPoints":true,
         "transmissionGearChangeDelay":1,
         "gearboxDecisionSmoothingDown":2,
         "gearboxDecisionSmoothingUp":2,
 		
         "highShiftUpRPM":1850,
-        "highShiftDownRPM":1200
+        "highShiftDownRPM":1200,
         "lowShiftUpRPM":1250,
         "lowShiftDownRPM":750,
     },

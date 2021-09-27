@@ -398,7 +398,7 @@
     "information":{
         "authors":"BeamNG",
         "name":"A Rear Access Panel",
-        "value":700,
+        "value":400,
     }
     "slotType" : "citybus.accessdoor.rear.articulated",
     "slots": [

@@ -18,14 +18,14 @@
         {"selfCollision":true}
         {"nodeWeight":3},
         {"group":"articulated_stanchions"}
-        ["astc3l",  0.41, 6.90, 2.25{"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
+        ["astc3l",  0.41, 6.90, 2.25, {"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
         ["astc4l",  0.41, 8.47, 2.25],
         ["astc5l",  0.41, 9.31, 2.25],
         ["astc6l",  0.41,  10.17, 2.25],
         ["astc7l",  0.41,  11.67, 2.25],
         ["astc8l",  0.41,  11.67, 1.55],
 		
-        ["astc3r", -0.41, 6.90, 2.25{"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
+        ["astc3r", -0.41, 6.90, 2.25, {"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
         ["astc4r", -0.41, 8.47, 2.25],
         ["astc5r", -0.41, 9.31, 2.25],
         ["astc6r", -0.41,  10.17, 2.25],

@@ -18,10 +18,11 @@
         //cooling system
         "radiatorArea":1,
         "radiatorEffectiveness":15000,
-        "coolantVolume":15
+        "coolantVolume":15,
         "radiatorFanType":"electric",
-        "radiatorFanMaxAirSpeed":10,
-        "thermostatTemperature":90
+        "radiatorFanMaxAirSpeed":15,
+        "thermostatTemperature":90,
+
         "oilRadiatorArea":0.24,
         "oilRadiatorEffectiveness":3000,
         "oilThermostatTemperature":100

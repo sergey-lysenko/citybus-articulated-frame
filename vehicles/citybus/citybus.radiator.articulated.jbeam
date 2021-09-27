@@ -11,7 +11,7 @@
          ["acitybus_radiator", ["rear_frame_upper","citybus_articulated_frame"]],
      ],
     "props": [
-        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"]
+        ["func"      , "mesh"              , "idRef:", "idX:", "idY:"            , "baseRotation"        , "rotation"                 , "translation"        , "min", "max", "offset", "multiplier"],
         ["radiatorFanSpin"  , "acitybus_radiatorfan", "afm16l","afs16l","afm17l",  {"x":90, "y":0, "z":0}, {"x":0, "y":0, "z":1}    , {"x":0, "y":0, "z":0}, -360, 360, 0, -1],
     ],
     "mainEngine":{
@@ -20,7 +20,7 @@
         "radiatorEffectiveness":15000,
         "coolantVolume":15,
         "radiatorFanType":"electric",
-        "radiatorFanMaxAirSpeed":5,
+        "radiatorFanMaxAirSpeed":15,
         "thermostatTemperature":90,
 
         "oilRadiatorArea":0.24,

@@ -26,8 +26,8 @@
     //},
     "nodes": [
          ["id", "posX", "posY", "posZ"],
-         {"selfCollision":true}
-         {"collision":true}
+         {"selfCollision":true},
+         {"collision":true},
          //--Exhaust-
          {"frictionCoef":0.5},
          {"nodeMaterial":"|NM_METAL"},
@@ -44,8 +44,8 @@
          {"group":""},
          ["aex7",1.07, 15.75, 2.88],
          //rigidifier
-         {"selfCollision":false}
-         {"collision":false}
+         {"selfCollision":false},
+         {"collision":false},
     ],
 
     "beams": [
@@ -95,8 +95,8 @@
           //support beams
           {"beamPrecompression":0.95, "beamType":"|SUPPORT", "beamLongBound":15},
           {"beamDeform":50000,"beamStrength":250000},
-          {"optional":true}
-          {"optional":false}
+          {"optional":true},
+          {"optional":false},
           ["aex1", "asp18ll"],
           ["aex1", "asp18l"],
           {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},

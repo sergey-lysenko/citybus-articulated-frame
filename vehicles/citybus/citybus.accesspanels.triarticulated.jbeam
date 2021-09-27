@@ -395,7 +395,7 @@
     "information":{
         "authors":"BeamNG",
         "name":"TA Rear Access Panel",
-        "value":700,
+        "value":400,
     }
     "slotType" : "citybus.accessdoor.rear.triarticulated",
     "slots": [

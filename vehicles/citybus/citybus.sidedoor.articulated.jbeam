@@ -72,8 +72,8 @@
         ["add3r",  -1.29, 10.972, 1.275],
         ["add3rr", -1.29, 10.511, 1.275],
 
-        ["add6r", -1.29, 10.87, 0.265{"group":"","collision":false,"selfCollision":false}],
-        ["add7r", -1.29, 10.87, 2.4{"group":"","collision":false,"selfCollision":false}],
+        ["add6r", -1.29, 10.87, 0.265, {"group":"","collision":false,"selfCollision":false}],
+        ["add7r", -1.29, 10.87, 2.4, {"group":"","collision":false,"selfCollision":false}],
 
         ["adx1r", -1.0,  10.7295, 0.4{"collision":false,"selfCollision":false}],
         ["adx2r", -1.0,  10.7295, 2.3{"collision":false,"selfCollision":false}],
@@ -86,8 +86,8 @@
         ["add3l",  -1.29,  11.002, 1.275],
         ["add3ll", -1.29,  11.463, 1.275],
 
-        ["add6l", -1.29,  11.104, 0.265{"group":"","collision":false,"selfCollision":false}],
-        ["add7l", -1.29,  11.104, 2.4{"group":"","collision":false,"selfCollision":false}],
+        ["add6l", -1.29,  11.104, 0.265, {"group":"","collision":false,"selfCollision":false}],
+        ["add7l", -1.29,  11.104, 2.4, {"group":"","collision":false,"selfCollision":false}],
 
         ["adx1l", -1.0,  11.225, 0.4{"collision":false,"selfCollision":false}],
         ["adx2l", -1.0,  11.225, 2.3{"collision":false,"selfCollision":false}],

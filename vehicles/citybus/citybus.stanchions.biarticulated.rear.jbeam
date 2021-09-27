@@ -18,14 +18,14 @@
         {"selfCollision":true}
         {"nodeWeight":3},
         {"group":"biarticulated_stanchions"}
-        ["bstc3l",  0.41, 16.90, 2.25{"group":["biarticulated_stanchions","birear_sleeve","birear_bellow_frame"]}],
+        ["bstc3l",  0.41, 16.90, 2.25, {"group":["biarticulated_stanchions","birear_sleeve","birear_bellow_frame"]}],
         ["bstc4l",  0.41, 18.47, 2.25],
         ["bstc5l",  0.41, 19.31, 2.25],
         ["bstc6l",  0.41,  20.17, 2.25],
         ["bstc7l",  0.41,  21.67, 2.25],
         ["bstc8l",  0.41,  21.67, 1.55],
 		
-        ["bstc3r", -0.41, 16.90, 2.25{"group":["biarticulated_stanchions","birear_sleeve","birear_bellow_frame"]}],
+        ["bstc3r", -0.41, 16.90, 2.25, {"group":["biarticulated_stanchions","birear_sleeve","birear_bellow_frame"]}],
         ["bstc4r", -0.41, 18.47, 2.25],
         ["bstc5r", -0.41, 19.31, 2.25],
         ["bstc6r", -0.41,  20.17, 2.25],

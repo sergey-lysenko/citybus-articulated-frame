@@ -30,9 +30,9 @@
         {"selfCollision":true},
         {"nodeWeight":75},
         {"group":"citybus_axle_C"},
-        ["cax1", 0.0, 33.12, 0.444{"group":["citybus_axle_C","citybus_lowerarm_C"]}],
+        ["cax1", 0.0, 33.12, 0.444, {"group":["citybus_axle_C","citybus_lowerarm_C"]}],
         ["cax2", 0.0, 33.6, 0.444],
-        ["cax3", 0.0, 33.36, 0.72{"selfCollision":false,"group":["citybus_axle_C","citybus_upperarm_C"]}],
+        ["cax3", 0.0, 33.36, 0.72, {"selfCollision":false,"group":["citybus_axle_C","citybus_upperarm_C"]}],
         ["cax4", 0.0, 33.36, 0.22],
 
         {"nodeWeight":35},
@@ -43,8 +43,8 @@
 
         ["cax3l",  0.80, 33.36, 0.68],
         ["cax3r", -0.80, 33.36, 0.68],
-        ["cax4l",  0.80, 33.36, 0.22{"group":["citybus_axle_C","citybus_lowerarm_C"]}],
-        ["cax4r", -0.80, 33.36, 0.22{"group":["citybus_axle_C","citybus_lowerarm_C"]}],
+        ["cax4l",  0.80, 33.36, 0.22, {"group":["citybus_axle_C","citybus_lowerarm_C"]}],
+        ["cax4r", -0.80, 33.36, 0.22, {"group":["citybus_axle_C","citybus_lowerarm_C"]}],
 
         //axle air bag mounts
         {"selfCollision":false},
@@ -400,10 +400,10 @@
         {"breakGroupType":1},
         {"deformGroup":"airbag_C_break","deformationTriggerRatio":0.1},
         {"breakGroup":"airbag_C_break"},
-        ["cab1l","cab3l"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
-        ["cab1r","cab3r"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
-        ["cab2l","cab4l"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
-        ["cab2r","cab4r"{"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        ["cab1l","cab3l", {"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        ["cab1r","cab3r", {"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        ["cab2l","cab4l", {"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
+        ["cab2r","cab4r", {"beamDamp":22000,"beamDampRebound":44000,"beamDampFast":11000,"beamDampReboundFast":22000,"beamDampVelocitySplit":0.1,"dampCutoffHz":500}],
         {"breakGroupType":0},
         {"deformGroup":""},
         {"breakGroup":""},

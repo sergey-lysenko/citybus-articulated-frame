@@ -18,14 +18,14 @@
         {"selfCollision":true}
         {"nodeWeight":3},
         {"group":"triarticulated_stanchions"}
-        ["cstc3l",  0.41, 26.90, 2.25{"group":["triarticulated_stanchions","trirear_sleeve","trirear_bellow_frame"]}],
+        ["cstc3l",  0.41, 26.90, 2.25, {"group":["triarticulated_stanchions","trirear_sleeve","trirear_bellow_frame"]}],
         ["cstc4l",  0.41, 28.47, 2.25],
         ["cstc5l",  0.41, 29.31, 2.25],
         ["cstc6l",  0.41,  30.17, 2.25],
         ["cstc7l",  0.41,  31.67, 2.25],
         ["cstc8l",  0.41,  31.67, 1.55],
 		
-        ["cstc3r", -0.41, 26.90, 2.25{"group":["triarticulated_stanchions","trirear_sleeve","trirear_bellow_frame"]}],
+        ["cstc3r", -0.41, 26.90, 2.25, {"group":["triarticulated_stanchions","trirear_sleeve","trirear_bellow_frame"]}],
         ["cstc4r", -0.41, 28.47, 2.25],
         ["cstc5r", -0.41, 29.31, 2.25],
         ["cstc6r", -0.41,  30.17, 2.25],

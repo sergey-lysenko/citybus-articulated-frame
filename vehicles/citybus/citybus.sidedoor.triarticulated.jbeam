@@ -72,8 +72,8 @@
         ["cdd3r",  -1.29, 30.972, 1.275],
         ["cdd3rr", -1.29, 30.511, 1.275],
 
-        ["cdd6r", -1.29, 30.87, 0.265{"group":"","collision":false,"selfCollision":false}],
-        ["cdd7r", -1.29, 30.87, 2.4{"group":"","collision":false,"selfCollision":false}],
+        ["cdd6r", -1.29, 30.87, 0.265, {"group":"","collision":false,"selfCollision":false}],
+        ["cdd7r", -1.29, 30.87, 2.4, {"group":"","collision":false,"selfCollision":false}],
 
         ["cdx1r", -1.0,  30.7295, 0.4{"collision":false,"selfCollision":false}],
         ["cdx2r", -1.0,  30.7295, 2.3{"collision":false,"selfCollision":false}],
@@ -86,8 +86,8 @@
         ["cdd3l",  -1.29,  31.002, 1.275],
         ["cdd3ll", -1.29,  31.463, 1.275],
 
-        ["cdd6l", -1.29,  31.104, 0.265{"group":"","collision":false,"selfCollision":false}],
-        ["cdd7l", -1.29,  31.104, 2.4{"group":"","collision":false,"selfCollision":false}],
+        ["cdd6l", -1.29,  31.104, 0.265, {"group":"","collision":false,"selfCollision":false}],
+        ["cdd7l", -1.29,  31.104, 2.4, {"group":"","collision":false,"selfCollision":false}],
 
         ["cdx1l", -1.0,  31.225, 0.4{"collision":false,"selfCollision":false}],
         ["cdx2l", -1.0,  31.225, 2.3{"collision":false,"selfCollision":false}],

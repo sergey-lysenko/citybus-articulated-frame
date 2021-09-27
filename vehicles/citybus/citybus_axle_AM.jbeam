@@ -3,7 +3,7 @@
     "information":{
         "authors":"BeamNG",
         "name":"Unpowered Live Axle",
-        "value":9500,
+        "value":1800,
     },
     "slotType" : "citybus_axle_AM",
     "slots": [
@@ -29,9 +29,9 @@
         {"selfCollision":true},
         {"nodeWeight":75},
         {"group":"citybus_axle_A"},
-        ["aax1", 0.0, 13.12, 0.444{"group":["citybus_axle_A","citybus_lowerarm_A"]}],
+        ["aax1", 0.0, 13.12, 0.444, {"group":["citybus_axle_A","citybus_lowerarm_A"]}],
         ["aax2", 0.0, 13.6, 0.444],
-        ["aax3", 0.0, 13.36, 0.72{"selfCollision":false,"group":["citybus_axle_A","citybus_upperarm_A"]}],
+        ["aax3", 0.0, 13.36, 0.72, {"selfCollision":false,"group":["citybus_axle_A","citybus_upperarm_A"]}],
         ["aax4", 0.0, 13.36, 0.22],
 
         {"nodeWeight":35},
@@ -42,8 +42,8 @@
 
         ["aax3l",  0.80, 13.36, 0.68],
         ["aax3r", -0.80, 13.36, 0.68],
-        ["aax4l",  0.80, 13.36, 0.22{"group":["citybus_axle_A","citybus_lowerarm_A"]}],
-        ["aax4r", -0.80, 13.36, 0.22{"group":["citybus_axle_A","citybus_lowerarm_A"]}],
+        ["aax4l",  0.80, 13.36, 0.22, {"group":["citybus_axle_A","citybus_lowerarm_A"]}],
+        ["aax4r", -0.80, 13.36, 0.22, {"group":["citybus_axle_A","citybus_lowerarm_A"]}],
 
         //axle air bag mounts
         {"selfCollision":false},

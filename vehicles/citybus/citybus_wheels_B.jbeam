@@ -29,10 +29,10 @@
          {"nodeWeight":35},
          //rear hub 1
          {"chemEnergy":200,"burnRate":0.15,"flashPoint":200,"specHeat":0.05,"smokePoint":150,"selfIgnitionCoef":false},
-         ["brw1r", -0.55, 23.356, 0.447],
+         ["brw1r", -0.55, 23.356, 0.447, {"staticCollision":false}],
          ["brw1rr", -1.12, 23.356, 0.447],
          {"group":"wheelhub_BL"}
-         ["brw1l", 0.55, 23.356, 0.447],
+         ["brw1l", 0.55, 23.356, 0.447, {"staticCollision":false}],
          ["brw1ll", 1.12, 23.356, 0.447],
          {"chemEnergy":false,"burnRate":false,"flashPoint":false,"specHeat":false,"smokePoint":false,"selfIgnitionCoef":false},
     ],
@@ -40,7 +40,7 @@
           ["id1:", "id2:"],
           {"beamPrecompression":1, "beamType":"|NORMAL", "beamLongBound":1, "beamShortBound":1},
           {"beamDeform":150000,"beamStrength":"FLT_MAX"},
-          {"beamSpring":3001000,"beamDamp":12},
+          {"beamSpring":3001000,"beamDamp":150},
           //wheel axis beams
           {"chemEnergy":200,"burnRate":0.15,"flashPoint":200,"specHeat":0.05,"smokePoint":150,"selfIgnitionCoef":false},
           ["brw1r","brw1rr"],
@@ -59,13 +59,13 @@
             {"numRays":14},
 
             //hub options
-            {"hubTreadBeamSpring":5501000, "hubTreadBeamDamp":50},
-            {"hubPeripheryBeamSpring":5501000, "hubPeripheryBeamDamp":50},
-            {"hubSideBeamSpring":8501000, "hubSideBeamDamp":50},
-            {"hubBeamDeform":195000, "hubBeamStrength":650000},
-            {"hubNodeWeight":2.3},
+            {"hubTreadBeamSpring":3001000, "hubTreadBeamDamp":150},
+            {"hubPeripheryBeamSpring":3001000, "hubPeripheryBeamDamp":150},
+            {"hubSideBeamSpring":4001000, "hubSideBeamDamp":150},
+            {"hubBeamDeform":150000, "hubBeamStrength":440000},
+            {"hubNodeWeight":1.7},
             {"hubNodeMaterial":"|NM_METAL","hasTire":false},
             {"hubFrictionCoef":0.5},
     ],
-}
+},
 }

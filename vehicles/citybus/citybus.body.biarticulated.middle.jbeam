@@ -43,111 +43,111 @@
         //bottom
 	{"nodeWeight":14},
         {"group":"front_side_R"},
-        ["aff0rr", -1.29, 6.90, 0.79{"group":["rear_side_R","rear_sleeve"]}],
-        ["aff0ll",  1.29, 6.90, 0.79{"group":["rear_side_L","rear_sleeve"]}],
+        ["aff0rr", -1.29, 6.90, 0.79, {"group":["rear_side_R","rear_sleeve"]}],
+        ["aff0ll",  1.29, 6.90, 0.79, {"group":["rear_side_L","rear_sleeve"]}],
 
-        ["asb6rr", -1.29, 7.68, 0.79{"group":"rear_side_R"}],
-        ["asb6ll",  1.29, 7.68, 0.79{"group":"rear_side_L"}],
+        ["asb6rr", -1.29, 7.68, 0.79, {"group":"rear_side_R"}],
+        ["asb6ll",  1.29, 7.68, 0.79, {"group":"rear_side_L"}],
 
-        ["asb7rr", -1.29, 8.48, 0.79{"group":"rear_side_R"}],
-        ["asb7ll",  1.29, 8.48, 0.79{"group":"rear_side_L"}],
+        ["asb7rr", -1.29, 8.48, 0.79, {"group":"rear_side_R"}],
+        ["asb7ll",  1.29, 8.48, 0.79, {"group":"rear_side_L"}],
 
-        ["asb8rr", -1.29, 9.34, 0.79{"group":"rear_side_R"}],
-        ["asb8ll",  1.29, 9.34, 0.79{"group":"rear_side_L"}],
+        ["asb8rr", -1.29, 9.34, 0.79, {"group":"rear_side_R"}],
+        ["asb8ll",  1.29, 9.34, 0.79, {"group":"rear_side_L"}],
 
-        ["asb9rr", -1.29,  10.38, 0.79{"group":"rear_side_R"}],
-        ["asb9ll",  1.29,  10.38, 0.79{"group":"rear_side_L"}],
+        ["asb9rr", -1.29,  10.38, 0.79, {"group":"rear_side_R"}],
+        ["asb9ll",  1.29,  10.38, 0.79, {"group":"rear_side_L"}],
 
         //extra flexbody help node
-        ["asm5rr", -1.29, 6.90, 1.265{"group":["front_side_R","rear_sleeve","rear_bellow_frame"]}],
-        ["asm5ll",  1.29, 6.90, 1.265{"group":["front_side_L","rear_sleeve","rear_bellow_frame"]}],
+        ["asm5rr", -1.29, 6.90, 1.265, {"group":["front_side_R","rear_sleeve","rear_bellow_frame"]}],
+        ["asm5ll",  1.29, 6.90, 1.265, {"group":["front_side_L","rear_sleeve","rear_bellow_frame"]}],
 
-        ["asm6rr", -1.29, 7.68, 1.265{"group":"rear_side_R"}],
-        ["asm6ll",  1.29, 7.68, 1.265{"group":"rear_side_L"}],
+        ["asm6rr", -1.29, 7.68, 1.265, {"group":"rear_side_R"}],
+        ["asm6ll",  1.29, 7.68, 1.265, {"group":"rear_side_L"}],
 
-        ["asm7rr", -1.29, 8.48, 1.265{"group":"rear_side_R"}],
-        ["asm7ll",  1.29, 8.48, 1.265{"group":"rear_side_L"}],
+        ["asm7rr", -1.29, 8.48, 1.265, {"group":"rear_side_R"}],
+        ["asm7ll",  1.29, 8.48, 1.265, {"group":"rear_side_L"}],
 
-        ["asm8rr", -1.29, 9.34, 1.265{"group":"rear_side_R"}],
-        ["asm8ll",  1.29, 9.34, 1.265{"group":"rear_side_L"}],
+        ["asm8rr", -1.29, 9.34, 1.265, {"group":"rear_side_R"}],
+        ["asm8ll",  1.29, 9.34, 1.265, {"group":"rear_side_L"}],
 
-        ["asm9rr", -1.29,  10.38, 1.265{"group":"rear_side_R"}],
-        ["asm9ll",  1.29,  10.38, 1.265{"group":"rear_side_L"}],
+        ["asm9rr", -1.29,  10.38, 1.265, {"group":"rear_side_R"}],
+        ["asm9ll",  1.29,  10.38, 1.265, {"group":"rear_side_L"}],
 
-        ["asm11rr", -1.29,  11.60, 1.45{"group":["rear_side_R","citybus_articulated_stanchions"]}],
-        ["asm11ll",  1.29,  11.60, 1.45{"group":["rear_side_L","citybus_articulated_stanchions"]}],
+        ["asm11rr", -1.29,  11.60, 1.45, {"group":["rear_side_R","citybus_articulated_stanchions"]}],
+        ["asm11ll",  1.29,  11.60, 1.45, {"group":["rear_side_L","citybus_articulated_stanchions"]}],
 
-        ["asm13rr", -1.29,  12.64, 1.45{"group":"rear_side_R"}],
-        ["asm13ll",  1.29,  12.64, 1.45{"group":"rear_side_L"}],
+        ["asm13rr", -1.29,  12.64, 1.45, {"group":"rear_side_R"}],
+        ["asm13ll",  1.29,  12.64, 1.45, {"group":"rear_side_L"}],
 
-        ["asm15rr", -1.29,  14.29, 1.45{"group":"rear_side_R"}],
-        ["asm15ll",  1.29,  14.29, 1.45{"group":"rear_side_L"}],
+        ["asm15rr", -1.29,  14.29, 1.45, {"group":"rear_side_R"}],
+        ["asm15ll",  1.29,  14.29, 1.45, {"group":"rear_side_L"}],
 
         {"nodeWeight":45},
-        ["asm16rr", -1.29,  15.10, 1.45{"group":["rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
-        ["asm16ll",  1.29,  15.10, 1.45{"group":["rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["asm16rr", -1.29,  15.10, 1.45, {"group":["rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["asm16ll",  1.29,  15.10, 1.45, {"group":["rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
 		
         //pillar
         {"nodeWeight":10},
-        ["asp5rr", -1.29, 6.90, 1.8{"group":"rear_side_R"}],
-        ["asp5ll",  1.29, 6.90, 1.8{"group":"rear_side_L"}],
+        ["asp5rr", -1.29, 6.90, 1.8, {"group":"rear_side_R"}],
+        ["asp5ll",  1.29, 6.90, 1.8, {"group":"rear_side_L"}],
 
-        ["asp7rr", -1.29, 8.48, 1.8{"group":"rear_side_R"}],
-        ["asp7ll",  1.29, 8.48, 1.8{"group":"rear_side_L"}],
+        ["asp7rr", -1.29, 8.48, 1.8, {"group":"rear_side_R"}],
+        ["asp7ll",  1.29, 8.48, 1.8, {"group":"rear_side_L"}],
 
-        ["asp9rr", -1.29,  10.38, 1.8{"group":"rear_side_R"}],
-        ["asp9ll",  1.29,  10.38, 1.8{"group":"rear_side_L"}],
+        ["asp9rr", -1.29,  10.38, 1.8, {"group":"rear_side_R"}],
+        ["asp9ll",  1.29,  10.38, 1.8, {"group":"rear_side_L"}],
 
-        ["asp11rr", -1.29,  11.60, 1.9{"group":["rear_side_R","citybus_articulated_stanchions"]}],
-        ["asp11ll",  1.29,  11.60, 1.9{"group":["rear_side_L","citybus_articulated_stanchions"]}],
+        ["asp11rr", -1.29,  11.60, 1.9, {"group":["rear_side_R","citybus_articulated_stanchions"]}],
+        ["asp11ll",  1.29,  11.60, 1.9, {"group":["rear_side_L","citybus_articulated_stanchions"]}],
 
-        ["asp14rr", -1.29,  13.46, 1.9{"group":"rear_side_R"}],
-        ["asp14ll",  1.29,  13.46, 1.9{"group":"rear_side_L"}],
+        ["asp14rr", -1.29,  13.46, 1.9, {"group":"rear_side_R"}],
+        ["asp14ll",  1.29,  13.46, 1.9, {"group":"rear_side_L"}],
 		
         {"nodeWeight":25},
-        ["asp16rr", -1.29,  15.10, 1.9{"group":["rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
-        ["asp16ll",  1.29,  15.10, 1.9{"group":["rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["asp16rr", -1.29,  15.10, 1.9, {"group":["rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["asp16ll",  1.29,  15.10, 1.9, {"group":["rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
 		
         //top
         {"nodeWeight":10},
-        ["ast5rr", -1.29, 6.90, 2.4{"group":["rear_roof","rear_side_R","rear_sleeve","rear_bellow_frame"]}],
-        ["ast5ll",  1.29, 6.90, 2.4{"group":["rear_roof","rear_side_L","rear_sleeve","rear_bellow_frame"]}],
+        ["ast5rr", -1.29, 6.90, 2.4, {"group":["rear_roof","rear_side_R","rear_sleeve","rear_bellow_frame"]}],
+        ["ast5ll",  1.29, 6.90, 2.4, {"group":["rear_roof","rear_side_L","rear_sleeve","rear_bellow_frame"]}],
 
-        ["ast6rr", -1.29, 7.68, 2.4{"group":["rear_roof2","rear_side_R"]}],
-        ["ast6ll",  1.29, 7.68, 2.4{"group":["rear_roof2","rear_side_L"]}],
+        ["ast6rr", -1.29, 7.68, 2.4, {"group":["rear_roof2","rear_side_R"]}],
+        ["ast6ll",  1.29, 7.68, 2.4, {"group":["rear_roof2","rear_side_L"]}],
 
-        ["ast7rr", -1.29, 8.48, 2.4{"group":["rear_roof","rear_side_R"]}],
-        ["ast7ll",  1.29, 8.48, 2.4{"group":["rear_roof","rear_side_L"]}],
+        ["ast7rr", -1.29, 8.48, 2.4, {"group":["rear_roof","rear_side_R"]}],
+        ["ast7ll",  1.29, 8.48, 2.4, {"group":["rear_roof","rear_side_L"]}],
 
-        ["ast8rr", -1.29, 9.34, 2.4{"group":["rear_roof2","rear_side_R"]}],
-        ["ast8ll",  1.29, 9.34, 2.4{"group":["rear_roof2","rear_side_L"]}],
+        ["ast8rr", -1.29, 9.34, 2.4, {"group":["rear_roof2","rear_side_R"]}],
+        ["ast8ll",  1.29, 9.34, 2.4, {"group":["rear_roof2","rear_side_L"]}],
 
-        ["ast9rr", -1.29,  10.38, 2.4{"group":["rear_roof","rear_side_R"]}],
-        ["ast9ll",  1.29,  10.38, 2.4{"group":["rear_roof","rear_side_L"]}],
+        ["ast9rr", -1.29,  10.38, 2.4, {"group":["rear_roof","rear_side_R"]}],
+        ["ast9ll",  1.29,  10.38, 2.4, {"group":["rear_roof","rear_side_L"]}],
 
-        ["ast11rr", -1.29,  11.60, 2.4{"group":["rear_roof","rear_side_R"]}],
-        ["ast11ll",  1.29,  11.60, 2.4{"group":["rear_roof","rear_side_L"]}],
+        ["ast11rr", -1.29,  11.60, 2.4, {"group":["rear_roof","rear_side_R"]}],
+        ["ast11ll",  1.29,  11.60, 2.4, {"group":["rear_roof","rear_side_L"]}],
 
-        ["ast13rr", -1.29,  12.64, 2.4{"group":["front_roof2","front_side_R"]}],
-        ["ast13ll",  1.29,  12.64, 2.4{"group":["front_roof2","front_side_L"]}],
+        ["ast13rr", -1.29,  12.64, 2.4, {"group":["front_roof2","front_side_R"]}],
+        ["ast13ll",  1.29,  12.64, 2.4, {"group":["front_roof2","front_side_L"]}],
 
-        ["ast14rr", -1.29,  13.46, 2.4{"group":["rear_roof","rear_side_R"]}],
-        ["ast14ll",  1.29,  13.46, 2.4{"group":["rear_roof","rear_side_L"]}],
+        ["ast14rr", -1.29,  13.46, 2.4, {"group":["rear_roof","rear_side_R"]}],
+        ["ast14ll",  1.29,  13.46, 2.4, {"group":["rear_roof","rear_side_L"]}],
 
-        ["ast15rr", -1.29,  14.29, 2.4{"group":["rear_roof2","rear_side_R"]}],
-        ["ast15ll",  1.29,  14.29, 2.4{"group":["rear_roof2","rear_side_L"]}],
+        ["ast15rr", -1.29,  14.29, 2.4, {"group":["rear_roof2","rear_side_R"]}],
+        ["ast15ll",  1.29,  14.29, 2.4, {"group":["rear_roof2","rear_side_L"]}],
 		
         {"nodeWeight":20},
-        //["ast16rr", -1.29,  15.10, 2.4{"group":["rear_roof","rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
-        //["ast16ll",  1.29,  15.10, 2.4{"group":["rear_roof","rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        //["ast16rr", -1.29,  15.10, 2.4, {"group":["rear_roof","rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        //["ast16ll",  1.29,  15.10, 2.4, {"group":["rear_roof","rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
 		
         //rear upper frame
         {"nodeWeight":10},
         {"group":"front_roof"},
-        ["att16rr", -1.28,  15.10, 2.74{"group":["front_roof","rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
-        ["att16r", -0.43,  15.10, 2.79{"group":["front_roof","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
-        ["att16l",  0.43,  15.10, 2.79{"group":["front_roof","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
-        ["att16ll",  1.28,  15.10, 2.74{"group":["front_roof","rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["att16rr", -1.28,  15.10, 2.74, {"group":["front_roof","rear_side_R","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["att16r", -0.43,  15.10, 2.79, {"group":["front_roof","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["att16l",  0.43,  15.10, 2.79, {"group":["front_roof","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
+        ["att16ll",  1.28,  15.10, 2.74, {"group":["front_roof","rear_side_L","rear_frame_upper","rearer_bellow_frame","biarticulated_front_sleeve"]}],
 
         {"group":"rear_frame_upper"},
 		
@@ -383,14 +383,14 @@
         {"beamSpring":8001000,"beamDamp":1000},
         {"beamDeform":5000,"beamStrength":"FLT_MAX"},
         {"deformationTriggerRatio":0.015},
-        ["asm6ll", "afm6l"{"deformGroup":"wallglass_9_L_break"}],
-        ["asm7ll", "afm7l"{"deformGroup":["wallglass_10_L_break","wallglass_11_L_break"]}],
-        ["asm8ll", "afm8l"{"deformGroup":"wallglass_11_L_break"}],
-        ["asm9ll", "afm9l"{"deformGroup":["wallglass_12_L_break","wallglass_13_L_break"]}],
-        ["asm11ll", "afs11l"{"deformGroup":["wallglass_13_L_break","wallglass_14_L_break"]}],
-        ["asm13ll", "afs13l"{"deformGroup":"wallglass_14_L_break"}],
-        ["asp14ll", "afs14ll"{"deformGroup":["wallglass_14_L_break","wallglass_15_L_break"],"deformationTriggerRatio":0.05}],
-        ["asm15ll", "afs15l"{"deformGroup":"wallglass_15_L_break"}],
+        ["asm6ll", "afm6l", {"deformGroup":"wallglass_9_L_break"}],
+        ["asm7ll", "afm7l", {"deformGroup":["wallglass_10_L_break","wallglass_11_L_break"]}],
+        ["asm8ll", "afm8l", {"deformGroup":"wallglass_11_L_break"}],
+        ["asm9ll", "afm9l", {"deformGroup":["wallglass_12_L_break","wallglass_13_L_break"]}],
+        ["asm11ll", "afs11l", {"deformGroup":["wallglass_13_L_break","wallglass_14_L_break"]}],
+        ["asm13ll", "afs13l", {"deformGroup":"wallglass_14_L_break"}],
+        ["asp14ll", "afs14ll", {"deformGroup":["wallglass_14_L_break","wallglass_15_L_break"],"deformationTriggerRatio":0.05}],
+        ["asm15ll", "afs15l", {"deformGroup":"wallglass_15_L_break"}],
         ["asp11ll", "afs11l"],
         ["asp7ll", "afm7l"],
         ["asp9ll", "afm9l"],
@@ -401,14 +401,14 @@
         ["asb9ll", "afm9l"],
 
         {"deformationTriggerRatio":0.015},
-        ["asm6rr", "afm6r"{"deformGroup":"wallglass_9_R_break"}],
-        ["asm7rr", "afm7r"{"deformGroup":["wallglass_9_R_break","wallglass_10_R_break"]}],
-        ["asm8rr", "afm8r"{"deformGroup":"wallglass_10_R_break"}],
-        ["asm9rr", "afm9r"{"deformGroup":"wallglass_10_R_break"}],
-        ["asm11rr", "afs11r"{"deformGroup":"wallglass_11_R_break"}],
-        ["asm13rr", "afs13r"{"deformGroup":"wallglass_11_R_break"}],
-        ["asp14rr", "afs14rr"{"deformGroup":["wallglass_11_R_break","wallglass_12_R_break"],"deformationTriggerRatio":0.05}],
-        ["asm15rr", "afs15r"{"deformGroup":"wallglass_12_R_break"}],
+        ["asm6rr", "afm6r", {"deformGroup":"wallglass_9_R_break"}],
+        ["asm7rr", "afm7r", {"deformGroup":["wallglass_9_R_break","wallglass_10_R_break"]}],
+        ["asm8rr", "afm8r", {"deformGroup":"wallglass_10_R_break"}],
+        ["asm9rr", "afm9r", {"deformGroup":"wallglass_10_R_break"}],
+        ["asm11rr", "afs11r", {"deformGroup":"wallglass_11_R_break"}],
+        ["asm13rr", "afs13r", {"deformGroup":"wallglass_11_R_break"}],
+        ["asp14rr", "afs14rr", {"deformGroup":["wallglass_11_R_break","wallglass_12_R_break"],"deformationTriggerRatio":0.05}],
+        ["asm15rr", "afs15r", {"deformGroup":"wallglass_12_R_break"}],
 		
         ["asp11rr", "afs11r"],
         ["asp7rr", "afm7r"],
@@ -426,9 +426,9 @@
         {"beamDeform":65000,"beamStrength":"FLT_MAX"},
         //L
         {"deformationTriggerRatio":0.01},
-        ["asm16ll", "afs16l"{"deformGroup":"wallglass_7_L_break"}], //What glass?
+        ["asm16ll", "afs16l", {"deformGroup":"wallglass_7_L_break"}], //What glass?
         //R
-        ["asm16rr", "afs16r"{"deformGroup":"wallglass_7_R_break"}], //What glass?
+        ["asm16rr", "afs16r", {"deformGroup":"wallglass_7_R_break"}], //What glass?
 
         //upper frame top main shape
         //
@@ -441,9 +441,9 @@
         {"beamSpring":3001000,"beamDamp":500},
         {"beamDeform":4000,"beamStrength":"FLT_MAX"},
         //L
-        ["att16l", "asm16ll"{"deformGroup":"wallglass_7_L_break"}],
+        ["att16l", "asm16ll", {"deformGroup":"wallglass_7_L_break"}],
         //R
-        ["att16r", "asm16rr"{"deformGroup":"wallglass_7_R_break"}],
+        ["att16r", "asm16rr", {"deformGroup":"wallglass_7_R_break"}],
 
         //roof lengthwise rigids
         {"beamSpring":4001000,"beamDamp":500},

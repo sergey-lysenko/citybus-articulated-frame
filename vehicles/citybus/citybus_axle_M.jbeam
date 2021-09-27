@@ -29,9 +29,9 @@
         {"selfCollision":true},
         {"nodeWeight":75},
         {"group":"citybus_axle_R"},
-        ["ax1", 0.0, 3.12, 0.444{"group":["citybus_axle_R","citybus_lowerarm_R"]}],
+        ["ax1", 0.0, 3.12, 0.444, {"group":["citybus_axle_R","citybus_lowerarm_R"]}],
         ["ax2", 0.0, 3.6, 0.444],
-        ["ax3", 0.0, 3.36, 0.72{"selfCollision":false,"group":["citybus_axle_R","citybus_upperarm_R"]}],
+        ["ax3", 0.0, 3.36, 0.72, {"selfCollision":false,"group":["citybus_axle_R","citybus_upperarm_R"]}],
         ["ax4", 0.0, 3.36, 0.22],
 
         {"nodeWeight":35},
@@ -42,8 +42,8 @@
 
         ["ax3l",  0.80, 3.36, 0.68],
         ["ax3r", -0.80, 3.36, 0.68],
-        ["ax4l",  0.80, 3.36, 0.22{"group":["citybus_axle_R","citybus_lowerarm_R"]}],
-        ["ax4r", -0.80, 3.36, 0.22{"group":["citybus_axle_R","citybus_lowerarm_R"]}],
+        ["ax4l",  0.80, 3.36, 0.22, {"group":["citybus_axle_R","citybus_lowerarm_R"]}],
+        ["ax4r", -0.80, 3.36, 0.22, {"group":["citybus_axle_R","citybus_lowerarm_R"]}],
 
         //axle air bag mounts
         {"selfCollision":false},

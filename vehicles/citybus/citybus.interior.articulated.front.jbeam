@@ -24,7 +24,7 @@
         ["citybus_transmission_DSP", ["citybus_gaugepod"]],
     ],
      "props": [
-        ["func",         "mesh",                   "idRef:", "idX:", "idY:", "baseRotation",            "rotation",                 "translation",         "min", "max", "offset", "multiplier"]
+        ["func",         "mesh",                   "idRef:", "idX:", "idY:", "baseRotation",            "rotation",                 "translation",         "min", "max", "offset", "multiplier"],
         //needles
         ["wheelspeed",   "citybus_needle_speedo",      "gp2r","gp2l","gp1r", {"x":-2, "y":0, "z":180},    {"x":0, "y":-7.05, "z":0},  {"x":0, "y":0, "z":0}, 0,    35.76, 7.55,  1],
         //["rpm",         "fullsize_needle_tacho",     "gp2r","gp2l","gp1r", {"x":-2, "y":0, "z":180},    {"x":0, "y":0, "z":-0.035}, {"x":0, "y":0, "z":0}, 0,    6000,  -3000, 1],
@@ -583,14 +583,14 @@
         {"selfCollision":true}
         {"nodeWeight":3},
         {"group":"articulated_stanchions"}
-        ["astc3l",  0.41, 6.90, 2.25{"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
+        ["astc3l",  0.41, 6.90, 2.25, {"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
         ["astc4l",  0.41, 8.47, 2.25],
         ["astc5l",  0.41, 9.31, 2.25],
         ["astc6l",  0.41,  10.17, 2.25],
         ["astc7l",  0.41,  11.67, 2.25],
         ["astc8l",  0.41,  11.67, 1.55],
 		
-        ["astc3r", -0.41, 6.90, 2.25{"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
+        ["astc3r", -0.41, 6.90, 2.25, {"group":["articulated_stanchions","rear_sleeve","rear_bellow_frame"]}],
         ["astc4r", -0.41, 8.47, 2.25],
         ["astc5r", -0.41, 9.31, 2.25],
         ["astc6r", -0.41,  10.17, 2.25],
